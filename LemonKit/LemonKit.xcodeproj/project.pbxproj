@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		183084721D73CB9900EADE9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 183084711D73CB9900EADE9C /* main.m */; };
+		183084751D73CB9900EADE9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183084741D73CB9900EADE9C /* AppDelegate.m */; };
+		1830847B1D73CB9900EADE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183084791D73CB9900EADE9C /* Main.storyboard */; };
+		1830847D1D73CB9900EADE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1830847C1D73CB9900EADE9C /* Assets.xcassets */; };
+		183084801D73CB9900EADE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830847E1D73CB9900EADE9C /* LaunchScreen.storyboard */; };
+		EA8F0AE51D73DD38000EF601 /* LKNotificationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE01D73DD38000EF601 /* LKNotificationBar.m */; };
+		EA8F0AE61D73DD38000EF601 /* LKNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE21D73DD38000EF601 /* LKNotificationManager.m */; };
+		EA8F0AE71D73DD38000EF601 /* UIResponder+LKNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE41D73DD38000EF601 /* UIResponder+LKNotification.m */; };
+		EA8F0AEC1D73E790000EF601 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AEB1D73E790000EF601 /* MainViewController.m */; };
+		EA8F0AEF1D73E90E000EF601 /* CustomViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AEE1D73E90E000EF601 /* CustomViewsViewController.m */; };
+		EA8F0AF21D73E91B000EF601 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AF11D73E91B000EF601 /* TipsViewController.m */; };
+		EA8F0AF71D73F330000EF601 /* LKNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AF61D73F330000EF601 /* LKNotificationViewController.m */; };
+		EA8F0AF91D73F6EB000EF601 /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8F0AF81D73F6EB000EF601 /* Tips.storyboard */; };
+		EA8F0AFD1D741241000EF601 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA8F0AFC1D741241000EF601 /* icon.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1830846D1D73CB9900EADE9C /* LemonKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183084711D73CB9900EADE9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		183084731D73CB9900EADE9C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		183084741D73CB9900EADE9C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1830847A1D73CB9900EADE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1830847C1D73CB9900EADE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1830847F1D73CB9900EADE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		183084811D73CB9900EADE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8F0ADD1D73DCB8000EF601 /* LKTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTip.h; sourceTree = "<group>"; };
+		EA8F0ADF1D73DD38000EF601 /* LKNotificationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNotificationBar.h; sourceTree = "<group>"; };
+		EA8F0AE01D73DD38000EF601 /* LKNotificationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNotificationBar.m; sourceTree = "<group>"; };
+		EA8F0AE11D73DD38000EF601 /* LKNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNotificationManager.h; sourceTree = "<group>"; };
+		EA8F0AE21D73DD38000EF601 /* LKNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNotificationManager.m; sourceTree = "<group>"; };
+		EA8F0AE31D73DD38000EF601 /* UIResponder+LKNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+LKNotification.h"; sourceTree = "<group>"; };
+		EA8F0AE41D73DD38000EF601 /* UIResponder+LKNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+LKNotification.m"; sourceTree = "<group>"; };
+		EA8F0AEA1D73E790000EF601 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EA8F0AEB1D73E790000EF601 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EA8F0AED1D73E90E000EF601 /* CustomViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewsViewController.h; sourceTree = "<group>"; };
+		EA8F0AEE1D73E90E000EF601 /* CustomViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewsViewController.m; sourceTree = "<group>"; };
+		EA8F0AF01D73E91B000EF601 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
+		EA8F0AF11D73E91B000EF601 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		EA8F0AF51D73F330000EF601 /* LKNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNotificationViewController.h; sourceTree = "<group>"; };
+		EA8F0AF61D73F330000EF601 /* LKNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNotificationViewController.m; sourceTree = "<group>"; };
+		EA8F0AF81D73F6EB000EF601 /* Tips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tips.storyboard; sourceTree = "<group>"; };
+		EA8F0AFA1D73FA95000EF601 /* LKNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKNotification.h; sourceTree = "<group>"; };
+		EA8F0AFC1D741241000EF601 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		EA8F0AFF1D741D50000EF601 /* LKConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKConst.h; sourceTree = "<group>"; };
+		EA8F0B001D74272D000EF601 /* LKLogConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLogConst.h; sourceTree = "<group>"; };
+		EA8F0B011D742907000EF601 /* LemonKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LemonKit.pch; sourceTree = "<group>"; };
+		EA9C882A1D742B3E00458DB9 /* LemonKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LemonKit.h; sourceTree = "<group>"; };
+		EA9C882B1D742B5B00458DB9 /* LKUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKUI.h; sourceTree = "<group>"; };
+		EA9C882C1D7434E800458DB9 /* LKColorConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKColorConst.h; sourceTree = "<group>"; };
+		EA9C882D1D74366E00458DB9 /* LKScreenConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKScreenConst.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1830846A1D73CB9900EADE9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		183084641D73CB9900EADE9C = {
+			isa = PBXGroup;
+			children = (
+				1830846F1D73CB9900EADE9C /* LemonKit */,
+				1830846E1D73CB9900EADE9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1830846E1D73CB9900EADE9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1830846D1D73CB9900EADE9C /* LemonKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1830846F1D73CB9900EADE9C /* LemonKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AE81D73E5F2000EF601 /* Example */,
+				183084871D73CBDD00EADE9C /* Core */,
+				183084731D73CB9900EADE9C /* AppDelegate.h */,
+				183084741D73CB9900EADE9C /* AppDelegate.m */,
+				1830847C1D73CB9900EADE9C /* Assets.xcassets */,
+				1830847E1D73CB9900EADE9C /* LaunchScreen.storyboard */,
+				183084811D73CB9900EADE9C /* Info.plist */,
+				183084701D73CB9900EADE9C /* Supporting Files */,
+				EA8F0B011D742907000EF601 /* LemonKit.pch */,
+			);
+			path = LemonKit;
+			sourceTree = "<group>";
+		};
+		183084701D73CB9900EADE9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				183084711D73CB9900EADE9C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		183084871D73CBDD00EADE9C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AFE1D741D1D000EF601 /* Const */,
+				183084891D73CC0D00EADE9C /* Categories */,
+				183084881D73CBF200EADE9C /* UI */,
+				EA9C882A1D742B3E00458DB9 /* LemonKit.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		183084881D73CBF200EADE9C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1830848B1D73CC4A00EADE9C /* View */,
+				1830848A1D73CC3F00EADE9C /* Tip */,
+				EA9C882B1D742B5B00458DB9 /* LKUI.h */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		183084891D73CC0D00EADE9C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1830848A1D73CC3F00EADE9C /* Tip */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0ADE1D73DD38000EF601 /* LKNotification */,
+				EA8F0ADD1D73DCB8000EF601 /* LKTip.h */,
+			);
+			path = Tip;
+			sourceTree = "<group>";
+		};
+		1830848B1D73CC4A00EADE9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA8F0ADE1D73DD38000EF601 /* LKNotification */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0ADF1D73DD38000EF601 /* LKNotificationBar.h */,
+				EA8F0AE01D73DD38000EF601 /* LKNotificationBar.m */,
+				EA8F0AE11D73DD38000EF601 /* LKNotificationManager.h */,
+				EA8F0AE21D73DD38000EF601 /* LKNotificationManager.m */,
+				EA8F0AE31D73DD38000EF601 /* UIResponder+LKNotification.h */,
+				EA8F0AE41D73DD38000EF601 /* UIResponder+LKNotification.m */,
+				EA8F0AFA1D73FA95000EF601 /* LKNotification.h */,
+			);
+			path = LKNotification;
+			sourceTree = "<group>";
+		};
+		EA8F0AE81D73E5F2000EF601 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AFB1D74123B000EF601 /* Resource */,
+				EA8F0AE91D73E673000EF601 /* ViewController */,
+				183084791D73CB9900EADE9C /* Main.storyboard */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		EA8F0AE91D73E673000EF601 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AF41D73F2BA000EF601 /* tips */,
+				EA8F0AF31D73F2A5000EF601 /* customViews */,
+				EA8F0AEA1D73E790000EF601 /* MainViewController.h */,
+				EA8F0AEB1D73E790000EF601 /* MainViewController.m */,
+				EA8F0AED1D73E90E000EF601 /* CustomViewsViewController.h */,
+				EA8F0AEE1D73E90E000EF601 /* CustomViewsViewController.m */,
+				EA8F0AF01D73E91B000EF601 /* TipsViewController.h */,
+				EA8F0AF11D73E91B000EF601 /* TipsViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA8F0AF31D73F2A5000EF601 /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = customViews;
+			sourceTree = "<group>";
+		};
+		EA8F0AF41D73F2BA000EF601 /* tips */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AF51D73F330000EF601 /* LKNotificationViewController.h */,
+				EA8F0AF61D73F330000EF601 /* LKNotificationViewController.m */,
+				EA8F0AF81D73F6EB000EF601 /* Tips.storyboard */,
+			);
+			name = tips;
+			sourceTree = "<group>";
+		};
+		EA8F0AFB1D74123B000EF601 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AFC1D741241000EF601 /* icon.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EA8F0AFE1D741D1D000EF601 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F0AFF1D741D50000EF601 /* LKConst.h */,
+				EA8F0B001D74272D000EF601 /* LKLogConst.h */,
+				EA9C882C1D7434E800458DB9 /* LKColorConst.h */,
+				EA9C882D1D74366E00458DB9 /* LKScreenConst.h */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1830846C1D73CB9900EADE9C /* LemonKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183084841D73CB9900EADE9C /* Build configuration list for PBXNativeTarget "LemonKit" */;
+			buildPhases = (
+				183084691D73CB9900EADE9C /* Sources */,
+				1830846A1D73CB9900EADE9C /* Frameworks */,
+				1830846B1D73CB9900EADE9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LemonKit;
+			productName = LemonKit;
+			productReference = 1830846D1D73CB9900EADE9C /* LemonKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		183084651D73CB9900EADE9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = 1em0nsOft;
+				TargetAttributes = {
+					1830846C1D73CB9900EADE9C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2RD6E8WKY9;
+					};
+				};
+			};
+			buildConfigurationList = 183084681D73CB9900EADE9C /* Build configuration list for PBXProject "LemonKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 183084641D73CB9900EADE9C;
+			productRefGroup = 1830846E1D73CB9900EADE9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1830846C1D73CB9900EADE9C /* LemonKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1830846B1D73CB9900EADE9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183084801D73CB9900EADE9C /* LaunchScreen.storyboard in Resources */,
+				EA8F0AFD1D741241000EF601 /* icon.jpg in Resources */,
+				1830847D1D73CB9900EADE9C /* Assets.xcassets in Resources */,
+				1830847B1D73CB9900EADE9C /* Main.storyboard in Resources */,
+				EA8F0AF91D73F6EB000EF601 /* Tips.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		183084691D73CB9900EADE9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8F0AE61D73DD38000EF601 /* LKNotificationManager.m in Sources */,
+				EA8F0AEC1D73E790000EF601 /* MainViewController.m in Sources */,
+				EA8F0AEF1D73E90E000EF601 /* CustomViewsViewController.m in Sources */,
+				EA8F0AE71D73DD38000EF601 /* UIResponder+LKNotification.m in Sources */,
+				EA8F0AF71D73F330000EF601 /* LKNotificationViewController.m in Sources */,
+				EA8F0AE51D73DD38000EF601 /* LKNotificationBar.m in Sources */,
+				183084751D73CB9900EADE9C /* AppDelegate.m in Sources */,
+				EA8F0AF21D73E91B000EF601 /* TipsViewController.m in Sources */,
+				183084721D73CB9900EADE9C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		183084791D73CB9900EADE9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1830847A1D73CB9900EADE9C /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1830847E1D73CB9900EADE9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1830847F1D73CB9900EADE9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		183084821D73CB9900EADE9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		183084831D73CB9900EADE9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		183084851D73CB9900EADE9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
+				INFOPLIST_FILE = LemonKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LemonKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		183084861D73CB9900EADE9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
+				INFOPLIST_FILE = LemonKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LemonKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		183084681D73CB9900EADE9C /* Build configuration list for PBXProject "LemonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183084821D73CB9900EADE9C /* Debug */,
+				183084831D73CB9900EADE9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183084841D73CB9900EADE9C /* Build configuration list for PBXNativeTarget "LemonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183084851D73CB9900EADE9C /* Debug */,
+				183084861D73CB9900EADE9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 183084651D73CB9900EADE9C /* Project object */;
+}

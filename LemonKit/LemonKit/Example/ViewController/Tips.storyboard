@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-rN-Vx3">
-                                <rect key="frame" x="216" y="28" width="169" height="30"/>
+                                <rect key="frame" x="216" y="104" width="169" height="30"/>
                                 <state key="normal" title="show a basic notification"/>
                                 <connections>
                                     <action selector="showBasicNotification:" destination="pvy-8Q-ccI" eventType="touchUpInside" id="y4V-x7-xYs"/>
@@ -28,7 +28,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SGa-rN-Vx3" firstAttribute="centerX" secondItem="xQY-GJ-wGD" secondAttribute="centerX" id="O3K-nh-bDy"/>
-                            <constraint firstItem="SGa-rN-Vx3" firstAttribute="top" secondItem="gf3-8M-vsv" secondAttribute="bottom" constant="8" id="s9A-8B-6K4"/>
+                            <constraint firstItem="SGa-rN-Vx3" firstAttribute="top" secondItem="gf3-8M-vsv" secondAttribute="bottom" constant="84" id="sYP-zR-vU1"/>
                         </constraints>
                     </view>
                 </viewController>

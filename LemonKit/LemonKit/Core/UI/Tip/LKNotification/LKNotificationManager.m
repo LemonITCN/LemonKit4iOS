@@ -22,12 +22,19 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.default_style = LK_NOTIFICATION_BAR_STYLE_LIGHT;
+        self.default_alpha = 0.95;
     }
     return self;
 }
 
 - (LKNotificationBar *)createWithTitle: (NSString *)title content: (NSString *)content icon: (UIImage *)icon{
     LKNotificationBar *notificationBar = [[LKNotificationBar alloc] initWithTitle: title content: content icon: icon style: self.default_style];
+    [notificationBar setBarAlpha: self.default_alpha];
+    return notificationBar;
+}
+
+- (LKNotificationBar *)createWithTitle: (NSString *)title content: (NSString *)content{
+    LKNotificationBar *notificationBar = [[LKNotificationBar alloc] initWithTitle: title content: content icon: _default_icon style: self.default_style];
     [notificationBar setBarAlpha: self.default_alpha];
     return notificationBar;
 }

@@ -16,18 +16,19 @@ typedef enum{
     LK_NOTIFICATION_BAR_STYLE_DARK
 } LKNotificationBarStyle;
 
-@protocol LKNotificationActionDelegate <NSObject>
+@class LKNotificationBar;
+
+@protocol LKNotificationDelegate <NSObject>
 
 /**
  *  @author 1em0nsOft LiuRi
- *  @date 2016-08-29 11:08:32
+ *  @date 2016-08-30 10:08:25
  *
- *  @brief 通知栏Action被点按事件代理
+ *  @brief 导航栏被触摸相应事件
  *
- *  @param actionIndex  action的索引
- *  @param actionTtitle action的标题
+ *  @param navigationBar 当前导航栏对象
  */
-- (void)onActionTouchUpInside: (NSInteger)actionIndex actionTitle: (NSString *)actionTtitle;
+- (void)onNavigationBarTouchUpInside: (LKNotificationBar *)navigationBar;
 
 @end
 
@@ -37,15 +38,22 @@ typedef enum{
  *
  *  @brief 通知控件，通常该View不需要手动实例化
  */
-@interface LKNotificationBar : UIView
+@interface LKNotificationBar : UIControl
 
 /// @brief 当前的通知栏是否处于显示状态
 @property(readonly) BOOL isShowing;
-/// @brief 动作标题数组
-@property(atomic , strong) NSMutableArray<NSString *> *actionTitleArray;
 /// @brief 容器控件
 @property UIView *containerView;
-
+/// @brief 代理函数
+@property NSObject<LKNotificationDelegate> *delegate;
+/// @brief 通知栏的标题
+@property(nonatomic) NSString *title;
+/// @brief 通知栏的内容
+@property(nonatomic) NSString *content;
+/// @brief 通知栏的图标
+@property(nonatomic) UIImage *icon;
+/// @brief 自动关闭的时间
+@property float autoCloseTime;
 
 /**
  *  @author 1em0nsOft LiuRi

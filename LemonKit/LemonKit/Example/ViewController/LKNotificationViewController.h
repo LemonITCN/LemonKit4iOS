@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LemonKit.h"
 
-@interface LKNotificationViewController : UIViewController
+@interface LKNotificationViewController : UIViewController <LKNotificationDelegate>
 
 - (IBAction)showBasicNotification:(UIButton *)sender;
 

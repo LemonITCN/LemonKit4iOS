@@ -15,8 +15,8 @@
 }
 
 - (void)viewDidLoad{
-    self->_titleArray = @[@"LKNotification"];
-    self->_viewControllerIDArray = @[@"LKNotificationViewController"];
+    self->_titleArray = @[@"LKNotification" , @"LKBubble" , @"LKActionSheet"];
+    self->_viewControllerIDArray = @[@"LKNotificationViewController" , @"LKBubbleViewController" , @"LKActionSheetViewController"];
     self->_tipStoryBoard = [UIStoryboard storyboardWithName: @"Tips" bundle: nil];
 }
 

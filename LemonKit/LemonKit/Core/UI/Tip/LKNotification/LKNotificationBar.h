@@ -42,8 +42,6 @@ typedef enum{
 
 /// @brief 当前的通知栏是否处于显示状态
 @property(readonly) BOOL isShowing;
-/// @brief 容器控件
-@property UIView *containerView;
 /// @brief 代理函数
 @property NSObject<LKNotificationDelegate> *delegate;
 /// @brief 通知栏的标题

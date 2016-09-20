@@ -13,7 +13,7 @@
     UIImageView *_iconImageView;// 图标
     UILabel *_titleLabel;// 标题
     UILabel *_contentLabel;// 内容
-    NSString *_id;
+    NSString *_id;// 通知栏的ID，用于存取通知栏的高度
     UIView *_bottomLine;// 底部的边框线控件
 }
 
@@ -27,7 +27,7 @@ static NSMutableDictionary<NSString *, NSNumber *> *_navigationHeightDic;// 通�
             _navigationWindow.windowLevel = UIWindowLevelStatusBar;// 覆盖状态栏
             _navigationWindow.backgroundColor = [UIColor clearColor];
             [_navigationWindow makeKeyAndVisible];
-            _navigationWindow.frame = CGRectMake(0, 0, self.frame.size.width,  0);//初始无大小
+            _navigationWindow.frame = CGRectMake(0, 0, self.frame.size.width,  0);// 初始无大小
             _navigationWindow.userInteractionEnabled = YES;
             
             _navigationHeightDic = [[NSMutableDictionary alloc] init];
@@ -59,7 +59,7 @@ static NSMutableDictionary<NSString *, NSNumber *> *_navigationHeightDic;// 通�
         [self->_contentLabel setNumberOfLines: 0];
         
         self->_bottomLine = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.frame.size.width, 1)];
-        self->_bottomLine.backgroundColor = LKUIColorMake(230, 230, 230, 0.3);
+        self->_bottomLine.backgroundColor = [UIColor colorWithRed: 230 / 255.0 green:230 /255.0 blue: 230 /255.0 alpha:0.3];
         
         [self addSubview: self->_containerEffectView];
         [self addSubview: self->_iconImageView];

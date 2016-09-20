@@ -18,8 +18,6 @@
  */
 @interface LKNotificationManager : NSObject
 
-/// @brief 通知栏对象堆栈
-@property (atomic , strong) NSMutableArray<LKNotificationBar *> *barStack;
 /// @brief 默认的通知栏主题
 @property LKNotificationBarStyle default_style;
 /// @brief 默认的通知栏透明度

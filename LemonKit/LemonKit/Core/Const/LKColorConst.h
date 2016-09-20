@@ -10,7 +10,8 @@
 #define LKColorConst_h
 
 /**
- *  @author 1em0nsOft LiuRi, 2016-08-29 17:08:21
+ *  @author 1em0nsOft LiuRi
+ *  @date 2016-08-29 17:08:21
  *
  *  @brief 快速的创建颜色对象UIColor
  *

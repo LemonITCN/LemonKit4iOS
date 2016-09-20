@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--LKNotification-->
@@ -14,27 +15,95 @@
                         <viewControllerLayoutGuide type="bottom" id="EGy-xp-XN3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xQY-GJ-wGD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-rN-Vx3">
-                                <rect key="frame" x="216" y="104" width="169" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-rN-Vx3">
+                                <frame key="frameInset" minX="103" minY="105" width="169" height="30"/>
                                 <state key="normal" title="show a basic notification"/>
                                 <connections>
                                     <action selector="showBasicNotification:" destination="pvy-8Q-ccI" eventType="touchUpInside" id="y4V-x7-xYs"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SGa-rN-Vx3" firstAttribute="centerX" secondItem="xQY-GJ-wGD" secondAttribute="centerX" id="O3K-nh-bDy"/>
-                            <constraint firstItem="SGa-rN-Vx3" firstAttribute="top" secondItem="gf3-8M-vsv" secondAttribute="bottom" constant="84" id="sYP-zR-vU1"/>
+                            <constraint firstItem="SGa-rN-Vx3" firstAttribute="top" secondItem="gf3-8M-vsv" secondAttribute="bottom" constant="84" id="a1K-qh-Lxl"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVg-s5-4Yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="-227"/>
+            <point key="canvasLocation" x="-326" y="-284"/>
+        </scene>
+        <!--LKBubble-->
+        <scene sceneID="tBx-lY-VDi">
+            <objects>
+                <viewController storyboardIdentifier="LKBubbleViewController" title="LKBubble" id="sXh-NP-13f" customClass="LKBubbleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NJI-DY-nl8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Soi-Df-ffq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="itz-e5-8tq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni8-aG-Oo4">
+                                <state key="normal" title="show success bubble!"/>
+                                <connections>
+                                    <action selector="showSuccessBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="3fO-eU-3Cv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ni8-aG-Oo4" firstAttribute="top" secondItem="NJI-DY-nl8" secondAttribute="bottom" constant="8" id="JVy-Si-VQE"/>
+                            <constraint firstItem="Ni8-aG-Oo4" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="QZd-Kk-YIT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NE-3s-1rJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="-285"/>
+        </scene>
+        <!--LKActionSheet-->
+        <scene sceneID="uAh-VM-Jct">
+            <objects>
+                <viewController storyboardIdentifier="LKActionSheetViewController" title="LKActionSheet" id="V0Y-Ur-6LD" customClass="LKActionSheetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F6D-LI-gVv"/>
+                        <viewControllerLayoutGuide type="bottom" id="VE9-0X-FZt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LDE-0O-ElX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bl3-cF-Oix">
+                                <state key="normal" title="show a basic LKActionSheet!"/>
+                                <connections>
+                                    <action selector="showBasicActionSheet:" destination="V0Y-Ur-6LD" eventType="touchUpInside" id="NK6-js-gSn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-ri-P4f">
+                                <state key="normal" title="show a picker actionSheet"/>
+                                <connections>
+                                    <action selector="showPickerActionSheet:" destination="V0Y-Ur-6LD" eventType="touchUpInside" id="sAz-1y-hGY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bl3-cF-Oix" firstAttribute="centerX" secondItem="LDE-0O-ElX" secondAttribute="centerX" id="0iS-He-pLS"/>
+                            <constraint firstItem="Bl3-cF-Oix" firstAttribute="top" secondItem="F6D-LI-gVv" secondAttribute="bottom" constant="8" id="Jbp-6c-qhe"/>
+                            <constraint firstItem="KBY-ri-P4f" firstAttribute="centerX" secondItem="LDE-0O-ElX" secondAttribute="centerX" id="L7C-dp-A4Z"/>
+                            <constraint firstItem="KBY-ri-P4f" firstAttribute="top" secondItem="Bl3-cF-Oix" secondAttribute="bottom" constant="19" id="uim-yU-FCv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1b-84-mMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122" y="-285"/>
         </scene>
     </scenes>
 </document>

@@ -10,5 +10,8 @@
 
 @implementation CustomViewsViewController
 
+- (void)viewDidLoad{
+    NSLog(@"LOGD");    
+}
 
 @end

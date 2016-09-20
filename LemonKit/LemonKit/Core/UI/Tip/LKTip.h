@@ -12,5 +12,6 @@
 // import LKNotification
 
 #import "LKNotification.h"
+#import "LKBubble.h"
 
 #endif /* LKTip_h */

@@ -12,9 +12,11 @@
 		1830847B1D73CB9900EADE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183084791D73CB9900EADE9C /* Main.storyboard */; };
 		1830847D1D73CB9900EADE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1830847C1D73CB9900EADE9C /* Assets.xcassets */; };
 		183084801D73CB9900EADE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830847E1D73CB9900EADE9C /* LaunchScreen.storyboard */; };
+		EA0277381D91248100684A63 /* LKActionLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0277371D91248100684A63 /* LKActionLineView.m */; };
 		EA0CB50B1D750E9B00EC6E35 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA0CB50A1D750E9B00EC6E35 /* icon.png */; };
 		EA0CB50E1D75187500EC6E35 /* NSString+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CB50D1D75187500EC6E35 /* NSString+LK.m */; };
 		EA0CB5241D755B6B00EC6E35 /* LKBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CB5231D755B6B00EC6E35 /* LKBubbleView.m */; };
+		EA0CB5271D7578A100EC6E35 /* UIResponder+LKBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CB5261D7578A100EC6E35 /* UIResponder+LKBubble.m */; };
 		EA8F0AE51D73DD38000EF601 /* LKNotificationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE01D73DD38000EF601 /* LKNotificationBar.m */; };
 		EA8F0AE61D73DD38000EF601 /* LKNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE21D73DD38000EF601 /* LKNotificationManager.m */; };
 		EA8F0AE71D73DD38000EF601 /* UIResponder+LKNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE41D73DD38000EF601 /* UIResponder+LKNotification.m */; };
@@ -23,6 +25,11 @@
 		EA8F0AF21D73E91B000EF601 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AF11D73E91B000EF601 /* TipsViewController.m */; };
 		EA8F0AF71D73F330000EF601 /* LKNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AF61D73F330000EF601 /* LKNotificationViewController.m */; };
 		EA8F0AF91D73F6EB000EF601 /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8F0AF81D73F6EB000EF601 /* Tips.storyboard */; };
+		EAA060241D814C56002D4089 /* LKBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA060231D814C56002D4089 /* LKBubbleViewController.m */; };
+		EAB266241D910EC1002FA679 /* LKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB266231D910EC1002FA679 /* LKActionSheetViewController.m */; };
+		EAB9B4A51D86A33A0019DAB0 /* LKBubbleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9B4A41D86A33A0019DAB0 /* LKBubbleInfo.m */; };
+		EAEA9E5E1D90F892002CB0B7 /* LKActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEA9E5D1D90F892002CB0B7 /* LKActionSheetView.m */; };
+		EAEA9E611D90F97E002CB0B7 /* LKActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEA9E601D90F97E002CB0B7 /* LKActionItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +41,17 @@
 		1830847C1D73CB9900EADE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1830847F1D73CB9900EADE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		183084811D73CB9900EADE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA0277361D91248100684A63 /* LKActionLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKActionLineView.h; sourceTree = "<group>"; };
+		EA0277371D91248100684A63 /* LKActionLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKActionLineView.m; sourceTree = "<group>"; };
 		EA0CB50A1D750E9B00EC6E35 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		EA0CB50C1D75187500EC6E35 /* NSString+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LK.h"; sourceTree = "<group>"; };
 		EA0CB50D1D75187500EC6E35 /* NSString+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LK.m"; sourceTree = "<group>"; };
 		EA0CB5211D755AB600EC6E35 /* LKBubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBubble.h; sourceTree = "<group>"; };
 		EA0CB5221D755B6B00EC6E35 /* LKBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBubbleView.h; sourceTree = "<group>"; };
 		EA0CB5231D755B6B00EC6E35 /* LKBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBubbleView.m; sourceTree = "<group>"; };
+		EA0CB5251D7578A100EC6E35 /* UIResponder+LKBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+LKBubble.h"; sourceTree = "<group>"; };
+		EA0CB5261D7578A100EC6E35 /* UIResponder+LKBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+LKBubble.m"; sourceTree = "<group>"; };
+		EA7DFCD51D91362A00F7EE56 /* LKActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKActionSheet.h; sourceTree = "<group>"; };
 		EA8F0ADD1D73DCB8000EF601 /* LKTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTip.h; sourceTree = "<group>"; };
 		EA8F0ADF1D73DD38000EF601 /* LKNotificationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNotificationBar.h; sourceTree = "<group>"; };
 		EA8F0AE01D73DD38000EF601 /* LKNotificationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNotificationBar.m; sourceTree = "<group>"; };
@@ -64,6 +76,16 @@
 		EA9C882B1D742B5B00458DB9 /* LKUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKUI.h; sourceTree = "<group>"; };
 		EA9C882C1D7434E800458DB9 /* LKColorConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKColorConst.h; sourceTree = "<group>"; };
 		EA9C882D1D74366E00458DB9 /* LKScreenConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKScreenConst.h; sourceTree = "<group>"; };
+		EAA060221D814C56002D4089 /* LKBubbleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBubbleViewController.h; sourceTree = "<group>"; };
+		EAA060231D814C56002D4089 /* LKBubbleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBubbleViewController.m; sourceTree = "<group>"; };
+		EAB266221D910EC1002FA679 /* LKActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKActionSheetViewController.h; sourceTree = "<group>"; };
+		EAB266231D910EC1002FA679 /* LKActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKActionSheetViewController.m; sourceTree = "<group>"; };
+		EAB9B4A31D86A33A0019DAB0 /* LKBubbleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBubbleInfo.h; sourceTree = "<group>"; };
+		EAB9B4A41D86A33A0019DAB0 /* LKBubbleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBubbleInfo.m; sourceTree = "<group>"; };
+		EAEA9E5C1D90F892002CB0B7 /* LKActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKActionSheetView.h; sourceTree = "<group>"; };
+		EAEA9E5D1D90F892002CB0B7 /* LKActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKActionSheetView.m; sourceTree = "<group>"; };
+		EAEA9E5F1D90F97E002CB0B7 /* LKActionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKActionItem.h; sourceTree = "<group>"; };
+		EAEA9E601D90F97E002CB0B7 /* LKActionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKActionItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +172,7 @@
 		1830848A1D73CC3F00EADE9C /* Tip */ = {
 			isa = PBXGroup;
 			children = (
+				EAEA9E5B1D90F858002CB0B7 /* LKActionSheet */,
 				EA0CB5201D755AAA00EC6E35 /* LKBubble */,
 				EA8F0ADE1D73DD38000EF601 /* LKNotification */,
 				EA8F0ADD1D73DCB8000EF601 /* LKTip.h */,
@@ -170,6 +193,10 @@
 				EA0CB5211D755AB600EC6E35 /* LKBubble.h */,
 				EA0CB5221D755B6B00EC6E35 /* LKBubbleView.h */,
 				EA0CB5231D755B6B00EC6E35 /* LKBubbleView.m */,
+				EA0CB5251D7578A100EC6E35 /* UIResponder+LKBubble.h */,
+				EA0CB5261D7578A100EC6E35 /* UIResponder+LKBubble.m */,
+				EAB9B4A31D86A33A0019DAB0 /* LKBubbleInfo.h */,
+				EAB9B4A41D86A33A0019DAB0 /* LKBubbleInfo.m */,
 			);
 			path = LKBubble;
 			sourceTree = "<group>";
@@ -225,7 +252,11 @@
 			children = (
 				EA8F0AF51D73F330000EF601 /* LKNotificationViewController.h */,
 				EA8F0AF61D73F330000EF601 /* LKNotificationViewController.m */,
+				EAA060221D814C56002D4089 /* LKBubbleViewController.h */,
+				EAA060231D814C56002D4089 /* LKBubbleViewController.m */,
 				EA8F0AF81D73F6EB000EF601 /* Tips.storyboard */,
+				EAB266221D910EC1002FA679 /* LKActionSheetViewController.h */,
+				EAB266231D910EC1002FA679 /* LKActionSheetViewController.m */,
 			);
 			name = tips;
 			sourceTree = "<group>";
@@ -247,6 +278,20 @@
 				EA9C882D1D74366E00458DB9 /* LKScreenConst.h */,
 			);
 			path = Const;
+			sourceTree = "<group>";
+		};
+		EAEA9E5B1D90F858002CB0B7 /* LKActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EAEA9E5C1D90F892002CB0B7 /* LKActionSheetView.h */,
+				EAEA9E5D1D90F892002CB0B7 /* LKActionSheetView.m */,
+				EAEA9E5F1D90F97E002CB0B7 /* LKActionItem.h */,
+				EAEA9E601D90F97E002CB0B7 /* LKActionItem.m */,
+				EA0277361D91248100684A63 /* LKActionLineView.h */,
+				EA0277371D91248100684A63 /* LKActionLineView.m */,
+				EA7DFCD51D91362A00F7EE56 /* LKActionSheet.h */,
+			);
+			path = LKActionSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,15 +369,22 @@
 			files = (
 				EA8F0AE61D73DD38000EF601 /* LKNotificationManager.m in Sources */,
 				EA0CB5241D755B6B00EC6E35 /* LKBubbleView.m in Sources */,
+				EAB9B4A51D86A33A0019DAB0 /* LKBubbleInfo.m in Sources */,
 				EA8F0AEC1D73E790000EF601 /* MainViewController.m in Sources */,
+				EA0CB5271D7578A100EC6E35 /* UIResponder+LKBubble.m in Sources */,
+				EAEA9E5E1D90F892002CB0B7 /* LKActionSheetView.m in Sources */,
 				EA8F0AEF1D73E90E000EF601 /* CustomViewsViewController.m in Sources */,
+				EAA060241D814C56002D4089 /* LKBubbleViewController.m in Sources */,
 				EA8F0AE71D73DD38000EF601 /* UIResponder+LKNotification.m in Sources */,
 				EA0CB50E1D75187500EC6E35 /* NSString+LK.m in Sources */,
 				EA8F0AF71D73F330000EF601 /* LKNotificationViewController.m in Sources */,
 				EA8F0AE51D73DD38000EF601 /* LKNotificationBar.m in Sources */,
 				183084751D73CB9900EADE9C /* AppDelegate.m in Sources */,
+				EAEA9E611D90F97E002CB0B7 /* LKActionItem.m in Sources */,
 				EA8F0AF21D73E91B000EF601 /* TipsViewController.m in Sources */,
+				EAB266241D910EC1002FA679 /* LKActionSheetViewController.m in Sources */,
 				183084721D73CB9900EADE9C /* main.m in Sources */,
+				EA0277381D91248100684A63 /* LKActionLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +504,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
 				INFOPLIST_FILE = LemonKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LemonKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
 				INFOPLIST_FILE = LemonKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LemonKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

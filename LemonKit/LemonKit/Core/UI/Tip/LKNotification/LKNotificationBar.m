@@ -15,18 +15,22 @@
     UILabel *_contentLabel;// 内容
     NSString *_id;// 通知栏的ID，用于存取通知栏的高度
     UIView *_bottomLine;// 底部的边框线控件
+    UIWindow *_defaultWindow;// 默认的UIWindow，当通知的UIWindow使用完毕之后需要重新将原有的默认UIWindow设置makeKey
 }
 
 static UIWindow *_navigationWindow;// 通知栏的容器window
 static NSMutableDictionary<NSString *, NSNumber *> *_navigationHeightDic;// 通知高度存储字典，用于设置window高度
 
 - (instancetype)initWithTitle: (NSString *)title content: (NSString *)content icon: (UIImage *)icon style: (LKNotificationBarStyle)style{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _defaultWindow = [UIApplication sharedApplication].keyWindow;
+    });
     if (self = [super initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)]) {
         if (!_navigationWindow) {
             _navigationWindow = [[UIWindow alloc] init];
             _navigationWindow.windowLevel = UIWindowLevelStatusBar;// 覆盖状态栏
             _navigationWindow.backgroundColor = [UIColor clearColor];
-            [_navigationWindow makeKeyAndVisible];
             _navigationWindow.frame = CGRectMake(0, 0, self.frame.size.width,  0);// 初始无大小
             _navigationWindow.userInteractionEnabled = YES;
             
@@ -106,6 +110,9 @@ static NSMutableDictionary<NSString *, NSNumber *> *_navigationHeightDic;// 通�
 }
 
 - (void)showWithAnimated:(BOOL)animated{
+    if (!self->_isShowing) {
+        [_navigationWindow makeKeyAndVisible];// 把navigation用的window设置为keyWindow
+    }
     self->_isShowing = YES;
     _navigationWindow.frame = self.bounds;// 设置通知栏window的大小
     [_navigationHeightDic setObject: [NSNumber numberWithFloat: self.frame.size.height] forKey: self->_id];
@@ -144,6 +151,9 @@ static NSMutableDictionary<NSString *, NSNumber *> *_navigationHeightDic;// 通�
     } completion:^(BOOL finished) {
         self->_isShowing = NO;
         [self removeFromSuperview];
+        if (!self->_isShowing){
+            [self->_defaultWindow makeKeyWindow];// 重新恢复默认的UIWindow为keyWindow
+        }
     }];
 }
 

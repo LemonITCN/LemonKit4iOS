@@ -55,8 +55,20 @@
     return [self initWithTitle: title height: DEFAULT_HEIGHT];
 }
 
+- (instancetype)initWithTitle: (NSString *)title textColor: (UIColor *)textColor onTouchBlock: (LK_ACION_SHEET_ON_ITEM_TOUCH)onTouchBlock{
+    return [self initWithTitle: title height: DEFAULT_HEIGHT textColor: textColor onTouchEvent: onTouchBlock];
+}
+
 - (instancetype)initWithTitle: (NSString *)title onTouchBlock: (LK_ACION_SHEET_ON_ITEM_TOUCH)onTouchBlock{
     return [self initWithTitle: title height: DEFAULT_HEIGHT textColor: [UIColor blackColor] onTouchEvent: onTouchBlock];
+}
+
+- (instancetype)initWithCustomView: (UIView *)customView height: (CGFloat)height{
+    if (self = [super init]) {
+        self.contentView = customView;
+        self.height = height;
+    }
+    return self;
 }
 
 - (instancetype)initWithCustomView: (UIView *)customView height: (CGFloat)height onTouchBlock: (LK_ACION_SHEET_ON_ITEM_TOUCH)onTouchBlock{

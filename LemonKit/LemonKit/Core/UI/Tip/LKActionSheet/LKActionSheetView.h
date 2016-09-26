@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "LKActionLineView.h"
 
+
+/**
+ ActionSheet选择控件
+ */
 @interface LKActionSheetView : NSObject
 
 @property CGFloat groupHeightSpace;
@@ -16,22 +20,64 @@
 @property UILabel *headView;
 @property(nonatomic) NSString *title;
 
+
+/**
+ 获取默认的选择控件 - 单例方法
+
+ @return 默认的选择控件
+ */
 + (LKActionSheetView *)defaultActionSheetView;
-/// @brief 显示ActionSheet
+
+/**
+ 显示ActionSheet
+ */
 - (void)show;
-/// @brief 隐藏ActionSheet
+
+/**
+ 隐藏ActionSheet
+ */
 - (void)hide;
-/// @brief 添加一个事件组
+
+/**
+ 添加一个事件组
+ */
 - (void)addActionGroup;
-/// @brief 移除一个指定索引的事件组
+
+/**
+ 移除一个指定索引的事件组
+
+ @param index 移除指定的事件组
+ */
 - (void)removeActionGroupAtIndex: (NSInteger)index;
-/// @breif 移除所有的组并新建一个空的组
+
+/**
+ 移除所有的组并新建一个空的组
+ */
 - (void)clear;
-/// @brief 在指定的事件组中追加一个事件
+
+/**
+ 在指定的事件组中追加一个事件
+
+ @param action 要追加的事件对象
+ @param index  要插入的事件组的位置
+ */
 - (void)addAction: (LKActionItem *)action groupIndex: (NSInteger)index;
-/// @brief 在指定的事件组中的指定位置插入一个事件
+
+/**
+ 在指定的事件组中的指定位置插入一个事件
+
+ @param action   要插入的事件对象
+ @param index    要把事件插入的事件组索引
+ @param location 插入的事件组的位置
+ */
 - (void)insertAction: (LKActionItem *)action groupIndex: (NSInteger)index location: (NSInteger)location;
-/// @brief 移除指定事件组的指定位置的事件
+
+/**
+ 移除指定事件组的指定位置的事件
+
+ @param index    移除事件的事件组的索引下标
+ @param location 要移除的事件位置下标
+ */
 - (void)removeActionAtIndex: (NSInteger)index location: (NSInteger)location;
 
 @end

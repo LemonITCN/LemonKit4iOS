@@ -29,6 +29,7 @@ static UIWindow *_defaultActionSheetWindow;
         }
         [self clear];
         self.groupHeightSpace = 7;
+        
         self->_maskView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, LKScreen.width, LKScreen.height)];
         self->_maskView.backgroundColor = [UIColor colorWithRed: 0  green: 0  blue: 0  alpha: 0.4];
         self->_maskView.alpha = 0;
@@ -75,7 +76,7 @@ static LKActionSheetView *defaultActionSheetView;
         [self initHeadView];
         [self initBodyView];
         [UIView animateWithDuration: 0.5 delay: 0 options: UIViewAnimationOptionCurveEaseInOut animations:^{
-            [UIApplication sharedApplication].keyWindow.transform = CGAffineTransformMakeScale(0.9, 0.9);
+            [UIApplication sharedApplication].keyWindow.transform = CGAffineTransformMakeScale(0.8, 0.8);
             [_defaultActionSheetWindow makeKeyAndVisible];
             self->_maskView.alpha = 1;
             self->_contentView.frame = CGRectMake(0, LKScreen.height - [self calViewHeight] - self.headViewHeight, LKScreen.width, [self calViewHeight]);

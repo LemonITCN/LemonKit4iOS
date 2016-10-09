@@ -223,8 +223,6 @@
         [leftLayer addAnimation: strokeStartAnimation forKey: @"strokeStart"];
         [rightLayer addAnimation: animation forKey: @"strokeEnd"];// 添加俩动画
         [rightLayer addAnimation: strokeStartAnimation forKey: @"strokeStart"];
-        
-        
     };
     info.title = @"发生了一个错误";
     info.iconColor = [UIColor whiteColor];

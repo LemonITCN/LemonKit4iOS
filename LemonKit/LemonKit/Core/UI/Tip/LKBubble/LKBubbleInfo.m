@@ -39,6 +39,9 @@
         
         self->_screenWidth = [UIScreen mainScreen].bounds.size.width;
         self->_screenHeight = [UIScreen mainScreen].bounds.size.height;
+        
+        // 生成随机的key
+        self->_key = arc4random();
     }
     return self;
 }

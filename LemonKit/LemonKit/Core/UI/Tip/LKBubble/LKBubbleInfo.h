@@ -79,7 +79,8 @@ typedef enum{
 @property UIColor *titleColor;
 /// @brief 标题字体大小
 @property CGFloat titleFontSize;
-
+/// @breif key，随机数，用于标志一个info的唯一性，关闭时候会通过这个验证
+@property(readonly) CGFloat key;
 
 - (CGRect)calBubbleViewFrame;
 - (CGRect)calIconViewFrame;

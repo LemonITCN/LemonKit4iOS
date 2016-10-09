@@ -20,9 +20,7 @@
 }
 
 - (IBAction)showSuccessBubble:(UIButton *)sender {
-    
-    [self showRightWithTitle: @"添加成功"];
-    
+    [self showRightWithTitle: @"添加成功" autoCloseTime: 2];
 }
 
 - (IBAction)showProgressBubble:(UIButton *)sender {
@@ -30,7 +28,7 @@
 }
 
 - (IBAction)showErrorBubble:(UIButton *)sender {
-    [self showErrorWithTitle: @"下载失败"];
+    [self showErrorWithTitle: @"下载失败" autoCloseTime: 2];
 }
 
 @end

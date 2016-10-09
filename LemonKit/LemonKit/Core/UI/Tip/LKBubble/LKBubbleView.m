@@ -27,6 +27,8 @@
     NSTimer *_currentTimer;
     /// @brief 蒙版view
     UIView *_maskView;
+    
+    CGFloat closeKey;// 关闭验证key，用来做关闭时候的延迟验证，当设置自动关闭之后，若在关闭之前出发了显示其他info的bubble，通过修改这个值保证不关闭其他样式的infoBubble
 }
 
 static LKBubbleView *defaultBubbleView;
@@ -71,12 +73,12 @@ static LKBubbleView *defaultBubbleView;
  */
 - (void)showWithInfo: (LKBubbleInfo *)info{
     [[UIApplication sharedApplication].keyWindow addSubview: self];
+    self->_currentInfo = info;
     
     // 弹簧动画改变外观
     [UIView animateWithDuration: 0.4 delay:0 usingSpringWithDamping: 0.5 initialSpringVelocity:0.5 options: UIViewAnimationOptionCurveEaseInOut animations:^{
         self.transform = CGAffineTransformMakeScale(1, 1);
         self.alpha = 1;
-        self->_currentInfo = info;
         if (self->_currentDrawLayer) {
             [self->_currentDrawLayer removeFromSuperlayer];
         }
@@ -145,6 +147,7 @@ static LKBubbleView *defaultBubbleView;
 - (void)showWithInfo: (LKBubbleInfo *)info autoCloseTime: (CGFloat)time{
     [self showWithInfo: info];
     [self performSelector: @selector(hide) withObject: self afterDelay: time + 0.2];
+    self->closeKey = self->_currentInfo.key;// 保存当前要关闭的key，防止关闭不需要关闭的bubble
 }
 
 /**
@@ -169,14 +172,16 @@ static LKBubbleView *defaultBubbleView;
  *  @brief 隐藏当前泡泡控件
  */
 - (void)hide{
-    // 动画缩放，更改透明度使其动画隐藏
-    [UIView animateWithDuration: 0.2 delay: 0 options: UIViewAnimationOptionCurveEaseOut animations:^{
-        self.transform = CGAffineTransformMakeScale(0.5f, 0.5f);
-        self.alpha = 0;
-    } completion:^(BOOL finished) {
-        // 从父层控件中移除
-        [self removeFromSuperview];
-    }];
+    if (self->closeKey == self->_currentInfo.key){// 要关闭的key没有变化，可以关闭
+        // 动画缩放，更改透明度使其动画隐藏
+        [UIView animateWithDuration: 0.2 delay: 0 options: UIViewAnimationOptionCurveEaseOut animations:^{
+            self.transform = CGAffineTransformMakeScale(0.5f, 0.5f);
+            self.alpha = 0;
+        } completion:^(BOOL finished) {
+            // 从父层控件中移除
+            [self removeFromSuperview];
+        }];
+    }
 }
 
 - (void)setProgress:(CGFloat)progress{

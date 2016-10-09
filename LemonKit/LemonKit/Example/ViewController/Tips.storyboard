@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -55,11 +55,29 @@
                                     <action selector="showSuccessBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="3fO-eU-3Cv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-Bw-4Ae">
+                                <frame key="frameInset" minX="109" minY="77" width="157" height="30"/>
+                                <state key="normal" title="show progress bubble!"/>
+                                <connections>
+                                    <action selector="showProgressBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="ua7-m1-Wo2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MS-1z-3QK">
+                                <frame key="frameInset" minX="122" minY="124" width="130" height="30"/>
+                                <state key="normal" title="show error bubble!"/>
+                                <connections>
+                                    <action selector="showErrorBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="aTW-sW-1ge"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mqm-Bw-4Ae" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="GM7-uF-rMQ"/>
                             <constraint firstItem="Ni8-aG-Oo4" firstAttribute="top" secondItem="NJI-DY-nl8" secondAttribute="bottom" constant="8" id="JVy-Si-VQE"/>
+                            <constraint firstItem="2MS-1z-3QK" firstAttribute="top" secondItem="mqm-Bw-4Ae" secondAttribute="bottom" constant="17" id="L7u-Qt-cre"/>
                             <constraint firstItem="Ni8-aG-Oo4" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="QZd-Kk-YIT"/>
+                            <constraint firstItem="mqm-Bw-4Ae" firstAttribute="top" secondItem="Ni8-aG-Oo4" secondAttribute="bottom" constant="18" id="rJ4-SC-xAc"/>
+                            <constraint firstItem="2MS-1z-3QK" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="sA0-Rk-m0r"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -87,9 +105,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-ri-P4f">
                                 <state key="normal" title="show a picker actionSheet"/>
-                                <connections>
-                                    <action selector="showPickerActionSheet:" destination="V0Y-Ur-6LD" eventType="touchUpInside" id="sAz-1y-hGY"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

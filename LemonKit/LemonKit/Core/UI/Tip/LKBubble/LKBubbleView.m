@@ -41,6 +41,8 @@ static LKBubbleView *defaultBubbleView;
 
 - (instancetype)init{
     if (self = [super init]) {
+        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        self.frame = CGRectMake(keyWindow.center.x, keyWindow.center.y, 0, 0);
         self->_infoDic = [[NSMutableDictionary alloc] init];
         
         self.clipsToBounds = YES;
@@ -68,42 +70,55 @@ static LKBubbleView *defaultBubbleView;
  *  @brief 显示指定的信息模型对应的泡泡控件
  */
 - (void)showWithInfo: (LKBubbleInfo *)info{
-    self->_currentInfo = info;
-    if (self->_currentDrawLayer) {
-        [self->_currentDrawLayer removeFromSuperlayer];
-    }
-    self.frame = [info calBubbleViewFrame];
-    self->_iconImageView.frame = [info calIconViewFrame];
-    self->_titleLabel.frame = [info calTitleViewFrame];
-    self->_titleLabel.text = info.title;
-    self->_titleLabel.textColor = info.titleColor;
-    self->_titleLabel.font = [UIFont systemFontOfSize: info.titleFontSize];
-    [self setBackgroundColor: info.backgroundColor];
-    self.layer.cornerRadius = info.cornerRadius;
+    [[UIApplication sharedApplication].keyWindow addSubview: self];
     
+    // 弹簧动画改变外观
+    [UIView animateWithDuration: 0.4 delay:0 usingSpringWithDamping: 0.5 initialSpringVelocity:0.5 options: UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.transform = CGAffineTransformMakeScale(1, 1);
+        self.alpha = 1;
+        self->_currentInfo = info;
+        if (self->_currentDrawLayer) {
+            [self->_currentDrawLayer removeFromSuperlayer];
+        }
+        self.frame = [info calBubbleViewFrame];
+        self->_iconImageView.frame = [info calIconViewFrame];
+        self->_titleLabel.frame = [info calTitleViewFrame];
+        self->_titleLabel.text = info.title;
+        self->_titleLabel.font = [UIFont systemFontOfSize: info.titleFontSize];
+        self.layer.cornerRadius = info.cornerRadius;
+        
+        if (info.iconArray == nil || info.iconArray.count == 0) {
+            // 显示显示自定义动画
+            _currentDrawLayer = [CAShapeLayer layer];
+            _currentDrawLayer.fillColor = [UIColor clearColor].CGColor;
+            _currentDrawLayer.frame = self->_iconImageView.bounds;
+            [self->_iconImageView.layer addSublayer: _currentDrawLayer];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                info.iconAnimation(_currentDrawLayer);
+            });
+        }
+        else if (info.iconArray.count == 1){
+            self->_iconImageView.image = info.iconArray[0];
+        }
+        else{
+            __block int index = 0;
+            self->_currentTimer = [NSTimer scheduledTimerWithTimeInterval: info.frameAnimationTime repeats: YES block:^(NSTimer * _Nonnull timer) {
+                self->_iconImageView.image = info.iconArray[index];
+                index = (index + 1) % info.iconArray.count;
+            }];
+        }
+
+    } completion:^(BOOL finished) {
+        
+    }];
     
-    if (info.iconArray == nil || info.iconArray.count == 0) {
-        // 显示显示自定义动画
-        _currentDrawLayer = [CAShapeLayer layer];
-        _currentDrawLayer.fillColor = [UIColor clearColor].CGColor;
+    [UIView animateWithDuration: 0.4 delay:0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+        self->_titleLabel.textColor = info.titleColor;
+        [self setBackgroundColor: info.backgroundColor];
         _currentDrawLayer.strokeColor = info.iconColor.CGColor;
-        _currentDrawLayer.frame = self->_iconImageView.bounds;
-        [self->_iconImageView.layer addSublayer: _currentDrawLayer];
-        [[UIApplication sharedApplication].keyWindow addSubview: self];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            info.iconAnimation(_currentDrawLayer);
-        });
-    }
-    else if (info.iconArray.count == 1){
-        self->_iconImageView.image = info.iconArray[0];
-    }
-    else{
-        __block int index = 0;
-        self->_currentTimer = [NSTimer scheduledTimerWithTimeInterval: info.frameAnimationTime repeats: YES block:^(NSTimer * _Nonnull timer) {
-            self->_iconImageView.image = info.iconArray[index];
-            index = (index + 1) % info.iconArray.count;
-        }];
-    }
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 /**
@@ -127,8 +142,9 @@ static LKBubbleView *defaultBubbleView;
  *  @param info          样式信息模型
  *  @param autoCloseTime 指定时间后隐藏泡泡控件的秒数
  */
-- (void)showWithInfo: (LKBubbleInfo *)info autoCloseTime: (NSInteger)time{
-    
+- (void)showWithInfo: (LKBubbleInfo *)info autoCloseTime: (CGFloat)time{
+    [self showWithInfo: info];
+    [self performSelector: @selector(hide) withObject: self afterDelay: time + 0.2];
 }
 
 /**
@@ -141,7 +157,9 @@ static LKBubbleView *defaultBubbleView;
  *  @param autoCloseTime 指定时间后隐藏泡泡控件的秒数
  */
 - (void)showWithInfoKey: (NSString *)infoKey autoCloseTime: (NSInteger)time{
-    
+    if ([self->_infoDic.allKeys containsObject: infoKey]){
+        [self showWithInfo: self->_infoDic[infoKey] autoCloseTime: time];
+    }
 }
 
 /**
@@ -151,7 +169,14 @@ static LKBubbleView *defaultBubbleView;
  *  @brief 隐藏当前泡泡控件
  */
 - (void)hide{
-    
+    // 动画缩放，更改透明度使其动画隐藏
+    [UIView animateWithDuration: 0.2 delay: 0 options: UIViewAnimationOptionCurveEaseOut animations:^{
+        self.transform = CGAffineTransformMakeScale(0.5f, 0.5f);
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        // 从父层控件中移除
+        [self removeFromSuperview];
+    }];
 }
 
 - (void)setProgress:(CGFloat)progress{
@@ -162,72 +187,5 @@ static LKBubbleView *defaultBubbleView;
         });
     }
 }
-
-//// 显示泡泡控件
-//- (void)show{
-//    self->_isShowing = YES;
-//    for (CALayer *layer in self->_iconImageView.layer.sublayers){
-//        [layer removeFromSuperlayer];
-//    }
-//    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-//    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-//    self.frame = CGRectMake(screenWidth / 2, screenHeight / 2, 0, 0);
-//    self->_iconImageView.frame = CGRectMake(0, 0, 0, 0);
-//    self->_titleLabel.frame = CGRectMake(bubble_padding, self->_iconImageView.frame.origin.y + self->_iconImageView.frame.size.height + bubble_icon_title_space, bubble_width - bubble_padding * 2, 24);
-//    self->_titleLabel.center = self.bounds.origin;
-//    self.backgroundColor = LKUIColorMake(0, 0, 0, 0);
-//    self.alpha = 0;
-//    
-//    [UIView animateWithDuration: 0.4 delay: 0 usingSpringWithDamping: 0.8 initialSpringVelocity:0.5 options: UIViewAnimationOptionCurveLinear animations:^{
-//        self.frame = CGRectMake((screenWidth - bubble_width) / 2, (screenHeight - bubble_width) / 2, bubble_width, bubble_height);
-//        self->_iconImageView.frame = CGRectMake((bubble_width - bubble_icon_width) / 2, bubble_padding, bubble_icon_width, bubble_icon_width);
-//        self->_titleLabel.frame = CGRectMake(bubble_padding, self->_iconImageView.frame.origin.y + self->_iconImageView.frame.size.height + bubble_icon_title_space, bubble_width - bubble_padding * 2, 24);
-//        self.backgroundColor = LKUIColorMake(0, 0, 0, 0.8);
-//        self.alpha = 1;
-//    } completion:^(BOOL finished) {
-//        
-//        
-//        
-//    }];
-//    
-//    CALayer *drawLayer = [CALayer layer];
-//    drawLayer.frame = _iconImageView.bounds;
-//    [self->_iconImageView.layer addSublayer: drawLayer];
-//    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-//    shapeLayer.fillColor = [UIColor clearColor].CGColor;
-//    shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-//    shapeLayer.lineCap = kCALineCapRound;
-//    shapeLayer.lineWidth = 3;
-//    UIBezierPath *path = [UIBezierPath bezierPath];
-//    [path moveToPoint: CGPointMake(10, 28)];
-//    [path addLineToPoint: CGPointMake(22, 40)];
-//    [path addLineToPoint: CGPointMake(50, 12)];
-//    shapeLayer.path = path.CGPath;
-//    [drawLayer addSublayer: shapeLayer];
-//    
-//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath: @"strokeEnd"];
-//    animation.duration = 0.35;
-//    animation.fromValue = [NSNumber numberWithInt: 0];
-//    animation.toValue = [NSNumber numberWithInt: 1];
-//    [shapeLayer addAnimation: animation forKey: @"ss"];
-//    
-//    [[[UIApplication sharedApplication] keyWindow] addSubview: self];
-//}
-//
-//// 显示泡泡控件并指定的时间后隐藏
-//- (void)showAndWaitInterval: (float)waitInterval{
-//    
-//}
-//
-//// 隐藏当前的泡泡控件
-//- (void)hide{
-//    self->_isShowing = NO;
-//}
-//
-//// 设置泡泡控件的标题
-//- (void)setTitle: (NSString *)title{
-//    self->_titleLabel.text = title;
-//}
-
 
 @end

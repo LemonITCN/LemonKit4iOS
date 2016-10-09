@@ -15,9 +15,22 @@
  */
 @interface LKActionSheetView : NSObject
 
+
+/**
+ 事件组之间的缝隙的高度数值
+ */
 @property CGFloat groupHeightSpace;
+/**
+ 头部控件的高度
+ */
 @property CGFloat headViewHeight;
+/**
+ 头部标题控件
+ */
 @property UILabel *headView;
+/**
+ 顶部显示的标题
+ */
 @property(nonatomic) NSString *title;
 
 

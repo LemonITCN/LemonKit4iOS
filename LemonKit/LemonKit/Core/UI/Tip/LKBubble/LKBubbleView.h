@@ -57,7 +57,7 @@
  *  @param info          样式信息模型
  *  @param autoCloseTime 指定时间后隐藏泡泡控件的秒数
  */
-- (void)showWithInfo: (LKBubbleInfo *)info autoCloseTime: (NSInteger)time;
+- (void)showWithInfo: (LKBubbleInfo *)info autoCloseTime: (CGFloat)time;
 
 /**
  *  @author 1em0nsOft LiuRi

@@ -26,7 +26,7 @@
         self.title = @"LKBubble";
         self.frameAnimationTime = 0.5;
         self.proportionOfIcon = 0.675;
-        self.proportionOfSpace = 0.05;
+        self.proportionOfSpace = 0.1;
         self.proportionOfPadding = CGPointMake(0.1, 0.1);
         self.locationStyle = BUBBLE_LOCATION_STYLE_CENTER;
         self.proportionOfDeviation = 0;

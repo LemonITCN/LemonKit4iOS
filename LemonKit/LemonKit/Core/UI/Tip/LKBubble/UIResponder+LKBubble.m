@@ -63,13 +63,13 @@
         [layer addAnimation: animation forKey: @"strokeEnd"];// 添加俩动画
         [layer addAnimation: strokeStartAnimation forKey: @"strokeStart"];
     };
-//    info.iconColor = [UIColor whiteColor];
     info.title = @"成功";
-    info.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
-    info.iconColor = [UIColor  colorWithRed: 95 / 255.0 green: 191 / 255.0 blue:0 alpha:1];
+    info.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
+    info.iconColor = [UIColor  colorWithRed: 0 / 255.0 green: 205 / 255.0 blue:0 alpha:1];
     info.titleColor = [UIColor blackColor];
     info.layoutStyle = BUBBLE_LAYOUT_STYLE_ICON_LEFT_TITLE_RIGHT;
-    info.bubbleSize = CGSizeMake(200, 80);
+    info.bubbleSize = CGSizeMake(200, 100);
+    
     return info;
 }
 
@@ -132,6 +132,9 @@
         [layer addAnimation: progressLongEndAnimation forKey: @"strokeStart"];
     };
     info.title = @"请稍候...";
+    info.bubbleSize = CGSizeMake(140, 120);
+    info.maskColor = [UIColor colorWithRed: 0.1 green:0.1 blue:0.1 alpha:0.4];
+    info.backgroundColor = [UIColor colorWithRed: 0.1 green:0.1 blue:0.1 alpha:0.8];
     return info;
 }
 
@@ -225,7 +228,11 @@
         [rightLayer addAnimation: strokeStartAnimation forKey: @"strokeStart"];
     };
     info.title = @"发生了一个错误";
-    info.iconColor = [UIColor whiteColor];
+    info.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
+    info.iconColor = [UIColor  colorWithRed: 255 / 255.0 green: 48 / 255.0 blue: 48 / 255.0 alpha:1];
+    info.titleColor = [UIColor blackColor];
+    info.layoutStyle = BUBBLE_LAYOUT_STYLE_ICON_LEFT_TITLE_RIGHT;
+    info.bubbleSize = CGSizeMake(200, 100);
     return info;
 }
 

@@ -54,6 +54,9 @@ static LKBubbleView *defaultBubbleView;
         self->_titleLabel.textAlignment = NSTextAlignmentCenter;
         self->_titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
         [self->_titleLabel setNumberOfLines: 0];
+        // 初始化蒙版控件
+        self->_maskView = [[UIView alloc] initWithFrame: [UIScreen mainScreen].bounds];
+        self->_maskView.hidden = YES;
         
         [self addSubview: self->_iconImageView];
         [self addSubview: self->_titleLabel];
@@ -72,8 +75,10 @@ static LKBubbleView *defaultBubbleView;
  *  @brief 显示指定的信息模型对应的泡泡控件
  */
 - (void)showWithInfo: (LKBubbleInfo *)info{
-    [[UIApplication sharedApplication].keyWindow addSubview: self];
     self->_currentInfo = info;
+    if (info.isShowMaskView)
+        [[UIApplication sharedApplication].keyWindow addSubview: _maskView];
+    [[UIApplication sharedApplication].keyWindow addSubview: self];
     
     // 弹簧动画改变外观
     [UIView animateWithDuration: 0.4 delay:0 usingSpringWithDamping: 0.5 initialSpringVelocity:0.5 options: UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -109,15 +114,25 @@ static LKBubbleView *defaultBubbleView;
                 index = (index + 1) % info.iconArray.count;
             }];
         }
-
+        // maskView
+        if (_currentInfo.isShowMaskView && _maskView.hidden) {
+            // 本次需要显示，但是之前已经隐藏
+            _maskView.alpha = 0;
+            _maskView.hidden = NO;
+        }
+        self->_maskView.alpha = self->_currentInfo.isShowMaskView ? 1 : 0;
     } completion:^(BOOL finished) {
-        
+        if(!_currentInfo.isShowMaskView){
+            _maskView.hidden = YES;
+            [_maskView removeFromSuperview];
+        }
     }];
     
     [UIView animateWithDuration: 0.4 delay:0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
         self->_titleLabel.textColor = info.titleColor;
         [self setBackgroundColor: info.backgroundColor];
         _currentDrawLayer.strokeColor = info.iconColor.CGColor;
+        self->_maskView.backgroundColor = self->_currentInfo.maskColor;
     } completion:^(BOOL finished) {
         
     }];
@@ -176,10 +191,12 @@ static LKBubbleView *defaultBubbleView;
         // 动画缩放，更改透明度使其动画隐藏
         [UIView animateWithDuration: 0.2 delay: 0 options: UIViewAnimationOptionCurveEaseOut animations:^{
             self.transform = CGAffineTransformMakeScale(0.5f, 0.5f);
+            self->_maskView.alpha = 0;
             self.alpha = 0;
         } completion:^(BOOL finished) {
             // 从父层控件中移除
             [self removeFromSuperview];
+            [self->_maskView removeFromSuperview];
         }];
     }
 }

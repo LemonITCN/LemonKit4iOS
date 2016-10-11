@@ -30,8 +30,8 @@
         self.proportionOfPadding = CGPointMake(0.1, 0.1);
         self.locationStyle = BUBBLE_LOCATION_STYLE_CENTER;
         self.proportionOfDeviation = 0;
-        self.isShowMaskView = NO;
-        self.maskColor = [UIColor clearColor];
+        self.isShowMaskView = YES;
+        self.maskColor = [UIColor colorWithRed: 0.1 green: 0.1 blue:0.1 alpha:0.2];
         self.backgroundColor = [UIColor colorWithRed: 0  green: 0 blue: 0 alpha: 0.8];
         self.iconColor = [UIColor whiteColor];
         self.titleColor = [UIColor whiteColor];

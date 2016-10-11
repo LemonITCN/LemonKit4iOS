@@ -105,6 +105,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-ri-P4f">
                                 <state key="normal" title="show a picker actionSheet"/>
+                                <connections>
+                                    <action selector="showPickerActionSheet:" destination="V0Y-Ur-6LD" eventType="touchUpInside" id="aUF-J3-eTE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -50,34 +50,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni8-aG-Oo4">
-                                <state key="normal" title="show success bubble!"/>
+                                <state key="normal" title="显示一个成功的泡泡控件"/>
                                 <connections>
                                     <action selector="showSuccessBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="3fO-eU-3Cv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-Bw-4Ae">
-                                <frame key="frameInset" minX="109" minY="77" width="157" height="30"/>
-                                <state key="normal" title="show progress bubble!"/>
+                                <frame key="frameInset" minX="96" minY="77" width="184" height="30"/>
+                                <state key="normal" title="显示一个加载中的泡泡控件"/>
                                 <connections>
                                     <action selector="showProgressBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="ua7-m1-Wo2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MS-1z-3QK">
-                                <frame key="frameInset" minX="122" minY="124" width="130" height="30"/>
-                                <state key="normal" title="show error bubble!"/>
+                                <frame key="frameInset" minX="103" minY="124" width="169" height="30"/>
+                                <state key="normal" title="显示一个错误的泡泡控件"/>
                                 <connections>
                                     <action selector="showErrorBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="aTW-sW-1ge"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-eB-zS3">
+                                <frame key="frameInset" minX="111" minY="174" width="153" height="30"/>
+                                <state key="normal" title="显示逐帧动画泡泡控件"/>
+                                <connections>
+                                    <action selector="showFrameAnimationBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="pmA-5i-prX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-WU-YFQ">
+                                <frame key="frameInset" minX="103" minY="224" width="169" height="30"/>
+                                <state key="normal" title="显示单个图标的泡泡控件"/>
+                                <connections>
+                                    <action selector="showSingleIconBubble:" destination="sXh-NP-13f" eventType="touchUpInside" id="TsQ-6f-TIn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rnH-WU-YFQ" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="0cV-x1-vQD"/>
+                            <constraint firstItem="rnH-WU-YFQ" firstAttribute="top" secondItem="h4d-eB-zS3" secondAttribute="bottom" constant="20" id="CmT-H5-ug3"/>
                             <constraint firstItem="mqm-Bw-4Ae" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="GM7-uF-rMQ"/>
                             <constraint firstItem="Ni8-aG-Oo4" firstAttribute="top" secondItem="NJI-DY-nl8" secondAttribute="bottom" constant="8" id="JVy-Si-VQE"/>
                             <constraint firstItem="2MS-1z-3QK" firstAttribute="top" secondItem="mqm-Bw-4Ae" secondAttribute="bottom" constant="17" id="L7u-Qt-cre"/>
                             <constraint firstItem="Ni8-aG-Oo4" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="QZd-Kk-YIT"/>
+                            <constraint firstItem="h4d-eB-zS3" firstAttribute="top" secondItem="2MS-1z-3QK" secondAttribute="bottom" constant="20" id="QjP-eJ-kna"/>
                             <constraint firstItem="mqm-Bw-4Ae" firstAttribute="top" secondItem="Ni8-aG-Oo4" secondAttribute="bottom" constant="18" id="rJ4-SC-xAc"/>
                             <constraint firstItem="2MS-1z-3QK" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="sA0-Rk-m0r"/>
+                            <constraint firstItem="h4d-eB-zS3" firstAttribute="centerX" secondItem="itz-e5-8tq" secondAttribute="centerX" id="xoA-ym-y6t"/>
                         </constraints>
                     </view>
                 </viewController>

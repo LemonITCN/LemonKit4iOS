@@ -17,6 +17,15 @@
 		EA0CB50E1D75187500EC6E35 /* NSString+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CB50D1D75187500EC6E35 /* NSString+LK.m */; };
 		EA0CB5241D755B6B00EC6E35 /* LKBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CB5231D755B6B00EC6E35 /* LKBubbleView.m */; };
 		EA0CB5271D7578A100EC6E35 /* UIResponder+LKBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CB5261D7578A100EC6E35 /* UIResponder+LKBubble.m */; };
+		EA4B2A501DAC712D00E9ACC2 /* lkbubble1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A481DAC712D00E9ACC2 /* lkbubble1.jpg */; };
+		EA4B2A511DAC712D00E9ACC2 /* lkbubble2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A491DAC712D00E9ACC2 /* lkbubble2.jpg */; };
+		EA4B2A521DAC712D00E9ACC2 /* lkbubble3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A4A1DAC712D00E9ACC2 /* lkbubble3.jpg */; };
+		EA4B2A531DAC712D00E9ACC2 /* lkbubble4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A4B1DAC712D00E9ACC2 /* lkbubble4.jpg */; };
+		EA4B2A541DAC712D00E9ACC2 /* lkbubble5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A4C1DAC712D00E9ACC2 /* lkbubble5.jpg */; };
+		EA4B2A551DAC712D00E9ACC2 /* lkbubble6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A4D1DAC712D00E9ACC2 /* lkbubble6.jpg */; };
+		EA4B2A561DAC712D00E9ACC2 /* lkbubble7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A4E1DAC712D00E9ACC2 /* lkbubble7.jpg */; };
+		EA4B2A571DAC712D00E9ACC2 /* lkbubble8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A4F1DAC712D00E9ACC2 /* lkbubble8.jpg */; };
+		EA4B2A591DAC741500E9ACC2 /* lkbubble-warning.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A581DAC741500E9ACC2 /* lkbubble-warning.png */; };
 		EA8F0AE51D73DD38000EF601 /* LKNotificationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE01D73DD38000EF601 /* LKNotificationBar.m */; };
 		EA8F0AE61D73DD38000EF601 /* LKNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE21D73DD38000EF601 /* LKNotificationManager.m */; };
 		EA8F0AE71D73DD38000EF601 /* UIResponder+LKNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F0AE41D73DD38000EF601 /* UIResponder+LKNotification.m */; };
@@ -51,6 +60,15 @@
 		EA0CB5231D755B6B00EC6E35 /* LKBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBubbleView.m; sourceTree = "<group>"; };
 		EA0CB5251D7578A100EC6E35 /* UIResponder+LKBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+LKBubble.h"; sourceTree = "<group>"; };
 		EA0CB5261D7578A100EC6E35 /* UIResponder+LKBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+LKBubble.m"; sourceTree = "<group>"; };
+		EA4B2A481DAC712D00E9ACC2 /* lkbubble1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble1.jpg; sourceTree = "<group>"; };
+		EA4B2A491DAC712D00E9ACC2 /* lkbubble2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble2.jpg; sourceTree = "<group>"; };
+		EA4B2A4A1DAC712D00E9ACC2 /* lkbubble3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble3.jpg; sourceTree = "<group>"; };
+		EA4B2A4B1DAC712D00E9ACC2 /* lkbubble4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble4.jpg; sourceTree = "<group>"; };
+		EA4B2A4C1DAC712D00E9ACC2 /* lkbubble5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble5.jpg; sourceTree = "<group>"; };
+		EA4B2A4D1DAC712D00E9ACC2 /* lkbubble6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble6.jpg; sourceTree = "<group>"; };
+		EA4B2A4E1DAC712D00E9ACC2 /* lkbubble7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble7.jpg; sourceTree = "<group>"; };
+		EA4B2A4F1DAC712D00E9ACC2 /* lkbubble8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble8.jpg; sourceTree = "<group>"; };
+		EA4B2A581DAC741500E9ACC2 /* lkbubble-warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lkbubble-warning.png"; sourceTree = "<group>"; };
 		EA7DFCD51D91362A00F7EE56 /* LKActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKActionSheet.h; sourceTree = "<group>"; };
 		EA8F0ADD1D73DCB8000EF601 /* LKTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTip.h; sourceTree = "<group>"; };
 		EA8F0ADF1D73DD38000EF601 /* LKNotificationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNotificationBar.h; sourceTree = "<group>"; };
@@ -201,6 +219,22 @@
 			path = LKBubble;
 			sourceTree = "<group>";
 		};
+		EA4B2A471DAC70D500E9ACC2 /* LKBubble */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B2A581DAC741500E9ACC2 /* lkbubble-warning.png */,
+				EA4B2A481DAC712D00E9ACC2 /* lkbubble1.jpg */,
+				EA4B2A491DAC712D00E9ACC2 /* lkbubble2.jpg */,
+				EA4B2A4A1DAC712D00E9ACC2 /* lkbubble3.jpg */,
+				EA4B2A4B1DAC712D00E9ACC2 /* lkbubble4.jpg */,
+				EA4B2A4C1DAC712D00E9ACC2 /* lkbubble5.jpg */,
+				EA4B2A4D1DAC712D00E9ACC2 /* lkbubble6.jpg */,
+				EA4B2A4E1DAC712D00E9ACC2 /* lkbubble7.jpg */,
+				EA4B2A4F1DAC712D00E9ACC2 /* lkbubble8.jpg */,
+			);
+			path = LKBubble;
+			sourceTree = "<group>";
+		};
 		EA8F0ADE1D73DD38000EF601 /* LKNotification */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +298,7 @@
 		EA8F0AFB1D74123B000EF601 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EA4B2A471DAC70D500E9ACC2 /* LKBubble */,
 				EA0CB50A1D750E9B00EC6E35 /* icon.png */,
 			);
 			path = Resource;
@@ -353,10 +388,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				183084801D73CB9900EADE9C /* LaunchScreen.storyboard in Resources */,
+				EA4B2A551DAC712D00E9ACC2 /* lkbubble6.jpg in Resources */,
+				EA4B2A561DAC712D00E9ACC2 /* lkbubble7.jpg in Resources */,
+				EA4B2A591DAC741500E9ACC2 /* lkbubble-warning.png in Resources */,
 				EA0CB50B1D750E9B00EC6E35 /* icon.png in Resources */,
+				EA4B2A531DAC712D00E9ACC2 /* lkbubble4.jpg in Resources */,
+				EA4B2A521DAC712D00E9ACC2 /* lkbubble3.jpg in Resources */,
+				EA4B2A501DAC712D00E9ACC2 /* lkbubble1.jpg in Resources */,
 				1830847D1D73CB9900EADE9C /* Assets.xcassets in Resources */,
+				EA4B2A541DAC712D00E9ACC2 /* lkbubble5.jpg in Resources */,
 				1830847B1D73CB9900EADE9C /* Main.storyboard in Resources */,
 				EA8F0AF91D73F6EB000EF601 /* Tips.storyboard in Resources */,
+				EA4B2A571DAC712D00E9ACC2 /* lkbubble8.jpg in Resources */,
+				EA4B2A511DAC712D00E9ACC2 /* lkbubble2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

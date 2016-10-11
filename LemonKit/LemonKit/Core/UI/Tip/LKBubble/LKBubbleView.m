@@ -96,18 +96,21 @@ static LKBubbleView *defaultBubbleView;
         
         if (info.iconArray == nil || info.iconArray.count == 0) {
             // 显示显示自定义动画
+            _iconImageView.image = [[UIImage alloc] init];
             _currentDrawLayer = [CAShapeLayer layer];
             _currentDrawLayer.fillColor = [UIColor clearColor].CGColor;
             _currentDrawLayer.frame = self->_iconImageView.bounds;
             [self->_iconImageView.layer addSublayer: _currentDrawLayer];
+            [_currentTimer invalidate];
             dispatch_async(dispatch_get_main_queue(), ^{
                 info.iconAnimation(_currentDrawLayer);
             });
         }
-        else if (info.iconArray.count == 1){
+        else if (info.iconArray.count == 1){// 显示单张图片
+            [_currentTimer invalidate];
             self->_iconImageView.image = info.iconArray[0];
         }
-        else{
+        else{// 逐帧连环动画
             __block int index = 0;
             self->_currentTimer = [NSTimer scheduledTimerWithTimeInterval: info.frameAnimationTime repeats: YES block:^(NSTimer * _Nonnull timer) {
                 self->_iconImageView.image = info.iconArray[index];

@@ -76,6 +76,7 @@ static LKBubbleView *defaultBubbleView;
  */
 - (void)showWithInfo: (LKBubbleInfo *)info{
     self->_currentInfo = info;
+    self->closeKey = self->_currentInfo.key;// 保存当前要关闭的key，防止关闭不需要关闭的bubble
     if (info.isShowMaskView)
         [[UIApplication sharedApplication].keyWindow addSubview: _maskView];
     [[UIApplication sharedApplication].keyWindow addSubview: self];
@@ -165,7 +166,6 @@ static LKBubbleView *defaultBubbleView;
 - (void)showWithInfo: (LKBubbleInfo *)info autoCloseTime: (CGFloat)time{
     [self showWithInfo: info];
     [self performSelector: @selector(hide) withObject: self afterDelay: time + 0.2];
-    self->closeKey = self->_currentInfo.key;// 保存当前要关闭的key，防止关闭不需要关闭的bubble
 }
 
 /**

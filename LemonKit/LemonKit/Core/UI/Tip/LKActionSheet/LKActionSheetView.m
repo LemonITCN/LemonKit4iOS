@@ -29,6 +29,7 @@ static UIWindow *_defaultActionSheetWindow;
         }
         [self clear];
         self.groupHeightSpace = 7;
+        self.backViewControllerScale = 0.8;// 默认的后边viewController的缩放比例为0.8
         
         self->_maskView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, LKScreen.width, LKScreen.height)];
         self->_maskView.backgroundColor = [UIColor colorWithRed: 0  green: 0  blue: 0  alpha: 0.4];
@@ -76,7 +77,7 @@ static LKActionSheetView *defaultActionSheetView;
         [self initHeadView];
         [self initBodyView];
         [UIView animateWithDuration: 0.5 delay: 0 options: UIViewAnimationOptionCurveEaseInOut animations:^{
-            [UIApplication sharedApplication].keyWindow.transform = CGAffineTransformMakeScale(0.8, 0.8);
+            [UIApplication sharedApplication].keyWindow.transform = CGAffineTransformMakeScale(self.backViewControllerScale, self.backViewControllerScale);
             [_defaultActionSheetWindow makeKeyAndVisible];
             self->_maskView.alpha = 1;
             self->_contentView.frame = CGRectMake(0, LKScreen.height - [self calViewHeight] - self.headViewHeight, LKScreen.width, [self calViewHeight]);

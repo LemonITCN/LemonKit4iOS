@@ -96,12 +96,16 @@
         
         [layer addSublayer: alphaLineLayer];// 把外部半透明圆形的图层加到当前图层上
         
+        CAShapeLayer *drawLayer = [CAShapeLayer layer];
         UIBezierPath *progressPath = [UIBezierPath bezierPath];
         [progressPath addArcWithCenter: CGPointMake(layer.frame.size.width / 2, layer.frame.size.height / 2) radius:layer.frame.size.width / 2 - STROKE_WIDTH startAngle: 0 * M_PI / 180 endAngle: 360 * M_PI / 180 clockwise: YES];
         
-        layer.lineWidth = STROKE_WIDTH;
-        layer.fillColor = [UIColor clearColor].CGColor;
-        layer.path = progressPath.CGPath;
+        drawLayer.lineWidth = STROKE_WIDTH;
+        drawLayer.fillColor = [UIColor clearColor].CGColor;
+        drawLayer.path = progressPath.CGPath;
+        drawLayer.frame = drawLayer.bounds;
+        drawLayer.strokeColor = layer.strokeColor;
+        [layer addSublayer: drawLayer];
         
         CAMediaTimingFunction *progressRotateTimingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25 :0.80 :0.75 :1.00];
         
@@ -124,12 +128,12 @@
         CABasicAnimation *progressRotateAnimation = [CABasicAnimation animationWithKeyPath: @"transform.rotation.z"];
         progressRotateAnimation.fromValue = [NSNumber numberWithFloat: 0.0];
         progressRotateAnimation.toValue = [NSNumber numberWithFloat: M_PI / 180 * 360];
-        progressRotateAnimation.repeatCount = 10000;
+        progressRotateAnimation.repeatCount = 1000000;
         progressRotateAnimation.duration = 6;
         
-        [layer addAnimation:progressLongAnimation forKey: @"strokeEnd"];
-        [layer addAnimation:progressRotateAnimation forKey: @"transfrom.rotation.x"];
-        [layer addAnimation: progressLongEndAnimation forKey: @"strokeStart"];
+        [drawLayer addAnimation:progressLongAnimation forKey: @"strokeEnd"];
+        [drawLayer addAnimation:progressRotateAnimation forKey: @"transfrom.rotation.z"];
+        [drawLayer addAnimation: progressLongEndAnimation forKey: @"strokeStart"];
     };
     info.title = @"请稍候...";
     info.bubbleSize = CGSizeMake(140, 120);
@@ -240,6 +244,10 @@
     LKBubbleInfo *info = [self getDefaultErrorBubbleInfo];
     info.title = title;
     [[LKBubbleView defaultBubbleView] showWithInfo: info autoCloseTime: autoCloseTime];
+}
+
+- (void)hideBubble{
+    [[LKBubbleView defaultBubbleView] hide];
 }
 
 @end

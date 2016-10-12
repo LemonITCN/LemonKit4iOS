@@ -33,6 +33,10 @@
  */
 @property(nonatomic) NSString *title;
 
+/**
+ 当actionSheet弹出的时候，后面的viewController的缩放比例
+ */
+@property(nonatomic) CGFloat backViewControllerScale;
 
 /**
  获取默认的选择控件 - 单例方法

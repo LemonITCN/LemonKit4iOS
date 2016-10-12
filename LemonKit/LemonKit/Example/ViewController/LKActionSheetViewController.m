@@ -33,6 +33,7 @@
     ((UILabel *)cancel.contentView).textColor = [UIColor redColor];
     [as addAction: cancel groupIndex: 0];
     [as addActionGroup];
+    as.backViewControllerScale = 1;// 设置1 就没有后边viewController的缩放效果了
     [as addAction: [[LKActionItem alloc] initWithTitle: @"哈哈哈" onTouchBlock: nil] groupIndex: 1];
     [as addAction: [[LKActionItem alloc] initWithTitle: @"当然啦" onTouchBlock: nil] groupIndex: 1];
     [as show];

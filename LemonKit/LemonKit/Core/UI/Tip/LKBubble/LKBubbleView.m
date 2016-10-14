@@ -29,6 +29,7 @@
     UIView *_maskView;
     
     CGFloat closeKey;// 关闭验证key，用来做关闭时候的延迟验证，当设置自动关闭之后，若在关闭之前出发了显示其他info的bubble，通过修改这个值保证不关闭其他样式的infoBubble
+    NSInteger frameAnimationPlayIndex;// 帧动画播放的下标索引
 }
 
 static LKBubbleView *defaultBubbleView;
@@ -112,11 +113,9 @@ static LKBubbleView *defaultBubbleView;
             self->_iconImageView.image = info.iconArray[0];
         }
         else{// 逐帧连环动画
-            __block int index = 0;
-            self->_currentTimer = [NSTimer scheduledTimerWithTimeInterval: info.frameAnimationTime repeats: YES block:^(NSTimer * _Nonnull timer) {
-                self->_iconImageView.image = info.iconArray[index];
-                index = (index + 1) % info.iconArray.count;
-            }];
+            frameAnimationPlayIndex = 0;// 帧动画播放索引归零
+            self->_iconImageView.image = _currentInfo.iconArray[0];
+            self->_currentTimer = [NSTimer scheduledTimerWithTimeInterval: info.frameAnimationTime target: self selector: @selector(frameAnimationPlayer) userInfo: nil repeats: YES];
         }
         // maskView
         if (_currentInfo.isShowMaskView && _maskView.hidden) {
@@ -140,6 +139,15 @@ static LKBubbleView *defaultBubbleView;
     } completion:^(BOOL finished) {
         
     }];
+}
+
+
+/**
+ 帧动画播放器 - NSTimer调用
+ */
+- (void)frameAnimationPlayer{
+    self->_iconImageView.image = _currentInfo.iconArray[frameAnimationPlayIndex];
+    frameAnimationPlayIndex = (frameAnimationPlayIndex + 1) % _currentInfo.iconArray.count;
 }
 
 /**

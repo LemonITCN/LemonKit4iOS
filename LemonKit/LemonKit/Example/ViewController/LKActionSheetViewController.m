@@ -52,7 +52,6 @@
     [as addAction: [[LKActionItem alloc] initWithTitle: @"确认" onTouchBlock:^(LKActionItem *item) {
         NSLog(@"您点击了确定");
     }] groupIndex: 0];
-
     
     [as addActionGroup];
     UIPickerView *picker = [[UIPickerView alloc] initWithFrame: CGRectMake(0, 0, LKScreenGetWidth, 160)];

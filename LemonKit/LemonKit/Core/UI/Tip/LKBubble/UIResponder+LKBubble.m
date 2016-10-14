@@ -132,7 +132,7 @@
         progressRotateAnimation.duration = 6;
         
         [drawLayer addAnimation:progressLongAnimation forKey: @"strokeEnd"];
-        [drawLayer addAnimation:progressRotateAnimation forKey: @"transfrom.rotation.z"];
+        [layer addAnimation:progressRotateAnimation forKey: @"transfrom.rotation.z"];
         [drawLayer addAnimation: progressLongEndAnimation forKey: @"strokeStart"];
     };
     info.title = @"请稍候...";

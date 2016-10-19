@@ -52,9 +52,9 @@ typedef enum{
 /// @brief 进度被改变的回调block
 @property BLOCK_LK_BUBBLE_ON_PROGRESS_CHANGED onProgressChanged;
 /// @brief 图标数组，如果该数组为空或者该对象为nil，那么显示自定义动画，如果图标为一张，那么固定显示那个图标，大于一张的时候显示图片帧动画
-@property NSArray<UIImage *> *iconArray;
+@property(nonatomic , strong) NSArray<UIImage *> *iconArray;
 /// @brief 要显示的标题
-@property NSString *title;
+@property(nonatomic , strong) NSString *title;
 /// @brief 帧动画时间间隔
 @property CGFloat frameAnimationTime;
 /// @brief 图标占比 0 - 1，图标控件的边长占高度的比例
@@ -70,13 +70,13 @@ typedef enum{
 /// @brief 是否展示蒙版，展示蒙版后，显示泡泡控件时会产生一个蒙版层来拦截所有其他控件的点击事件
 @property BOOL isShowMaskView;
 /// @brief 蒙版颜色
-@property UIColor *maskColor;
+@property(nonatomic , strong) UIColor *maskColor;
 /// @brief 背景色
-@property UIColor *backgroundColor;
+@property(nonatomic , strong) UIColor *backgroundColor;
 /// @brief 图标渲染色
-@property UIColor *iconColor;
+@property(nonatomic , strong) UIColor *iconColor;
 /// @brief 标题文字颜色
-@property UIColor *titleColor;
+@property(nonatomic , strong) UIColor *titleColor;
 /// @brief 标题字体大小
 @property CGFloat titleFontSize;
 /// @breif key，随机数，用于标志一个info的唯一性，关闭时候会通过这个验证

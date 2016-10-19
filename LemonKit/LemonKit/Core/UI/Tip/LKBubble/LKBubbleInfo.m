@@ -8,11 +8,7 @@
 
 #import "LKBubbleInfo.h"
 
-@implementation LKBubbleInfo{
-    CGFloat _screenWidth;
-    CGFloat _screenHeight;
-    CGSize _contentSize;
-}
+@implementation LKBubbleInfo
 
 - (instancetype)init{
     self = [super init];
@@ -37,9 +33,6 @@
         self.titleColor = [UIColor whiteColor];
         self.titleFontSize = 13;
         
-        self->_screenWidth = [UIScreen mainScreen].bounds.size.width;
-        self->_screenHeight = [UIScreen mainScreen].bounds.size.height;
-        
         // 生成随机的key
         self->_key = arc4random();
     }
@@ -62,14 +55,14 @@
             y = 0;
             break;
         case BUBBLE_LOCATION_STYLE_CENTER:
-            y = (self->_screenHeight - self.bubbleSize.height) / 2;
+            y = ([UIScreen mainScreen].bounds.size.height - self.bubbleSize.height) / 2;
             break;
         default:
-            y = self->_screenHeight - self.bubbleSize.height;
+            y = [UIScreen mainScreen].bounds.size.height - self.bubbleSize.height;
             break;
     }
-    y += (self.locationStyle != BUBBLE_LOCATION_STYLE_BOTTOM ? 1 : -1) * (self.proportionOfDeviation * self-> _screenHeight);
-    return CGRectMake((self->_screenWidth - self.bubbleSize.width) / 2, y, self.bubbleSize.width, self.bubbleSize.height);
+    y += (self.locationStyle != BUBBLE_LOCATION_STYLE_BOTTOM ? 1 : -1) * (self.proportionOfDeviation * [UIScreen mainScreen].bounds.size.height);
+    return CGRectMake(([UIScreen mainScreen].bounds.size.width - self.bubbleSize.width) / 2, y, self.bubbleSize.width, self.bubbleSize.height);
 }
 
 - (CGRect)calIconViewFrame{

@@ -185,7 +185,7 @@ static LKBubbleView *defaultBubbleView;
  *  @param info          已注册的样式信息模型的键
  *  @param autoCloseTime 指定时间后隐藏泡泡控件的秒数
  */
-- (void)showWithInfoKey: (NSString *)infoKey autoCloseTime: (NSInteger)time{
+- (void)showWithInfoKey: (NSString *)infoKey autoCloseTime: (CGFloat)time{
     if ([self->_infoDic.allKeys containsObject: infoKey]){
         [self showWithInfo: self->_infoDic[infoKey] autoCloseTime: time];
     }

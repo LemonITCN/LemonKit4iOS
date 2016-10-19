@@ -67,7 +67,7 @@
     info.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     info.iconColor = [UIColor  colorWithRed: 0 / 255.0 green: 205 / 255.0 blue:0 alpha:1];
     info.titleColor = [UIColor blackColor];
-    info.layoutStyle = BUBBLE_LAYOUT_STYLE_ICON_LEFT_TITLE_RIGHT;
+//    info.layoutStyle = BUBBLE_LAYOUT_STYLE_ICON_LEFT_TITLE_RIGHT;
     info.bubbleSize = CGSizeMake(200, 100);
     
     return info;
@@ -185,7 +185,7 @@
         
         [layer addSublayer: leftLayer];
         
-        // 首先画顺时针旋转的线
+        // 逆时针旋转的线
         CAShapeLayer *rightLayer = [CAShapeLayer layer];
         // 设置当前图层的绘制属性
         rightLayer.frame = layer.bounds;

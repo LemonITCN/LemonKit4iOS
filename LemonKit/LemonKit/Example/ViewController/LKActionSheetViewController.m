@@ -36,7 +36,15 @@
     as.backViewControllerScale = 1;// 设置1 就没有后边viewController的缩放效果了
     [as addAction: [[LKActionItem alloc] initWithTitle: @"哈哈哈" onTouchBlock: nil] groupIndex: 1];
     [as addAction: [[LKActionItem alloc] initWithTitle: @"当然啦" onTouchBlock: nil] groupIndex: 1];
+    UIButton *leftButton = [[UIButton alloc] initWithFrame: CGRectMake(10, 0, 100, as.headView.frame.size.height)];
+    [leftButton setTitle: @"确定" forState: UIControlStateNormal];
+    [leftButton setTitleColor: [UIColor blackColor] forState: UIControlStateNormal];
+    
+    as.headView.backgroundColor = [UIColor redColor];
+    leftButton.backgroundColor = [UIColor blueColor];
     [as show];
+    [as.headView addSubview: leftButton];
+    [as.headView bringSubviewToFront: leftButton];
 }
 - (IBAction)showPickerActionSheet:(UIButton *)sender {
     self->_source = @[@"中山区" , @"西岗区" , @"高新园区" , @"甘井子区" , @"旅顺口区" , @"瓦房店" , @"金州" , @"普兰店"];

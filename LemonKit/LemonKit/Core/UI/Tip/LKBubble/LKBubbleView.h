@@ -30,6 +30,13 @@
  */
 + (LKBubbleView *)defaultBubbleView;
 
+
+/**
+ 注册泡泡信息对象
+
+ @param info 泡泡信息对象
+ @param key  泡泡信息对象对应的键
+ */
 - (void)registerInfo: (LKBubbleInfo *)info forKey: (NSString *)key;
 
 /**
@@ -68,7 +75,7 @@
  *  @param info          已注册的样式信息模型的键
  *  @param autoCloseTime 指定时间后隐藏泡泡控件的秒数
  */
-- (void)showWithInfoKey: (NSString *)infoKey autoCloseTime: (NSInteger)time;
+- (void)showWithInfoKey: (NSString *)infoKey autoCloseTime: (CGFloat)time;
 
 /**
  *  @author 1em0nsOft LiuRi

@@ -22,6 +22,7 @@
 
 - (void)onNavigationBarTouchUpInside:(LKNotificationBar *)navigationBar{
     NSLog(@"TOUCH !@");
+    [navigationBar hideWithAnimated: YES];
 }
 
 @end

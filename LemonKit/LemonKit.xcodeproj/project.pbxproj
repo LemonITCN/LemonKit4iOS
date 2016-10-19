@@ -319,12 +319,12 @@
 			isa = PBXGroup;
 			children = (
 				EAEA9E5C1D90F892002CB0B7 /* LKActionSheetView.h */,
+				EA7DFCD51D91362A00F7EE56 /* LKActionSheet.h */,
 				EAEA9E5D1D90F892002CB0B7 /* LKActionSheetView.m */,
 				EAEA9E5F1D90F97E002CB0B7 /* LKActionItem.h */,
 				EAEA9E601D90F97E002CB0B7 /* LKActionItem.m */,
 				EA0277361D91248100684A63 /* LKActionLineView.h */,
 				EA0277371D91248100684A63 /* LKActionLineView.m */,
-				EA7DFCD51D91362A00F7EE56 /* LKActionSheet.h */,
 			);
 			path = LKActionSheet;
 			sourceTree = "<group>";

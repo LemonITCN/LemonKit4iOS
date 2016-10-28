@@ -31,7 +31,7 @@ typedef enum{
 
 /// @brief 泡泡控件位置枚举
 typedef enum{
-    /// @brief 位于屏幕底部
+    /// @brief 位于屏幕顶部
     BUBBLE_LOCATION_STYLE_TOP = 0,
     /// @brief 位于屏幕中间
     BUBBLE_LOCATION_STYLE_CENTER,

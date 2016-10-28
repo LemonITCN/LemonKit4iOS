@@ -203,8 +203,7 @@
         rightLayer.path = rightPath.CGPath;
         
         [layer addSublayer: rightLayer];
-        
-        
+
         
         CAMediaTimingFunction *timing = [[CAMediaTimingFunction alloc] initWithControlPoints:0.3 :0.6 :0.8 :1.1];
         // 创建路径顺序绘制的动画

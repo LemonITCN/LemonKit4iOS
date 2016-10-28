@@ -70,7 +70,7 @@
                                           self.bubbleSize.height * (1 - self.proportionOfPadding.y * 2));
     CGFloat baseX = self.bubbleSize.width * self.proportionOfPadding.x;
     CGFloat baseY = self.bubbleSize.height * self.proportionOfPadding.y;
-    CGFloat iconWidth = self.layoutStyle == 0 || self.layoutStyle == 2 || self.layoutStyle == 3 ?
+    CGFloat iconWidth = self.layoutStyle == BUBBLE_LAYOUT_STYLE_ICON_TOP_TITLE_BOTTOM || self.layoutStyle == BUBBLE_LAYOUT_STYLE_ICON_ONLY || self.layoutStyle == BUBBLE_LAYOUT_STYLE_ICON_BOTTOM_TITLE_TOP ?
     bubbleContentSize.height * self.proportionOfIcon :
     bubbleContentSize.height * self.proportionOfIcon;
     CGRect iconFrame = CGRectMake(baseX, baseY+ (bubbleContentSize.height - iconWidth) / 2, iconWidth, iconWidth);
@@ -104,7 +104,7 @@
                                           self.bubbleSize.height * (1 - self.proportionOfPadding.y * 2));
     CGFloat baseX = self.bubbleSize.width * self.proportionOfPadding.x;
     CGFloat baseY = self.bubbleSize.height * self.proportionOfPadding.y;
-    CGFloat titleWidth = self.layoutStyle == 0 || self.layoutStyle == 3 || self.layoutStyle == 5 ?
+    CGFloat titleWidth = self.layoutStyle == BUBBLE_LAYOUT_STYLE_ICON_TOP_TITLE_BOTTOM || self.layoutStyle == BUBBLE_LAYOUT_STYLE_ICON_BOTTOM_TITLE_TOP || self.layoutStyle == BUBBLE_LAYOUT_STYLE_TITLE_ONLY ?
     bubbleContentSize.width:
     bubbleContentSize.width * (1 - self.proportionOfSpace) - iconFrame.size.width;
     CGFloat titleHeight = [self.title sizeWithAttributes: @{NSFontAttributeName : [UIFont systemFontOfSize: self.titleFontSize]}].height;

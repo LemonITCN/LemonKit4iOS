@@ -31,7 +31,7 @@
 }
 
 - (IBAction)showErrorBubble:(UIButton *)sender {
-    [self showErrorWithTitle: @"下载失败" autoCloseTime: 2];
+    [self showErrorWithTitle: @"加载失败" autoCloseTime: 2];
 }
 
 - (IBAction)showFrameAnimationBubble:(UIButton *)sender {

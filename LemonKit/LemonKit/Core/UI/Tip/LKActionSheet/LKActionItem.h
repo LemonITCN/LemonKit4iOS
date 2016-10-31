@@ -13,11 +13,11 @@
 typedef void(^ LK_ACION_SHEET_ON_ITEM_TOUCH)(LKActionItem *);
 
 /// @brief 内容控件
-@property UIView *contentView;
+@property (nonatomic , strong) UIView *contentView;
 /// @brief 点击事件
-@property LK_ACION_SHEET_ON_ITEM_TOUCH action;
+@property (assign) LK_ACION_SHEET_ON_ITEM_TOUCH action;
 /// @brief 控件的高度
-@property CGFloat height;
+@property (assign) CGFloat height;
 
 
 /**

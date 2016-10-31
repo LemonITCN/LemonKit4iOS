@@ -18,8 +18,8 @@
         self.layoutStyle = BUBBLE_LAYOUT_STYLE_ICON_TOP_TITLE_BOTTOM;
         self.iconAnimation = nil;
         self.onProgressChanged = nil;
-        self.iconArray = nil;
-        self.title = @"LKBubble";
+        self->_iconArray = nil;
+        self->_title = @"LKBubble";
         self.frameAnimationTime = 0.1;
         self.proportionOfIcon = 0.675;
         self.proportionOfSpace = 0.1;
@@ -27,10 +27,10 @@
         self.locationStyle = BUBBLE_LOCATION_STYLE_CENTER;
         self.proportionOfDeviation = 0;
         self.isShowMaskView = YES;
-        self.maskColor = [UIColor colorWithRed: 0.1 green: 0.1 blue:0.1 alpha:0.2];
-        self.backgroundColor = [UIColor colorWithRed: 0  green: 0 blue: 0 alpha: 0.8];
-        self.iconColor = [UIColor whiteColor];
-        self.titleColor = [UIColor whiteColor];
+        self->_maskColor = [UIColor colorWithRed: 0.1 green: 0.1 blue:0.1 alpha:0.2];
+        self->_backgroundColor = [UIColor colorWithRed: 0  green: 0 blue: 0 alpha: 0.8];
+        self->_iconColor = [UIColor whiteColor];
+        self->_titleColor = [UIColor whiteColor];
         self.titleFontSize = 13;
         
         // 生成随机的key
@@ -42,8 +42,8 @@
 - (instancetype)initWithTitle: (NSString *)title icon: (UIImage *)icon{
     self = [self init];
     if (self) {
-        self.title = title;
-        self.iconArray = @[icon];
+        self->_title = title;
+        self->_iconArray = @[icon];
     }
     return self;
 }

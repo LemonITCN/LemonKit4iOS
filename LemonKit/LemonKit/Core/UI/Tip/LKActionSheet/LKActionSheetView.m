@@ -9,7 +9,6 @@
 #import "LKActionSheetView.h"
 #define LKScreen [UIScreen mainScreen].bounds.size
 #define HEAD_VIEW_HEIGHT 40
-#define VIEW_MAX_HEIGHT_IN_SCREEN 0.4
 
 @implementation LKActionSheetView{
     NSMutableArray<NSMutableArray<LKActionItem *> *> *actionItems;
@@ -27,6 +26,7 @@ static UIWindow *_defaultActionSheetWindow;
             _defaultActionSheetWindow = [[UIWindow alloc] initWithFrame: CGRectMake(0, 0, LKScreen.width, 0)];
             _defaultActionSheetWindow.clipsToBounds = YES;
         }
+        self.maxHeightInScreen = 1;
         [self clear];
         self.groupHeightSpace = 7;
         self.backViewControllerScale = 0.8;// 默认的后边viewController的缩放比例为0.8
@@ -148,7 +148,7 @@ static LKActionSheetView *defaultActionSheetView;
 
 - (CGFloat)calViewHeight{
     CGFloat contentHeight = [self calContentHeight];
-    CGFloat maxHeight = VIEW_MAX_HEIGHT_IN_SCREEN * LKScreen.height;
+    CGFloat maxHeight = self.maxHeightInScreen * LKScreen.height;
     return contentHeight > maxHeight ? maxHeight : contentHeight;
 }
 

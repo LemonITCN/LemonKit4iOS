@@ -38,6 +38,12 @@
  */
 @property(nonatomic) CGFloat backViewControllerScale;
 
+
+/**
+ 在屏幕中占用的最大高度比例，0-1之间，默认是1
+ */
+@property(nonatomic) CGFloat maxHeightInScreen;
+
 /**
  获取默认的选择控件 - 单例方法
 

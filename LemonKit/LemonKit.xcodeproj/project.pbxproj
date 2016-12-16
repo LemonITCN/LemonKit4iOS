@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA264A5F1E03C0A600F0BCE0 /* LemonKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264A5E1E03C0A600F0BCE0 /* LemonKit.m */; };
+		EA264A601E03C0A600F0BCE0 /* LemonKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA264A5D1E03C0A600F0BCE0 /* LemonKit.h */; };
+		EA264A6E1E03C0F500F0BCE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264A6D1E03C0F500F0BCE0 /* main.m */; };
+		EA264A8A1E03C0F500F0BCE0 /* LKSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264A891E03C0F500F0BCE0 /* LKSamplesTests.m */; };
+		EA264A951E03C0F500F0BCE0 /* LKSamplesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264A941E03C0F500F0BCE0 /* LKSamplesUITests.m */; };
+		EA264ABD1E03C14100F0BCE0 /* LKUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AA41E03C14100F0BCE0 /* LKUINavigationController.m */; };
+		EA264ABE1E03C14100F0BCE0 /* LKUINavigationTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AA61E03C14100F0BCE0 /* LKUINavigationTabBarController.m */; };
+		EA264ABF1E03C14100F0BCE0 /* LKUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AA81E03C14100F0BCE0 /* LKUITabBarController.m */; };
+		EA264AC01E03C14100F0BCE0 /* LKUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AAA1E03C14100F0BCE0 /* LKUIViewController.m */; };
+		EA264AC11E03C14100F0BCE0 /* NSObject+LKFreeCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AAE1E03C14100F0BCE0 /* NSObject+LKFreeCtrl.m */; };
+		EA264AC21E03C14100F0BCE0 /* NSObject+LKInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AB01E03C14100F0BCE0 /* NSObject+LKInstance.m */; };
+		EA264AC31E03C14100F0BCE0 /* NSObject+LKLocalStr.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AB21E03C14100F0BCE0 /* NSObject+LKLocalStr.m */; };
+		EA264AC41E03C14100F0BCE0 /* UIColor+LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AB41E03C14100F0BCE0 /* UIColor+LKColor.m */; };
+		EA264AC51E03C14100F0BCE0 /* UIView+LKGestureListener.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264AB61E03C14100F0BCE0 /* UIView+LKGestureListener.m */; };
+		EA264AC61E03C1E200F0BCE0 /* libLemonKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA264A5A1E03C0A600F0BCE0 /* libLemonKit.a */; };
+		EA264AD11E03C2E700F0BCE0 /* AppInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA264AD01E03C2E700F0BCE0 /* AppInfo.plist */; };
+		EA264AD41E03C33500F0BCE0 /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA264AD31E03C33500F0BCE0 /* Main.xcassets */; };
+		EAC4CA681E03D508002CDBAE /* StarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC4CA671E03D508002CDBAE /* StarterViewController.m */; };
+		EAC4CA711E03E3B3002CDBAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC4CA6F1E03E3B3002CDBAE /* LaunchScreen.storyboard */; };
+		EAC4CA721E03E3B3002CDBAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC4CA701E03E3B3002CDBAE /* Main.storyboard */; };
+		EAC4CA761E03E3BC002CDBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC4CA751E03E3BC002CDBAE /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA264A861E03C0F500F0BCE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA264A521E03C0A600F0BCE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA264A691E03C0F500F0BCE0;
+			remoteInfo = LKSamples;
+		};
+		EA264A911E03C0F500F0BCE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA264A521E03C0A600F0BCE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA264A691E03C0F500F0BCE0;
+			remoteInfo = LKSamples;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA264A581E03C0A600F0BCE0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EA264A601E03C0A600F0BCE0 /* LemonKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA264A5A1E03C0A600F0BCE0 /* libLemonKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLemonKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA264A5D1E03C0A600F0BCE0 /* LemonKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LemonKit.h; sourceTree = "<group>"; };
+		EA264A5E1E03C0A600F0BCE0 /* LemonKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LemonKit.m; sourceTree = "<group>"; };
+		EA264A6A1E03C0F500F0BCE0 /* LKSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA264A6D1E03C0F500F0BCE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA264A851E03C0F500F0BCE0 /* LKSamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKSamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA264A891E03C0F500F0BCE0 /* LKSamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKSamplesTests.m; sourceTree = "<group>"; };
+		EA264A8B1E03C0F500F0BCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA264A901E03C0F500F0BCE0 /* LKSamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKSamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA264A941E03C0F500F0BCE0 /* LKSamplesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKSamplesUITests.m; sourceTree = "<group>"; };
+		EA264A961E03C0F500F0BCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA264AA01E03C14100F0BCE0 /* LemonKit.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LemonKit.pch; sourceTree = "<group>"; };
+		EA264AA21E03C14100F0BCE0 /* LKBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBase.h; sourceTree = "<group>"; };
+		EA264AA31E03C14100F0BCE0 /* LKUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUINavigationController.h; sourceTree = "<group>"; };
+		EA264AA41E03C14100F0BCE0 /* LKUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUINavigationController.m; sourceTree = "<group>"; };
+		EA264AA51E03C14100F0BCE0 /* LKUINavigationTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUINavigationTabBarController.h; sourceTree = "<group>"; };
+		EA264AA61E03C14100F0BCE0 /* LKUINavigationTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUINavigationTabBarController.m; sourceTree = "<group>"; };
+		EA264AA71E03C14100F0BCE0 /* LKUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUITabBarController.h; sourceTree = "<group>"; };
+		EA264AA81E03C14100F0BCE0 /* LKUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUITabBarController.m; sourceTree = "<group>"; };
+		EA264AA91E03C14100F0BCE0 /* LKUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUIViewController.h; sourceTree = "<group>"; };
+		EA264AAA1E03C14100F0BCE0 /* LKUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUIViewController.m; sourceTree = "<group>"; };
+		EA264AAC1E03C14100F0BCE0 /* LKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKCategory.h; sourceTree = "<group>"; };
+		EA264AAD1E03C14100F0BCE0 /* NSObject+LKFreeCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKFreeCtrl.h"; sourceTree = "<group>"; };
+		EA264AAE1E03C14100F0BCE0 /* NSObject+LKFreeCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKFreeCtrl.m"; sourceTree = "<group>"; };
+		EA264AAF1E03C14100F0BCE0 /* NSObject+LKInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKInstance.h"; sourceTree = "<group>"; };
+		EA264AB01E03C14100F0BCE0 /* NSObject+LKInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKInstance.m"; sourceTree = "<group>"; };
+		EA264AB11E03C14100F0BCE0 /* NSObject+LKLocalStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKLocalStr.h"; sourceTree = "<group>"; };
+		EA264AB21E03C14100F0BCE0 /* NSObject+LKLocalStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKLocalStr.m"; sourceTree = "<group>"; };
+		EA264AB31E03C14100F0BCE0 /* UIColor+LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LKColor.h"; sourceTree = "<group>"; };
+		EA264AB41E03C14100F0BCE0 /* UIColor+LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LKColor.m"; sourceTree = "<group>"; };
+		EA264AB51E03C14100F0BCE0 /* UIView+LKGestureListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LKGestureListener.h"; sourceTree = "<group>"; };
+		EA264AB61E03C14100F0BCE0 /* UIView+LKGestureListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LKGestureListener.m"; sourceTree = "<group>"; };
+		EA264AB81E03C14100F0BCE0 /* LKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKConst.h; sourceTree = "<group>"; };
+		EA264AB91E03C14100F0BCE0 /* LKImageConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKImageConst.h; sourceTree = "<group>"; };
+		EA264ABA1E03C14100F0BCE0 /* LKLogConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLogConst.h; sourceTree = "<group>"; };
+		EA264AD01E03C2E700F0BCE0 /* AppInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppInfo.plist; sourceTree = "<group>"; };
+		EA264AD31E03C33500F0BCE0 /* Main.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Main.xcassets; sourceTree = "<group>"; };
+		EAC4CA661E03D508002CDBAE /* StarterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarterViewController.h; sourceTree = "<group>"; };
+		EAC4CA671E03D508002CDBAE /* StarterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterViewController.m; sourceTree = "<group>"; };
+		EAC4CA6F1E03E3B3002CDBAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAC4CA701E03E3B3002CDBAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EAC4CA741E03E3BC002CDBAE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAC4CA751E03E3BC002CDBAE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAC4CA771E03EAD7002CDBAE /* LemonKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LemonKit.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA264A571E03C0A600F0BCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A671E03C0F500F0BCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA264AC61E03C1E200F0BCE0 /* libLemonKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A821E03C0F500F0BCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A8D1E03C0F500F0BCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA264A511E03C0A600F0BCE0 = {
+			isa = PBXGroup;
+			children = (
+				EA264A5C1E03C0A600F0BCE0 /* LemonKit */,
+				EA264A6B1E03C0F500F0BCE0 /* LKSamples */,
+				EA264A881E03C0F500F0BCE0 /* LKSamplesTests */,
+				EA264A931E03C0F500F0BCE0 /* LKSamplesUITests */,
+				EA264A5B1E03C0A600F0BCE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA264A5B1E03C0A600F0BCE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA264A5A1E03C0A600F0BCE0 /* libLemonKit.a */,
+				EA264A6A1E03C0F500F0BCE0 /* LKSamples.app */,
+				EA264A851E03C0F500F0BCE0 /* LKSamplesTests.xctest */,
+				EA264A901E03C0F500F0BCE0 /* LKSamplesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA264A5C1E03C0A600F0BCE0 /* LemonKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA264A5D1E03C0A600F0BCE0 /* LemonKit.h */,
+				EA264A5E1E03C0A600F0BCE0 /* LemonKit.m */,
+				EA264AA01E03C14100F0BCE0 /* LemonKit.pch */,
+				EA264AA11E03C14100F0BCE0 /* LKBase */,
+				EA264AAB1E03C14100F0BCE0 /* LKCategory */,
+				EA264AB71E03C14100F0BCE0 /* LKConst */,
+				EA264ABB1E03C14100F0BCE0 /* LKRecorder */,
+				EA264ABC1E03C14100F0BCE0 /* LKRuntime */,
+			);
+			path = LemonKit;
+			sourceTree = "<group>";
+		};
+		EA264A6B1E03C0F500F0BCE0 /* LKSamples */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA611E03C420002CDBAE /* ViewController */,
+				EA264ACE1E03C2C900F0BCE0 /* Resource */,
+				EA264ACB1E03C26B00F0BCE0 /* Storyboard */,
+				EA264AC71E03C23300F0BCE0 /* Delegate */,
+				EA264A6C1E03C0F500F0BCE0 /* Supporting Files */,
+			);
+			path = LKSamples;
+			sourceTree = "<group>";
+		};
+		EA264A6C1E03C0F500F0BCE0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA264A6D1E03C0F500F0BCE0 /* main.m */,
+				EAC4CA771E03EAD7002CDBAE /* LemonKit.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA264A881E03C0F500F0BCE0 /* LKSamplesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA264A891E03C0F500F0BCE0 /* LKSamplesTests.m */,
+				EA264A8B1E03C0F500F0BCE0 /* Info.plist */,
+			);
+			path = LKSamplesTests;
+			sourceTree = "<group>";
+		};
+		EA264A931E03C0F500F0BCE0 /* LKSamplesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA264A941E03C0F500F0BCE0 /* LKSamplesUITests.m */,
+				EA264A961E03C0F500F0BCE0 /* Info.plist */,
+			);
+			path = LKSamplesUITests;
+			sourceTree = "<group>";
+		};
+		EA264AA11E03C14100F0BCE0 /* LKBase */ = {
+			isa = PBXGroup;
+			children = (
+				EA264AA21E03C14100F0BCE0 /* LKBase.h */,
+				EA264AA31E03C14100F0BCE0 /* LKUINavigationController.h */,
+				EA264AA41E03C14100F0BCE0 /* LKUINavigationController.m */,
+				EA264AA51E03C14100F0BCE0 /* LKUINavigationTabBarController.h */,
+				EA264AA61E03C14100F0BCE0 /* LKUINavigationTabBarController.m */,
+				EA264AA71E03C14100F0BCE0 /* LKUITabBarController.h */,
+				EA264AA81E03C14100F0BCE0 /* LKUITabBarController.m */,
+				EA264AA91E03C14100F0BCE0 /* LKUIViewController.h */,
+				EA264AAA1E03C14100F0BCE0 /* LKUIViewController.m */,
+			);
+			path = LKBase;
+			sourceTree = "<group>";
+		};
+		EA264AAB1E03C14100F0BCE0 /* LKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				EA264AAC1E03C14100F0BCE0 /* LKCategory.h */,
+				EA264AAD1E03C14100F0BCE0 /* NSObject+LKFreeCtrl.h */,
+				EA264AAE1E03C14100F0BCE0 /* NSObject+LKFreeCtrl.m */,
+				EA264AAF1E03C14100F0BCE0 /* NSObject+LKInstance.h */,
+				EA264AB01E03C14100F0BCE0 /* NSObject+LKInstance.m */,
+				EA264AB11E03C14100F0BCE0 /* NSObject+LKLocalStr.h */,
+				EA264AB21E03C14100F0BCE0 /* NSObject+LKLocalStr.m */,
+				EA264AB31E03C14100F0BCE0 /* UIColor+LKColor.h */,
+				EA264AB41E03C14100F0BCE0 /* UIColor+LKColor.m */,
+				EA264AB51E03C14100F0BCE0 /* UIView+LKGestureListener.h */,
+				EA264AB61E03C14100F0BCE0 /* UIView+LKGestureListener.m */,
+			);
+			path = LKCategory;
+			sourceTree = "<group>";
+		};
+		EA264AB71E03C14100F0BCE0 /* LKConst */ = {
+			isa = PBXGroup;
+			children = (
+				EA264AB81E03C14100F0BCE0 /* LKConst.h */,
+				EA264AB91E03C14100F0BCE0 /* LKImageConst.h */,
+				EA264ABA1E03C14100F0BCE0 /* LKLogConst.h */,
+			);
+			path = LKConst;
+			sourceTree = "<group>";
+		};
+		EA264ABB1E03C14100F0BCE0 /* LKRecorder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LKRecorder;
+			sourceTree = "<group>";
+		};
+		EA264ABC1E03C14100F0BCE0 /* LKRuntime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LKRuntime;
+			sourceTree = "<group>";
+		};
+		EA264AC71E03C23300F0BCE0 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA731E03E3BC002CDBAE /* Base */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EA264ACB1E03C26B00F0BCE0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA6E1E03E3B3002CDBAE /* Base */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EA264ACE1E03C2C900F0BCE0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EA264AD21E03C32400F0BCE0 /* ImageAsset */,
+				EA264ACF1E03C2C900F0BCE0 /* PropertyList */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EA264ACF1E03C2C900F0BCE0 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				EA264AD01E03C2E700F0BCE0 /* AppInfo.plist */,
+			);
+			path = PropertyList;
+			sourceTree = "<group>";
+		};
+		EA264AD21E03C32400F0BCE0 /* ImageAsset */ = {
+			isa = PBXGroup;
+			children = (
+				EA264AD31E03C33500F0BCE0 /* Main.xcassets */,
+			);
+			path = ImageAsset;
+			sourceTree = "<group>";
+		};
+		EAC4CA611E03C420002CDBAE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA651E03D508002CDBAE /* Base */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EAC4CA651E03D508002CDBAE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA661E03D508002CDBAE /* StarterViewController.h */,
+				EAC4CA671E03D508002CDBAE /* StarterViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EAC4CA6E1E03E3B3002CDBAE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA6F1E03E3B3002CDBAE /* LaunchScreen.storyboard */,
+				EAC4CA701E03E3B3002CDBAE /* Main.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EAC4CA731E03E3BC002CDBAE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4CA741E03E3BC002CDBAE /* AppDelegate.h */,
+				EAC4CA751E03E3BC002CDBAE /* AppDelegate.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA264A591E03C0A600F0BCE0 /* LemonKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA264A631E03C0A600F0BCE0 /* Build configuration list for PBXNativeTarget "LemonKit" */;
+			buildPhases = (
+				EA264A561E03C0A600F0BCE0 /* Sources */,
+				EA264A571E03C0A600F0BCE0 /* Frameworks */,
+				EA264A581E03C0A600F0BCE0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LemonKit;
+			productName = LemonKit;
+			productReference = EA264A5A1E03C0A600F0BCE0 /* libLemonKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA264A691E03C0F500F0BCE0 /* LKSamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA264A971E03C0F500F0BCE0 /* Build configuration list for PBXNativeTarget "LKSamples" */;
+			buildPhases = (
+				EA264A661E03C0F500F0BCE0 /* Sources */,
+				EA264A671E03C0F500F0BCE0 /* Frameworks */,
+				EA264A681E03C0F500F0BCE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LKSamples;
+			productName = LKSamples;
+			productReference = EA264A6A1E03C0F500F0BCE0 /* LKSamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA264A841E03C0F500F0BCE0 /* LKSamplesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA264A9A1E03C0F500F0BCE0 /* Build configuration list for PBXNativeTarget "LKSamplesTests" */;
+			buildPhases = (
+				EA264A811E03C0F500F0BCE0 /* Sources */,
+				EA264A821E03C0F500F0BCE0 /* Frameworks */,
+				EA264A831E03C0F500F0BCE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA264A871E03C0F500F0BCE0 /* PBXTargetDependency */,
+			);
+			name = LKSamplesTests;
+			productName = LKSamplesTests;
+			productReference = EA264A851E03C0F500F0BCE0 /* LKSamplesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA264A8F1E03C0F500F0BCE0 /* LKSamplesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA264A9D1E03C0F500F0BCE0 /* Build configuration list for PBXNativeTarget "LKSamplesUITests" */;
+			buildPhases = (
+				EA264A8C1E03C0F500F0BCE0 /* Sources */,
+				EA264A8D1E03C0F500F0BCE0 /* Frameworks */,
+				EA264A8E1E03C0F500F0BCE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA264A921E03C0F500F0BCE0 /* PBXTargetDependency */,
+			);
+			name = LKSamplesUITests;
+			productName = LKSamplesUITests;
+			productReference = EA264A901E03C0F500F0BCE0 /* LKSamplesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA264A521E03C0A600F0BCE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Lemonsoft;
+				TargetAttributes = {
+					EA264A591E03C0A600F0BCE0 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = E9Z57RBU72;
+						ProvisioningStyle = Automatic;
+					};
+					EA264A691E03C0F500F0BCE0 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = L77U8HVTZN;
+						ProvisioningStyle = Automatic;
+					};
+					EA264A841E03C0F500F0BCE0 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = E9Z57RBU72;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EA264A691E03C0F500F0BCE0;
+					};
+					EA264A8F1E03C0F500F0BCE0 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = E9Z57RBU72;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EA264A691E03C0F500F0BCE0;
+					};
+				};
+			};
+			buildConfigurationList = EA264A551E03C0A600F0BCE0 /* Build configuration list for PBXProject "LemonKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA264A511E03C0A600F0BCE0;
+			productRefGroup = EA264A5B1E03C0A600F0BCE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA264A591E03C0A600F0BCE0 /* LemonKit */,
+				EA264A691E03C0F500F0BCE0 /* LKSamples */,
+				EA264A841E03C0F500F0BCE0 /* LKSamplesTests */,
+				EA264A8F1E03C0F500F0BCE0 /* LKSamplesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA264A681E03C0F500F0BCE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC4CA711E03E3B3002CDBAE /* LaunchScreen.storyboard in Resources */,
+				EA264AD11E03C2E700F0BCE0 /* AppInfo.plist in Resources */,
+				EA264AD41E03C33500F0BCE0 /* Main.xcassets in Resources */,
+				EAC4CA721E03E3B3002CDBAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A831E03C0F500F0BCE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A8E1E03C0F500F0BCE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA264A561E03C0A600F0BCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA264AC01E03C14100F0BCE0 /* LKUIViewController.m in Sources */,
+				EA264AC41E03C14100F0BCE0 /* UIColor+LKColor.m in Sources */,
+				EA264AC21E03C14100F0BCE0 /* NSObject+LKInstance.m in Sources */,
+				EA264ABD1E03C14100F0BCE0 /* LKUINavigationController.m in Sources */,
+				EA264A5F1E03C0A600F0BCE0 /* LemonKit.m in Sources */,
+				EA264ABF1E03C14100F0BCE0 /* LKUITabBarController.m in Sources */,
+				EA264ABE1E03C14100F0BCE0 /* LKUINavigationTabBarController.m in Sources */,
+				EA264AC51E03C14100F0BCE0 /* UIView+LKGestureListener.m in Sources */,
+				EA264AC31E03C14100F0BCE0 /* NSObject+LKLocalStr.m in Sources */,
+				EA264AC11E03C14100F0BCE0 /* NSObject+LKFreeCtrl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A661E03C0F500F0BCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC4CA681E03D508002CDBAE /* StarterViewController.m in Sources */,
+				EA264A6E1E03C0F500F0BCE0 /* main.m in Sources */,
+				EAC4CA761E03E3BC002CDBAE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A811E03C0F500F0BCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA264A8A1E03C0F500F0BCE0 /* LKSamplesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA264A8C1E03C0F500F0BCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA264A951E03C0F500F0BCE0 /* LKSamplesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA264A871E03C0F500F0BCE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA264A691E03C0F500F0BCE0 /* LKSamples */;
+			targetProxy = EA264A861E03C0F500F0BCE0 /* PBXContainerItemProxy */;
+		};
+		EA264A921E03C0F500F0BCE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA264A691E03C0F500F0BCE0 /* LKSamples */;
+			targetProxy = EA264A911E03C0F500F0BCE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EA264A611E03C0A600F0BCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA264A621E03C0A600F0BCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA264A641E03C0A600F0BCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = E9Z57RBU72;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA264A651E03C0A600F0BCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = E9Z57RBU72;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EA264A981E03C0F500F0BCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = main_appIcon;
+				DEVELOPMENT_TEAM = L77U8HVTZN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LKSamples/LemonKit.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/LKSamples/Resource/PropertyList/AppInfo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.lemonkit.samples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA264A991E03C0F500F0BCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = main_appIcon;
+				DEVELOPMENT_TEAM = L77U8HVTZN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LKSamples/LemonKit.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/LKSamples/Resource/PropertyList/AppInfo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.lemonkit.samples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA264A9B1E03C0F500F0BCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E9Z57RBU72;
+				INFOPLIST_FILE = LKSamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LKSamplesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LKSamples.app/LKSamples";
+			};
+			name = Debug;
+		};
+		EA264A9C1E03C0F500F0BCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E9Z57RBU72;
+				INFOPLIST_FILE = LKSamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LKSamplesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LKSamples.app/LKSamples";
+			};
+			name = Release;
+		};
+		EA264A9E1E03C0F500F0BCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = E9Z57RBU72;
+				INFOPLIST_FILE = LKSamplesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LKSamplesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LKSamples;
+			};
+			name = Debug;
+		};
+		EA264A9F1E03C0F500F0BCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = E9Z57RBU72;
+				INFOPLIST_FILE = LKSamplesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.LKSamplesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LKSamples;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA264A551E03C0A600F0BCE0 /* Build configuration list for PBXProject "LemonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA264A611E03C0A600F0BCE0 /* Debug */,
+				EA264A621E03C0A600F0BCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA264A631E03C0A600F0BCE0 /* Build configuration list for PBXNativeTarget "LemonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA264A641E03C0A600F0BCE0 /* Debug */,
+				EA264A651E03C0A600F0BCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA264A971E03C0F500F0BCE0 /* Build configuration list for PBXNativeTarget "LKSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA264A981E03C0F500F0BCE0 /* Debug */,
+				EA264A991E03C0F500F0BCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA264A9A1E03C0F500F0BCE0 /* Build configuration list for PBXNativeTarget "LKSamplesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA264A9B1E03C0F500F0BCE0 /* Debug */,
+				EA264A9C1E03C0F500F0BCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA264A9D1E03C0F500F0BCE0 /* Build configuration list for PBXNativeTarget "LKSamplesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA264A9E1E03C0F500F0BCE0 /* Debug */,
+				EA264A9F1E03C0F500F0BCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA264A521E03C0A600F0BCE0 /* Project object */;
+}

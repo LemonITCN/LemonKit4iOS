@@ -29,7 +29,7 @@ typedef enum{
     BUBBLE_LAYOUT_STYLE_TITLE_ONLY = 5
 }BUBBLE_LAYOUT_STYLE;
 
-/// @brief 泡泡控件位置枚举
+/// @brief LK泡泡控件位置枚举
 typedef enum{
     /// @brief 位于屏幕顶部
     BUBBLE_LOCATION_STYLE_TOP = 0,

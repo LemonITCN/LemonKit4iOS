@@ -7,6 +7,7 @@
 //
 
 #import "LKUIViewController.h"
+#import "LKLogConst.h"
 
 @interface LKUIViewController ()
 
@@ -100,7 +101,7 @@ static UIImage *_lk_sys_backIndicatorImage;
 
 - (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
     [super presentViewController: viewControllerToPresent animated: flag completion: completion];
-    LKInfoLog(@"Present ViewController success!");
+    NSLog(@"Present ViewController success!");
 }
 
 // 作用：拦截手势触发

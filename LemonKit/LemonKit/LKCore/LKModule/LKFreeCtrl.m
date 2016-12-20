@@ -20,11 +20,11 @@
 + (void)pushViewController: (UIViewController *)viewController
     inNavigationController: (UINavigationController *)inNavigationController
                   animated: (BOOL)animated{
-    LKInfoLog(@"使用LKFreeCtrl进行了push操作： %@ - into - %@" ,
+    NSLog(@"使用LKFreeCtrl进行了push操作： %@ - into - %@" ,
               viewController,
               inNavigationController);
     if ([[self getTopViewController] isEqual: viewController]){
-        LKInfoLog(@"要push的viewController与当前正在显示的viewController为同一对象！自动忽略操作并调用ViewDidAppear函数！");
+        NSLog(@"要push的viewController与当前正在显示的viewController为同一对象！自动忽略操作并调用ViewDidAppear函数！");
         [viewController viewDidAppear: animated];
         return;
     }
@@ -45,9 +45,9 @@
              onViewController: (UIViewController *)onViewController
                      animated: (BOOL)animated
                    completion: (void (^)(void))completion{
-    LKInfoLog(@"使用LKFreeCtrl进行了prersent操作： %@ - on - %@" , viewController, onViewController);
+    NSLog(@"使用LKFreeCtrl进行了prersent操作： %@ - on - %@" , viewController, onViewController);
     if ([[self getTopViewController] isEqual: viewController]){
-        LKInfoLog(@"要present的viewController与当前正在显示的viewController为同一对象！自动忽略操作并调用ViewDidAppear函数！");
+        NSLog(@"要present的viewController与当前正在显示的viewController为同一对象！自动忽略操作并调用ViewDidAppear函数！");
         [viewController viewDidAppear: animated];
         return;
     }
@@ -74,7 +74,7 @@
  @param animated 是否使用动画
  @param completion 在present之后的回调block
  */
-+ (void)presentViewcontroller: (UIViewController *)viewController
++ (void)presentViewController: (UIViewController *)viewController
                      animated: (BOOL)animated
                    completion: (void (^)(void))completion{
     [self presentViewController: viewController
@@ -89,7 +89,7 @@
  @param viewController 要push出的viewController对象
  */
 + (void)pushViewController:(UIViewController *)viewController{
-    [self lkFreeCtrlPushViewController: viewController
+    [self pushViewController: viewController
                               animated: YES];
 }
 

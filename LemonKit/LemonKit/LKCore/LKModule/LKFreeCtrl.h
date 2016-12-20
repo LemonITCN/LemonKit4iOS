@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface LKFreeCtrl : NSObject
 
 /**
@@ -41,7 +42,7 @@
  @param viewController 要push出的viewController对象
  @param animated 是否使用动画
  */
-+ (void)lkFreeCtrlPushViewController: (UIViewController *)viewController
++ (void)pushViewController: (UIViewController *)viewController
                             animated: (BOOL)animated;
 
 /**

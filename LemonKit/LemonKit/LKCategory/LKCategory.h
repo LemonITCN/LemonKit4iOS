@@ -9,7 +9,6 @@
 #ifndef LKCategory_h
 #define LKCategory_h
 
-#import "NSObject+LKFreeCtrl.h"
 #import "NSObject+LKInstance.h"
 #import "NSObject+LKLocalStr.h"
 #import "UIView+LKGestureListener.h"

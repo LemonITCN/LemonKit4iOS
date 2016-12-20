@@ -11,6 +11,7 @@
 #import "LKBase.h"
 #import "LKConst.h"
 #import "LKCategory.h"
+#import "LKModule.h"
 
 @interface LemonKit : NSObject
 

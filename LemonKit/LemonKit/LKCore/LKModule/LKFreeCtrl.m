@@ -1,14 +1,14 @@
 //
-//  NSObject+LKFreeCtrl.m
+//  LKFreeCtrl.m
 //  LemonKit
 //
-//  Created by 1em0nsOft on 2016/12/2.
+//  Created by 1em0nsOft on 2016/12/20.
 //  Copyright © 2016年 Lemonsoft. All rights reserved.
 //
 
-#import "NSObject+LKFreeCtrl.h"
+#import "LKFreeCtrl.h"
 
-@implementation NSObject (LKFreeCtrl)
+@implementation LKFreeCtrl
 
 /**
  LK自由控制 - 在指定的NavigationController中push一个新的ViewController
@@ -17,14 +17,19 @@
  @param inNavigationController 要push新ViewController的NavigationController
  @param animated 是否使用动画
  */
-- (void)lkFreeCtrlPushViewController:(UIViewController *)viewController inNavigationController: (UINavigationController *)inNavigationController animated:(BOOL)animated{
-    LKInfoLog(@"使用LKFreeCtrl进行了push操作： %@ - into - %@" , viewController, inNavigationController);
-    if ([[self lkFreeCtrlGetTopViewController] isEqual: viewController]){
++ (void)pushViewController: (UIViewController *)viewController
+    inNavigationController: (UINavigationController *)inNavigationController
+                  animated: (BOOL)animated{
+    LKInfoLog(@"使用LKFreeCtrl进行了push操作： %@ - into - %@" ,
+              viewController,
+              inNavigationController);
+    if ([[self getTopViewController] isEqual: viewController]){
         LKInfoLog(@"要push的viewController与当前正在显示的viewController为同一对象！自动忽略操作并调用ViewDidAppear函数！");
         [viewController viewDidAppear: animated];
         return;
     }
-    [inNavigationController pushViewController: viewController animated: animated];
+    [inNavigationController pushViewController: viewController
+                                      animated: animated];
 }
 
 
@@ -36,9 +41,12 @@
  @param animated 是否使用动画
  @param completion 在present之后的回调block
  */
-- (void)lkFreeCtrlPresent: (UIViewController *)viewController onViewController: (UIViewController *)onViewController animated:(BOOL)animated completion:(void (^)(void))completion{
++ (void)presentViewController: (UIViewController *)viewController
+             onViewController: (UIViewController *)onViewController
+                     animated: (BOOL)animated
+                   completion: (void (^)(void))completion{
     LKInfoLog(@"使用LKFreeCtrl进行了prersent操作： %@ - on - %@" , viewController, onViewController);
-    if ([[self lkFreeCtrlGetTopViewController] isEqual: viewController]){
+    if ([[self getTopViewController] isEqual: viewController]){
         LKInfoLog(@"要present的viewController与当前正在显示的viewController为同一对象！自动忽略操作并调用ViewDidAppear函数！");
         [viewController viewDidAppear: animated];
         return;
@@ -52,8 +60,11 @@
  @param viewController 要push出的viewController对象
  @param animated 是否使用动画
  */
-- (void)lkFreeCtrlPushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    [self lkFreeCtrlPushViewController: viewController inNavigationController: [self lkFreeCtrlGetTopViewController].navigationController animated: animated];
++ (void)pushViewController: (UIViewController *)viewController
+                  animated: (BOOL)animated{
+    [self pushViewController: viewController
+      inNavigationController: [self getTopViewController].navigationController
+                    animated: animated];
 }
 
 /**
@@ -63,8 +74,13 @@
  @param animated 是否使用动画
  @param completion 在present之后的回调block
  */
-- (void)lkFreeCtrlPresent: (UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion{
-    [self lkFreeCtrlPresent: viewController onViewController: [self lkFreeCtrlGetTopViewController] animated:animated completion: completion];
++ (void)presentViewcontroller: (UIViewController *)viewController
+                     animated: (BOOL)animated
+                   completion: (void (^)(void))completion{
+    [self presentViewController: viewController
+               onViewController: [self getTopViewController]
+                       animated: animated
+                     completion: completion];
 }
 
 /**
@@ -72,8 +88,9 @@
  
  @param viewController 要push出的viewController对象
  */
-- (void)lkFreeCtrlPushViewController:(UIViewController *)viewController{
-    [self lkFreeCtrlPushViewController: viewController animated: YES];
++ (void)pushViewController:(UIViewController *)viewController{
+    [self lkFreeCtrlPushViewController: viewController
+                              animated: YES];
 }
 
 /**
@@ -82,8 +99,11 @@
  @param viewController 要present出的ViewController对象
  @param completion 在present之后的回调block
  */
-- (void)lkFreeCtrlPresent: (UIViewController *)viewController completion:(void (^)(void))completion{
-    [self lkFreeCtrlPresent: viewController animated: YES completion: completion];
++ (void)presentViewController: (UIViewController *)viewController
+                   completion: (void (^)(void))completion{
+    [self presentViewController: viewController
+                       animated: YES
+                     completion: completion];
 }
 
 /**
@@ -91,8 +111,9 @@
  
  @param viewController 要present出的ViewController对象
  */
-- (void)lkFreeCtrlPresent: (UIViewController *)viewController{
-    [self lkFreeCtrlPresent: viewController completion: nil];
++ (void)presentViewController: (UIViewController *)viewController{
+    [self presentViewController: viewController
+                     completion: nil];
 }
 
 /**
@@ -100,11 +121,11 @@
  
  @return 顶层的ViewController对象
  */
-- (UIViewController *)lkFreeCtrlGetTopViewController{
++ (UIViewController *)getTopViewController{
     UIViewController *resultViewController;
-    resultViewController = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
+    resultViewController = [self _topViewController: [[UIApplication sharedApplication].keyWindow rootViewController]];
     while (resultViewController.presentedViewController) {
-        resultViewController = [self _topViewController:resultViewController.presentedViewController];
+        resultViewController = [self _topViewController: resultViewController.presentedViewController];
     }
     return resultViewController;
 }
@@ -112,19 +133,20 @@
 
 /**
  递归获取视图控制器
-
+ 
  @param viewController 递归获取视图控制器
  @return 最终获取到的顶层视图控制器
  */
-- (UIViewController *)_topViewController:(UIViewController *)viewController {
++ (UIViewController *)_topViewController: (UIViewController *)viewController {
     if ([viewController isKindOfClass:[UINavigationController class]]) {
-        return [self _topViewController:[(UINavigationController *)viewController topViewController]];
+        return [self _topViewController: [(UINavigationController *)viewController topViewController]];
     } else if ([viewController isKindOfClass:[UITabBarController class]]) {
-        return [self _topViewController:[(UITabBarController *)viewController selectedViewController]];
+        return [self _topViewController: [(UITabBarController *)viewController selectedViewController]];
     } else {
         return viewController;
     }
     return nil;
 }
+
 
 @end

@@ -95,6 +95,11 @@
 		EA264AD31E03C33500F0BCE0 /* Main.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Main.xcassets; sourceTree = "<group>"; };
 		EA7580461E08BC6900D376A8 /* LKFreeCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKFreeCtrl.h; sourceTree = "<group>"; };
 		EA7580471E08BC6900D376A8 /* LKFreeCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKFreeCtrl.m; sourceTree = "<group>"; };
+		EAB47A391E092CA000632BAE /* LKModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKModule.h; sourceTree = "<group>"; };
+		EAB47A3A1E092CB600632BAE /* LKCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCore.h; sourceTree = "<group>"; };
+		EAB47A3B1E092CC900632BAE /* LKBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKBase.h; sourceTree = "<group>"; };
+		EAB47A3C1E092CE100632BAE /* LKCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCategory.h; sourceTree = "<group>"; };
+		EAB47A3D1E092D3500632BAE /* LKConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKConst.h; sourceTree = "<group>"; };
 		EAC4CA661E03D508002CDBAE /* StarterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarterViewController.h; sourceTree = "<group>"; };
 		EAC4CA671E03D508002CDBAE /* StarterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterViewController.m; sourceTree = "<group>"; };
 		EAC4CA6F1E03E3B3002CDBAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -225,6 +230,7 @@
 				EA264AA81E03C14100F0BCE0 /* LKUITabBarController.m */,
 				EA264AA91E03C14100F0BCE0 /* LKUIViewController.h */,
 				EA264AAA1E03C14100F0BCE0 /* LKUIViewController.m */,
+				EAB47A3B1E092CC900632BAE /* LKBase.h */,
 			);
 			path = LKBase;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 				EA264AB41E03C14100F0BCE0 /* UIColor+LKColor.m */,
 				EA264AB51E03C14100F0BCE0 /* UIView+LKGestureListener.h */,
 				EA264AB61E03C14100F0BCE0 /* UIView+LKGestureListener.m */,
+				EAB47A3C1E092CE100632BAE /* LKCategory.h */,
 			);
 			path = LKCategory;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 			children = (
 				EA264AB91E03C14100F0BCE0 /* LKImageConst.h */,
 				EA264ABA1E03C14100F0BCE0 /* LKLogConst.h */,
+				EAB47A3D1E092D3500632BAE /* LKConst.h */,
 			);
 			path = LKConst;
 			sourceTree = "<group>";
@@ -312,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7580451E08BC4400D376A8 /* LKModule */,
+				EAB47A3A1E092CB600632BAE /* LKCore.h */,
 			);
 			path = LKCore;
 			sourceTree = "<group>";
@@ -321,6 +330,7 @@
 			children = (
 				EA7580461E08BC6900D376A8 /* LKFreeCtrl.h */,
 				EA7580471E08BC6900D376A8 /* LKFreeCtrl.m */,
+				EAB47A391E092CA000632BAE /* LKModule.h */,
 			);
 			path = LKModule;
 			sourceTree = "<group>";

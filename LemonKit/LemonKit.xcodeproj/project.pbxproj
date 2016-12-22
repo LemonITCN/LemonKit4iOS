@@ -25,6 +25,7 @@
 		EA264AC61E03C1E200F0BCE0 /* libLemonKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA264A5A1E03C0A600F0BCE0 /* libLemonKit.a */; };
 		EA264AD11E03C2E700F0BCE0 /* AppInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA264AD01E03C2E700F0BCE0 /* AppInfo.plist */; };
 		EA264AD41E03C33500F0BCE0 /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA264AD31E03C33500F0BCE0 /* Main.xcassets */; };
+		EA5E0CDB1E0A464C0082CC1B /* LKSize.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5E0CDA1E0A464C0082CC1B /* LKSize.m */; };
 		EA7580481E08BC6900D376A8 /* LKFreeCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7580471E08BC6900D376A8 /* LKFreeCtrl.m */; };
 		EAC4CA681E03D508002CDBAE /* StarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC4CA671E03D508002CDBAE /* StarterViewController.m */; };
 		EAC4CA711E03E3B3002CDBAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC4CA6F1E03E3B3002CDBAE /* LaunchScreen.storyboard */; };
@@ -109,6 +110,8 @@
 		EA264ABA1E03C14100F0BCE0 /* LKLogConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLogConst.h; sourceTree = "<group>"; };
 		EA264AD01E03C2E700F0BCE0 /* AppInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppInfo.plist; sourceTree = "<group>"; };
 		EA264AD31E03C33500F0BCE0 /* Main.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Main.xcassets; sourceTree = "<group>"; };
+		EA5E0CD91E0A464C0082CC1B /* LKSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKSize.h; sourceTree = "<group>"; };
+		EA5E0CDA1E0A464C0082CC1B /* LKSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSize.m; sourceTree = "<group>"; };
 		EA7580461E08BC6900D376A8 /* LKFreeCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKFreeCtrl.h; sourceTree = "<group>"; };
 		EA7580471E08BC6900D376A8 /* LKFreeCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKFreeCtrl.m; sourceTree = "<group>"; };
 		EAB47A391E092CA000632BAE /* LKModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKModule.h; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 		EA264AA11E03C14100F0BCE0 /* LKBase */ = {
 			isa = PBXGroup;
 			children = (
+				EAB47A3B1E092CC900632BAE /* LKBase.h */,
 				EA264AA31E03C14100F0BCE0 /* LKUINavigationController.h */,
 				EA264AA41E03C14100F0BCE0 /* LKUINavigationController.m */,
 				EA264AA51E03C14100F0BCE0 /* LKUINavigationTabBarController.h */,
@@ -278,7 +282,6 @@
 				EA264AA81E03C14100F0BCE0 /* LKUITabBarController.m */,
 				EA264AA91E03C14100F0BCE0 /* LKUIViewController.h */,
 				EA264AAA1E03C14100F0BCE0 /* LKUIViewController.m */,
-				EAB47A3B1E092CC900632BAE /* LKBase.h */,
 			);
 			path = LKBase;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 		EA264AAB1E03C14100F0BCE0 /* LKCategory */ = {
 			isa = PBXGroup;
 			children = (
+				EAB47A3C1E092CE100632BAE /* LKCategory.h */,
 				EA264AAF1E03C14100F0BCE0 /* NSObject+LKInstance.h */,
 				EA264AB01E03C14100F0BCE0 /* NSObject+LKInstance.m */,
 				EA264AB11E03C14100F0BCE0 /* NSObject+LKLocalStr.h */,
@@ -294,7 +298,6 @@
 				EA264AB41E03C14100F0BCE0 /* UIColor+LKColor.m */,
 				EA264AB51E03C14100F0BCE0 /* UIView+LKGestureListener.h */,
 				EA264AB61E03C14100F0BCE0 /* UIView+LKGestureListener.m */,
-				EAB47A3C1E092CE100632BAE /* LKCategory.h */,
 			);
 			path = LKCategory;
 			sourceTree = "<group>";
@@ -302,9 +305,9 @@
 		EA264AB71E03C14100F0BCE0 /* LKConst */ = {
 			isa = PBXGroup;
 			children = (
+				EAB47A3D1E092D3500632BAE /* LKConst.h */,
 				EA264AB91E03C14100F0BCE0 /* LKImageConst.h */,
 				EA264ABA1E03C14100F0BCE0 /* LKLogConst.h */,
-				EAB47A3D1E092D3500632BAE /* LKConst.h */,
 			);
 			path = LKConst;
 			sourceTree = "<group>";
@@ -364,9 +367,17 @@
 			path = ImageAsset;
 			sourceTree = "<group>";
 		};
+		EA5E0CDE1E0A471F0082CC1B /* LKSimplify */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LKSimplify;
+			sourceTree = "<group>";
+		};
 		EA7580441E08BC4400D376A8 /* LKCore */ = {
 			isa = PBXGroup;
 			children = (
+				EA5E0CDE1E0A471F0082CC1B /* LKSimplify */,
 				EA7580451E08BC4400D376A8 /* LKModule */,
 				EAB47A3A1E092CB600632BAE /* LKCore.h */,
 			);
@@ -376,9 +387,11 @@
 		EA7580451E08BC4400D376A8 /* LKModule */ = {
 			isa = PBXGroup;
 			children = (
+				EAB47A391E092CA000632BAE /* LKModule.h */,
 				EA7580461E08BC6900D376A8 /* LKFreeCtrl.h */,
 				EA7580471E08BC6900D376A8 /* LKFreeCtrl.m */,
-				EAB47A391E092CA000632BAE /* LKModule.h */,
+				EA5E0CD91E0A464C0082CC1B /* LKSize.h */,
+				EA5E0CDA1E0A464C0082CC1B /* LKSize.m */,
 			);
 			path = LKModule;
 			sourceTree = "<group>";
@@ -767,6 +780,7 @@
 				EA264ABE1E03C14100F0BCE0 /* LKUINavigationTabBarController.m in Sources */,
 				EA264AC51E03C14100F0BCE0 /* UIView+LKGestureListener.m in Sources */,
 				EA264AC31E03C14100F0BCE0 /* NSObject+LKLocalStr.m in Sources */,
+				EA5E0CDB1E0A464C0082CC1B /* LKSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

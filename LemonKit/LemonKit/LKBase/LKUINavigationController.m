@@ -20,7 +20,16 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        
+        self.navigationBarHidden = YES;
+        [self initBaseInfo];
+    }
+    return self;
+}
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController{
+    self = [super initWithRootViewController:rootViewController];
+    if (self) {
+        self.navigationBarHidden = YES;
         [self initBaseInfo];
     }
     return self;

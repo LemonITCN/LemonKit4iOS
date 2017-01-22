@@ -10,8 +10,9 @@
 #define LKCategory_h
 
 #import "NSObject+LKInstance.h"
-#import "NSObject+LKLocalStr.h"
-#import "UIView+LKGestureListener.h"
 #import "UIColor+LKColor.h"
+#import "UIView+LKGestureListener.h"
+#import "NSString+LKLocalStr.h"
+#import "NSDictionary+LK.h"
 
 #endif /* LKCategory_h */

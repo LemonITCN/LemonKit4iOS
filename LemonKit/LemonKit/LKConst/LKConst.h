@@ -11,5 +11,6 @@
 
 #import "LKLogConst.h"
 #import "LKImageConst.h"
+#import "LKSizeConst.h"
 
 #endif /* LKConst_h */

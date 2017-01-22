@@ -16,6 +16,8 @@ static NSDictionary *_lk_stringsFileMap;
 - (NSString *)stringWithLKLocalString: (NSString *)stringKey{
     if (!_lk_stringsFileMap) {
         _lk_stringsFileMap = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_STRINGS_FILE_MAPPING];
+        if (!_lk_stringsFileMap)
+            return nil;
     }
     NSArray *stringKeyComponents = [stringKey componentsSeparatedByString: @"_"];
     if (stringKeyComponents.count < 2) {// 按照下划线拆分后，得到的数组小于2，说明格式不正确

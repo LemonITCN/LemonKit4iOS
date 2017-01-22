@@ -12,7 +12,9 @@
 
 // LKApp.plist
 static const NSString *LK_NAME_APP = @"LKApp";
-// LKStringsFileMapping.PLIST
+// LKStringsFileMapping.plist
 static const NSString *LK_NAME_STRINGS_FILE_MAPPING = @"LKStringsFileMapping";
+// LKViewControllerMapping.plist
+static const NSString *LK_NAME_VIEW_CONTROLLER_MAPPING = @"LKViewControllerMapping";
 
 #endif /* LKNameConst_h */

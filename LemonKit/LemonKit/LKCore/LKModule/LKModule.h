@@ -10,6 +10,6 @@
 #define LKModule_h
 
 #import "LKFreeCtrl.h"
-#import "LKSize.h"
+#import "LKInstance.h"
 
 #endif /* LKModule_h */

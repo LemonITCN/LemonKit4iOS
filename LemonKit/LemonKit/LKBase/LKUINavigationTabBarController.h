@@ -11,6 +11,9 @@
 
 @interface LKUINavigationTabBarController : LKUINavigationController
 
+/**
+ 导航栏控制器
+ */
 @property (nonatomic , readonly) LKUITabBarController *lkTabBarController;
 
 @end

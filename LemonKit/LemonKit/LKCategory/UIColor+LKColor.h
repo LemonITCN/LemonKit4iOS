@@ -18,7 +18,7 @@
  @param alpha 透明度值
  @return 生成的颜色对象
  */
-#define LKColorMake(red , green , blue , alpha) [UIColor colorWithRed: red / 255.0 green: green / 255.0 blue: blue / 255.0 alpha: alpha]
+#define LKColorMake(_red , _green , _blue , _alpha) [UIColor colorWithRed: (_red) / 255.0 green: (_green) / 255.0 blue: (_blue) / 255.0 alpha: (_alpha)]
 
 /**
  根据颜色值来创建颜色，颜色值和透明度的范围都是0-1的小数
@@ -29,7 +29,7 @@
  @param alpha 透明度值
  @return 生成的颜色对象
  */
-#define LKColorMakeWithFloat(red , green , blue , alpha) [UIColor colorWithRed: red green: green blue: blue alpha: alpha]
+#define LKColorMakeWithFloat(_red , _green , _blue , _alpha) [UIColor colorWithRed: (_red) green: (_green) blue: (_blue) alpha: (_alpha)]
 
 /**
  根据颜色值来生成不透明的颜色，颜色值范围为0-255
@@ -39,7 +39,7 @@
  @param blue 蓝色的颜色值
  @return 生成的颜色对象
  */
-#define LKColorMakeNoTransprant(red , green , blue) [UIColor colorWithRed: red / 255.0 green: green / 255.0 blue: blue / 255.0 alpha: 1]
+#define LKColorMakeNoTransprant(_red , _green , _blue) [UIColor colorWithRed: (_red) / 255.0 green: (_green) / 255.0 blue: (_blue) / 255.0 alpha: 1]
 
 
 /**
@@ -51,7 +51,7 @@
  @param alpha 透明度的值
  @return 生成的颜色对象
  */
-#define LKColorMakeWithHexString(hexString , alpha) [UIColor colorWithHexString: hexString alpha: alpha]
+#define LKColorMakeWithHexString(_hexString , _alpha) [UIColor colorWithHexString: _hexString alpha: (_alpha)]
 
 /**
  根据十六进制的字符串来生成不透明的颜色对象
@@ -60,7 +60,7 @@
  @param hexString 十六进制颜色值字符串
  @return 生成的颜色对象
  */
-#define LKColorMakeWithHexStringNoTransparent(hexString) [UIColor colorWithHexString: hexString]
+#define LKColorMakeWithHexStringNoTransparent(_hexString) [UIColor colorWithHexString: _hexString]
 
 @interface UIColor (LKColor)
 
@@ -81,5 +81,21 @@
  @return 颜色对象
  */
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
+
+/**
+ 生成一种随机颜色
+
+ @return 随机颜色对象
+ */
++ (UIColor *)randomColor;
+
+/**
+ 返回主题色
+ 若使用此功能必须配置了LKApp.plist文件并设置了ThemeColor字段
+ 否则返回白色
+ 
+ @return 主题色对象
+ */
++ (UIColor *)themeColor;
 
 @end

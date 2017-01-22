@@ -7,6 +7,7 @@
 //
 
 #import "StarterViewController.h"
+#import "NSString+LKLocalStr.h"
 
 @interface StarterViewController ()
 
@@ -20,7 +21,7 @@
 
 - (void)initView{
     UIView *view = [[UIView alloc] initWithFrame: CGRectMake(50,50, 100, 100)];
-    view.backgroundColor = [UIColor blueColor];
+    view.backgroundColor = [UIColor themeColor];
     view.onTap = ^(UIView *view){
         [LKFreeCtrl pushViewController: LKFindViewController(@"MainViewController")];
     };

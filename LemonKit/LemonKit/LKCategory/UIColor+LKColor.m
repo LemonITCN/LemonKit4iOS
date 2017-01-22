@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+LKColor.h"
+#import "NSDictionary+LK.h"
 
 @implementation UIColor (LKColor)
 
@@ -50,6 +51,26 @@
 //默认alpha值为1
 + (UIColor *)colorWithHexString:(NSString *)color {
     return [self colorWithHexString:color alpha:1.0f];
+}
+
+// 生成随机颜色
++ (UIColor *)randomColor{
+    return [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+}
+
+
+/**
+ 返回主题色
+ 若使用此功能必须配置了LKApp.plist文件并设置了ThemeColor字段
+ 否则返回白色
+
+ @return 主题色对象
+ */
++ (UIColor *)themeColor{
+    NSDictionary *app = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_APP];
+    if (app)
+        return [UIColor colorWithHexString: app[@"ThemeColor"]];
+    return [UIColor whiteColor];
 }
 
 @end

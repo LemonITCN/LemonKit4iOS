@@ -6,7 +6,6 @@
 //  Copyright © 2016年 Lemonsoft. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 /**

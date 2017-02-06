@@ -9,8 +9,6 @@
 #ifndef LKLogConst_h
 #define LKLogConst_h
 
-#include <stdio.h>
-#include <stdlib.h>
 #import <Foundation/Foundation.h>
 
 #ifdef DEBUG

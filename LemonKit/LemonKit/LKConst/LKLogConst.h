@@ -38,7 +38,7 @@
  */
 #define LKInfoLog(format, ...) do {fprintf(stderr, "🍋");(NSLog)((format), ##__VA_ARGS__);fprintf(stderr, "\n");} while (0)
 #else
-#define LKLog(...)
+#define LKInfoLog(...)
 #endif
 
 /**

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0584D61DC6098C6FB8E837CF /* libPods-LemonKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E78FDC1802ECEF585CFD47 /* libPods-LemonKit.a */; };
 		5FE2A627323E50E6618D4049 /* libPods-LKSamplesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F95FDF386374F38532942EB /* libPods-LKSamplesTests.a */; };
-		EA05F5341E481BF1007B45A6 /* LKNameConst.h in Sources */ = {isa = PBXBuildFile; fileRef = F06A354D1E34D57A00401416 /* LKNameConst.h */; };
 		EA264A5F1E03C0A600F0BCE0 /* LemonKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264A5E1E03C0A600F0BCE0 /* LemonKit.m */; };
 		EA264A601E03C0A600F0BCE0 /* LemonKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA264A5D1E03C0A600F0BCE0 /* LemonKit.h */; };
 		EA264A6E1E03C0F500F0BCE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA264A6D1E03C0F500F0BCE0 /* main.m */; };
@@ -772,7 +771,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA05F5341E481BF1007B45A6 /* LKNameConst.h in Sources */,
 				EA264AC01E03C14100F0BCE0 /* LKUIViewController.m in Sources */,
 				EA264AC41E03C14100F0BCE0 /* UIColor+LKColor.m in Sources */,
 				EA264ABD1E03C14100F0BCE0 /* LKUINavigationController.m in Sources */,
@@ -957,7 +955,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LKSamples/Resource/PropertyList/AppInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.lemonkit.samples;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.lemonkit.samples1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -974,7 +972,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LKSamples/Resource/PropertyList/AppInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.lemonkit.samples;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lemonsoft.lemonkit.samples1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

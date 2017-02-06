@@ -10,6 +10,5 @@
 #define LemonKit_pch
 
 #import "LKLogConst.h"
-#import "LKNameConst.h"
 
 #endif /* LemonKit_pch */

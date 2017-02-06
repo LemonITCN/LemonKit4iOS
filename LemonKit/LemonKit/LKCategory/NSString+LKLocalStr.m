@@ -8,6 +8,8 @@
 
 #import "NSString+LKLocalStr.h"
 #import "NSDictionary+LK.h"
+#import "LKNameConst.h"
+#import "LKLogConst.h"
 
 @implementation NSString (LKLocalStr)
 

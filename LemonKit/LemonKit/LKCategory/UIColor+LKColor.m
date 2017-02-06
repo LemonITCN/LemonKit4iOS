@@ -8,6 +8,7 @@
 
 #import "UIColor+LKColor.h"
 #import "NSDictionary+LK.h"
+#import "LKNameConst.h"
 
 @implementation UIColor (LKColor)
 

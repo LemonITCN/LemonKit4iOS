@@ -7,6 +7,8 @@
 //
 
 #import "NSDictionary+LK.h"
+#import "LKNameConst.h"
+#import "LKLogConst.h"
 
 @implementation NSDictionary (LK)
 

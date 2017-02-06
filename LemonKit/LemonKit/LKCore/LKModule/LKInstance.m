@@ -8,6 +8,7 @@
 
 #import "LKInstance.h"
 #import "NSDictionary+LK.h"
+#import "LKNameConst.h"
 
 @implementation LKInstance
 

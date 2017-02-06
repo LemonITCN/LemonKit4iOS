@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LKNameConst.h"
 
 @interface NSDictionary (LK)
 

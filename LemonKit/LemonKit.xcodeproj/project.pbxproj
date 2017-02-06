@@ -90,7 +90,6 @@
 		EA264A901E03C0F500F0BCE0 /* LKSamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKSamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA264A941E03C0F500F0BCE0 /* LKSamplesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKSamplesUITests.m; sourceTree = "<group>"; };
 		EA264A961E03C0F500F0BCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA264AA01E03C14100F0BCE0 /* LemonKit.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LemonKit.pch; sourceTree = "<group>"; };
 		EA264AA31E03C14100F0BCE0 /* LKUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUINavigationController.h; sourceTree = "<group>"; };
 		EA264AA41E03C14100F0BCE0 /* LKUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUINavigationController.m; sourceTree = "<group>"; };
 		EA264AA51E03C14100F0BCE0 /* LKUINavigationTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUINavigationTabBarController.h; sourceTree = "<group>"; };
@@ -225,7 +224,6 @@
 			children = (
 				EA264A5D1E03C0A600F0BCE0 /* LemonKit.h */,
 				EA264A5E1E03C0A600F0BCE0 /* LemonKit.m */,
-				EA264AA01E03C14100F0BCE0 /* LemonKit.pch */,
 				EA7580441E08BC4400D376A8 /* LKCore */,
 				EA264AA11E03C14100F0BCE0 /* LKBase */,
 				EA264AAB1E03C14100F0BCE0 /* LKCategory */,
@@ -922,8 +920,8 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = E9Z57RBU72;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -936,8 +934,8 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = E9Z57RBU72;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/LemonKit/LemonKit.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

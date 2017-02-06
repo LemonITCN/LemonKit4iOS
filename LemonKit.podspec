@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LemonKit"
-  s.version          = "1.0.5"
+  s.version          = "1.0.6"
   s.summary          = "一个可以让你开发iOS爽到爆的framework!"
   s.description      = <<-DESC
                        移动开发框架的新血液——LemonKit！更有Swift和Android版本哦！

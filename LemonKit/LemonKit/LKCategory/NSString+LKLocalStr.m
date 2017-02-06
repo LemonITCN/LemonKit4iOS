@@ -15,7 +15,7 @@
 
 static NSDictionary *_lk_stringsFileMap;
 
-- (NSString *)stringWithLKLocalString: (NSString *)stringKey{
++ (NSString *)stringWithLKLocalString: (NSString *)stringKey{
     if (!_lk_stringsFileMap) {
         _lk_stringsFileMap = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_STRINGS_FILE_MAPPING];
         if (!_lk_stringsFileMap)

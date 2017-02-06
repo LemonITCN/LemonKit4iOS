@@ -23,7 +23,7 @@
     UIView *view = [[UIView alloc] initWithFrame: CGRectMake(50,50, 100, 100)];
     view.backgroundColor = [UIColor themeColor];
     view.onTap = ^(UIView *view){
-        [LKFreeCtrl pushViewController: LKFindViewController(@"MainViewController")];
+        [LKFreeCtrl pushViewController: LKInstanceFindViewController(@"MainViewController")];
     };
     [self.view addSubview: view];
 }

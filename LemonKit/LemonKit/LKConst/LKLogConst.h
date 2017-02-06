@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#import <Foundation/Foundation.h>
 
 #ifdef DEBUG
 /**

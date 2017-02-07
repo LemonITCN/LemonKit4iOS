@@ -7,6 +7,7 @@
 //
 
 #import "LemonKit.h"
+#import "LKLinkageItem.h"
 
 @implementation LemonKit{
     UIView *_lemonerContainer;
@@ -21,12 +22,20 @@ static LemonKit *lemonKit;
     printf("🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋\t🍋🍋🍋🍋🍋\n");
     printf("🍋🍋🍋🍋🍋 LemonKit Framework start up success!\t🍋🍋🍋🍋🍋\n");
     printf("🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋\t🍋🍋🍋🍋🍋\n\n");
+    
+    LKLinkageItem *item = [[LKLinkageItem alloc] init];
+    LKLinkageItem *item1 = [[LKLinkageItem alloc] init];
+    LKLinkageItem *item2 = [[LKLinkageItem alloc] init];
+    LKLinkageItem *item3 = [[LKLinkageItem alloc] init];
+//    [item addChild: item1];
+//    [item addChild: item2];
+    [item2 addChild: item3];
+    LKLog(@"deepth: %d",[item calculateDepth]);
 }
 
 - (LemonKit *)startUp{
 #ifdef DEBUG
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(keyWindowFirstKeyListener) name: UIWindowDidBecomeKeyNotification object: nil];
-
 #else
     LKLog(@"APP startup!")
 #endif

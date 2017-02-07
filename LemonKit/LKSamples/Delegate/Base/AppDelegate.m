@@ -20,6 +20,7 @@
     self.window.rootViewController = [[LKUINavigationController alloc] initWithRootViewController: [[StarterViewController alloc] init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [LemonKit startUp];
     return YES;
 }
 

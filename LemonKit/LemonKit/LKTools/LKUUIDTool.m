@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Lemonsoft. All rights reserved.
 //
 
-#import "LKUUID.h"
+#import "LKUUIDTool.h"
 
-@implementation LKUUID
+@implementation LKUUIDTool
 
 + (NSString *)random{
     CFUUIDRef uuid_ref = CFUUIDCreate(NULL);

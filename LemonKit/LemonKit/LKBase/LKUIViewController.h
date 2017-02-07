@@ -21,12 +21,12 @@
 /**
  LK自定义 - 导航栏
  */
-@property (nonatomic , readonly) UINavigationBar *lkNavigationBar;
+@property (nonnull, nonatomic , readonly) UINavigationBar *lkNavigationBar;
 
 /**
  LK自定义 - 导航栏Item
  */
-@property (nonatomic , readonly) UINavigationItem *lkNavigationItem;
+@property (nonnull, nonatomic , readonly) UINavigationItem *lkNavigationItem;
 
 
 /**

@@ -8,6 +8,7 @@
 
 #import "LKUIViewController.h"
 #import "LKLogConst.h"
+#import "LKUUIDTool.h"
 
 @interface LKUIViewController ()
 

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 @class LKLinkageItem;
+@class LKLinkageCell;
+@class LKLinkageView;
+
+@protocol LKLinkageViewDelegate <NSObject>
+
+- (void)customCellWithLKLinkageView: (nonnull LKLinkageView *)linkageView
+                        linkageCell: (nonnull LKLinkageCell *)linkageCell
+                        linkageItem: (nonnull LKLinkageItem *)linkageitem;
+
+@end
 
 @interface LKLinkageView : UIView
 

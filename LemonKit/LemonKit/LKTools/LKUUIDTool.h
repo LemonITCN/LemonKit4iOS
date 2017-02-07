@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LKUUID : NSObject
+@interface LKUUIDTool : NSObject
 
 /**
  随机生成一个UUID字符串

@@ -30,7 +30,7 @@
 		EAC4CA761E03E3BC002CDBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC4CA751E03E3BC002CDBAE /* AppDelegate.m */; };
 		EAEB47201E495B9D0016512B /* LKLinkageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB471F1E495B9D0016512B /* LKLinkageView.m */; };
 		EAEB47241E495BF30016512B /* LKLinkageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB47231E495BF30016512B /* LKLinkageItem.m */; };
-		EAEB47281E496BC70016512B /* LKUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB47271E496BC70016512B /* LKUUID.m */; };
+		EAEB47281E496BC70016512B /* LKUUIDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB47271E496BC70016512B /* LKUUIDTool.m */; };
 		F06A35441E34C46200401416 /* NSString+LKLocalStr.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A35431E34C46200401416 /* NSString+LKLocalStr.m */; };
 		F06A35461E34CE5E00401416 /* LKApp.plist in Resources */ = {isa = PBXBuildFile; fileRef = F06A35451E34CE5E00401416 /* LKApp.plist */; };
 		F06A354C1E34CFE100401416 /* NSDictionary+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A354B1E34CFE100401416 /* NSDictionary+LK.m */; };
@@ -129,8 +129,8 @@
 		EAEB471F1E495B9D0016512B /* LKLinkageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinkageView.m; sourceTree = "<group>"; };
 		EAEB47221E495BF30016512B /* LKLinkageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinkageItem.h; sourceTree = "<group>"; };
 		EAEB47231E495BF30016512B /* LKLinkageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinkageItem.m; sourceTree = "<group>"; };
-		EAEB47261E496BC70016512B /* LKUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUUID.h; sourceTree = "<group>"; };
-		EAEB47271E496BC70016512B /* LKUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUUID.m; sourceTree = "<group>"; };
+		EAEB47261E496BC70016512B /* LKUUIDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKUUIDTool.h; sourceTree = "<group>"; };
+		EAEB47271E496BC70016512B /* LKUUIDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKUUIDTool.m; sourceTree = "<group>"; };
 		EAEB47291E496C630016512B /* LKTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKTools.h; sourceTree = "<group>"; };
 		F06A35411E34C20600401416 /* LKSizeConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKSizeConst.h; sourceTree = "<group>"; };
 		F06A35421E34C46200401416 /* NSString+LKLocalStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LKLocalStr.h"; sourceTree = "<group>"; };
@@ -461,8 +461,8 @@
 		EAEB47251E496BBB0016512B /* LKTools */ = {
 			isa = PBXGroup;
 			children = (
-				EAEB47261E496BC70016512B /* LKUUID.h */,
-				EAEB47271E496BC70016512B /* LKUUID.m */,
+				EAEB47261E496BC70016512B /* LKUUIDTool.h */,
+				EAEB47271E496BC70016512B /* LKUUIDTool.m */,
 				EAEB47291E496C630016512B /* LKTools.h */,
 			);
 			path = LKTools;
@@ -817,7 +817,7 @@
 				EA264ABF1E03C14100F0BCE0 /* LKUITabBarController.m in Sources */,
 				EA4E6BDB1E4996D3005D52FA /* LKLinkageCell.m in Sources */,
 				EA264ABE1E03C14100F0BCE0 /* LKUINavigationTabBarController.m in Sources */,
-				EAEB47281E496BC70016512B /* LKUUID.m in Sources */,
+				EAEB47281E496BC70016512B /* LKUUIDTool.m in Sources */,
 				EA264AC51E03C14100F0BCE0 /* UIView+LKGestureListener.m in Sources */,
 				F06A35441E34C46200401416 /* NSString+LKLocalStr.m in Sources */,
 				EAEB47201E495B9D0016512B /* LKLinkageView.m in Sources */,

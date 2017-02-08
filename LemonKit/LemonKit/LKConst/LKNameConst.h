@@ -20,6 +20,7 @@ static const NSString *LK_NAME_VIEW_CONTROLLER_MAPPING = @"LKViewControllerMappi
 
 // 配置项目命名
 static const NSString *LK_THEME_COLOR = @"ThemeColor";
+static const NSString *LK_STATUS_BAR_DEFAULT_LIGHT = @"StatusBarDefaultLight";
 // LK导航栏默认样式配置
 static const NSString *LK_NAV_BAR = @"LKNavBar";
 //// LK导航栏默认背景颜色

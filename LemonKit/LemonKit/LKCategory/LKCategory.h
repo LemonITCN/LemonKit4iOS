@@ -11,6 +11,7 @@
 
 #import "UIColor+LKColor.h"
 #import "UIView+LKGestureListener.h"
+#import "NSString+LK.h"
 #import "NSString+LKLocalStr.h"
 #import "NSDictionary+LK.h"
 #import "UINavigationBar+LK.h"

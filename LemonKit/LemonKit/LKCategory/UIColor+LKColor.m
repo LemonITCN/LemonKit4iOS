@@ -7,7 +7,7 @@
 //
 
 #import "UIColor+LKColor.h"
-#import "NSDictionary+LK.h"
+#import "LKConfigTool.h"
 #import "LKNameConst.h"
 
 @implementation UIColor (LKColor)
@@ -68,10 +68,7 @@
  @return 主题色对象
  */
 + (UIColor *)themeColor{
-    NSDictionary *app = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_APP];
-    if (app)
-        return [UIColor colorWithHexString: app[LK_THEME_COLOR]];
-    return [UIColor whiteColor];
+    return [UIColor colorWithHexString: [LKConfigTool lkApp][LK_THEME_COLOR]];
 }
 
 @end

@@ -9,6 +9,7 @@
 #ifndef LKTools_h
 #define LKTools_h
 
-#import "LKUUID.h"
+#import "LKUUIDTool.h"
+#import "LKConfigTool.h"
 
 #endif /* LKTools_h */

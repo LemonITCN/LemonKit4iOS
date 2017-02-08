@@ -10,7 +10,7 @@
 #import "LKLogConst.h"
 #import "LKUUIDTool.h"
 #import "UIColor+LKColor.h"
-#import "NSDictionary+LK.h"
+#import "LKConfigTool.h"
 #import "LKNameConst.h"
 #import "UINavigationBar+LK.h"
 
@@ -26,6 +26,8 @@
 static UIImage *_lk_sys_backIndicatorImage;
 static UIColor *_lk_default_nav_backgroundColor;
 static UIColor *_lk_default_nav_rendColor;
+// 是否状态栏亮（白色）
+static BOOL _lk_default_status_bar_light;
 
 - (instancetype)init{
     self = [super init];
@@ -121,22 +123,20 @@ static UIColor *_lk_default_nav_rendColor;
 }
 
 - (void)_initWithConfig{
-    NSDictionary *app;
-    // 判断，如果静态的backgroundColor或者选染色对象为空，那么从本地读取配置文件
-    if (!_lk_default_nav_backgroundColor || !_lk_default_nav_rendColor)
-        app = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_APP];
-    if (app) {// 配置字典获取成功
-        if (!_lk_default_nav_backgroundColor)
-            // 存储到静态对象中，方便后续的对象使用，而不是每次都重新初始化颜色对象
-            _lk_default_nav_backgroundColor = [UIColor colorWithHexString: app[LK_NAV_BAR][LK_NAV_BAR_DFLT_BACK_COLOR]];
-        if (!_lk_default_nav_rendColor) {
-            _lk_default_nav_rendColor = [UIColor colorWithHexString: app[LK_NAV_BAR][LK_NAV_BAR_DFLT_REND_COLOR]];
-        }
+    if (!_lk_default_nav_backgroundColor)
+        // 存储到静态对象中，方便后续的对象使用，而不是每次都重新初始化颜色对象
+        _lk_default_nav_backgroundColor = [UIColor colorWithHexString: [LKConfigTool lkApp][LK_NAV_BAR][LK_NAV_BAR_DFLT_BACK_COLOR]];
+    if (!_lk_default_nav_rendColor) {
+        _lk_default_nav_rendColor = [UIColor colorWithHexString: [LKConfigTool lkApp][LK_NAV_BAR][LK_NAV_BAR_DFLT_REND_COLOR]];
     }
     if (_lk_default_nav_backgroundColor)
         self.lkNavigationBar.barTintColor = _lk_default_nav_backgroundColor;
     if (_lk_default_nav_rendColor)// 非空判断，防止获取失败，对象为nil，导致闪退
         self.lkNavigationBar.renderingColor = _lk_default_nav_rendColor;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return [LKConfigTool lkApp][LK_STATUS_BAR_DEFAULT_LIGHT] ? UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
 }
 
 @end

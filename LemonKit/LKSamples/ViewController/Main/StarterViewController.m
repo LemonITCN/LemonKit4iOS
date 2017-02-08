@@ -19,13 +19,8 @@
     self.title = @"Starter";
 }
 
-- (void)initView{
-    UIView *view = [[UIView alloc] initWithFrame: CGRectMake(50,10, 100, 100)];
-    view.backgroundColor = [UIColor themeColor];
-    view.onTap = ^(UIView *view){
-        [LKFreeCtrl pushViewController: LKInstanceFindViewController(@"MainViewController")];
-    };
-    [self.view addSubview: view];
+- (void)firstViewDidAppear:(BOOL)animated{
+    [LKFreeCtrl presentViewController: [LKInstance findViewControllerWithKey: @"m_tabRoot"]];
 }
 
 @end

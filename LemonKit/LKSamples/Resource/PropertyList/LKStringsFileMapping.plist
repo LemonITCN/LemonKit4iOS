@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>m</key>
+	<string>Main</string>
+	<key>rhs</key>
+	<string>ReleaseHouseSource</string>
+	<key>as</key>
+	<string>ApplySign</string>
+	<key>ci</key>
+	<string>ContractInfomation</string>
+</dict>
+</plist>

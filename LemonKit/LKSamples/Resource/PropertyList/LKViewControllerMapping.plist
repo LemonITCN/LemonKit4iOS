@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>m_tabRoot</key>
+	<string>RootTabViewController</string>
+	<key>m_tabHomepage</key>
+	<string>HomepageViewController</string>
+	<key>m_tabDemo</key>
+	<string>DemoViewController</string>
+	<key>m_tabService</key>
+	<string>ServiceViewController</string>
+	<key>m_tabMy</key>
+	<string>MyViewController</string>
+	<key>rhs_step01</key>
+	<string>ReleaseHouseSourceStep1ViewController</string>
+</dict>
+</plist>

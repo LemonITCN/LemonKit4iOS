@@ -9,6 +9,10 @@
 #import "LKUIViewController.h"
 #import "LKLogConst.h"
 #import "LKUUIDTool.h"
+#import "UIColor+LKColor.h"
+#import "NSDictionary+LK.h"
+#import "LKNameConst.h"
+#import "UINavigationBar+LK.h"
 
 @interface LKUIViewController ()
 
@@ -20,6 +24,8 @@
 
 // 系统的返回按钮图片存放静态变量
 static UIImage *_lk_sys_backIndicatorImage;
+static UIColor *_lk_default_nav_backgroundColor;
+static UIColor *_lk_default_nav_rendColor;
 
 - (instancetype)init{
     self = [super init];
@@ -30,7 +36,7 @@ static UIImage *_lk_sys_backIndicatorImage;
         self->_lkNavigationBar.items = @[self->_lkNavigationItem];
         self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
         [self.view addSubview: self->_lkNavigationBar];
-        
+        [self _initWithConfig];// 根据配置进行初始化（plist配置）
         [self initBaseInfo];
     }
     return self;
@@ -112,6 +118,25 @@ static UIImage *_lk_sys_backIndicatorImage;
         return NO;
     }
     return YES;
+}
+
+- (void)_initWithConfig{
+    NSDictionary *app;
+    // 判断，如果静态的backgroundColor或者选染色对象为空，那么从本地读取配置文件
+    if (!_lk_default_nav_backgroundColor || !_lk_default_nav_rendColor)
+        app = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_APP];
+    if (app) {// 配置字典获取成功
+        if (!_lk_default_nav_backgroundColor)
+            // 存储到静态对象中，方便后续的对象使用，而不是每次都重新初始化颜色对象
+            _lk_default_nav_backgroundColor = [UIColor colorWithHexString: app[LK_NAV_BAR][LK_NAV_BAR_DFLT_BACK_COLOR]];
+        if (!_lk_default_nav_rendColor) {
+            _lk_default_nav_rendColor = [UIColor colorWithHexString: app[LK_NAV_BAR][LK_NAV_BAR_DFLT_REND_COLOR]];
+        }
+    }
+    if (_lk_default_nav_backgroundColor)
+        self.lkNavigationBar.barTintColor = _lk_default_nav_backgroundColor;
+    if (_lk_default_nav_rendColor)// 非空判断，防止获取失败，对象为nil，导致闪退
+        self.lkNavigationBar.renderingColor = _lk_default_nav_rendColor;
 }
 
 @end

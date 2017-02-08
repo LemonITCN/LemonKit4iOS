@@ -1,0 +1,11 @@
+/* 
+  Main.strings
+  LemonKit
+
+  Created by 1em0nsOft on 2017/2/8.
+  Copyright © 2017年 Lemonsoft. All rights reserved.
+*/
+"m_tabHomepage" = "柠檬家";
+"m_tabDemo" = "示例";
+"m_tabService" = "服务";
+"m_tabMy" = "我的";

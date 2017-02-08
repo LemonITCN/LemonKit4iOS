@@ -70,7 +70,7 @@
 + (UIColor *)themeColor{
     NSDictionary *app = [NSDictionary dictionaryWithMainBundlePlistName: LK_NAME_APP];
     if (app)
-        return [UIColor colorWithHexString: app[@"ThemeColor"]];
+        return [UIColor colorWithHexString: app[LK_THEME_COLOR]];
     return [UIColor whiteColor];
 }
 

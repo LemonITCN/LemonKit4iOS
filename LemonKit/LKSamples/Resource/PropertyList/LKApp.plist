@@ -3,6 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>ThemeColor</key>
-	<string>#abcdef</string>
+	<string>#7bad35</string>
+	<key>LKNavBar</key>
+	<dict>
+		<key>DefaultBackgroundColor</key>
+		<string>#7bad35</string>
+		<key>DefaultRendColor</key>
+		<string>#ffffff</string>
+	</dict>
 </dict>
 </plist>

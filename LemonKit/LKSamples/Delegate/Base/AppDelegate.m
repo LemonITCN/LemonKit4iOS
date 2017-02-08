@@ -16,11 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [LemonKit startUp];
+    // 启动LemonKit
+    
     self.window = [[UIWindow alloc] init];
-    self.window.rootViewController = [[LKUINavigationController alloc] initWithRootViewController: [[StarterViewController alloc] init]];
+    self.window.rootViewController = [[StarterViewController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    [LemonKit startUp];
+    
     return YES;
 }
 

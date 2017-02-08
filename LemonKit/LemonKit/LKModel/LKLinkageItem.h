@@ -24,8 +24,15 @@
  */
 @property (readonly,nonnull,nonatomic,strong)NSMutableArray<LKLinkageItem *> *children;
 
-- (nonnull instancetype)initWithTitle: (nonnull NSString *)title code: (nonnull NSString *)code;
-- (nonnull instancetype)initWithDictionary: (nonnull NSDictionary *)dataDictionary;
+- (nonnull instancetype)initWithTitle: (nonnull NSString *)title
+                                 code: (nonnull NSString *)code;
+
+- (nonnull instancetype)initWithStandardDictionary: (nonnull NSDictionary *)dataDictionary;
+
+- (nonnull instancetype)initWithCustomDictionary: (nonnull NSDictionary *)dataDictionary
+                                titleKey: (nonnull NSString *)titleKey
+                                 codeKey: (nonnull NSString *)codeKey
+                             childrenKey: (nonnull NSString *)childrenKey;
 
 /**
  计算当前树分支的最深深度

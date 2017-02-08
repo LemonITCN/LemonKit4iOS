@@ -7,6 +7,7 @@
 //
 
 #import "LKLinkageItem.h"
+#import "NSString+LKLocalStr.h"
 
 @implementation LKLinkageItem
 
@@ -55,6 +56,10 @@
         }
     }
     return self;
+}
+
+- (void)setTitle:(NSString *)title{
+    self->_title = LKLocalStr(title);
 }
 
 // 递归调用计算深度

@@ -28,27 +28,27 @@
 /**
  正常时标题颜色
  */
-@property (nonnull,nonatomic,strong)UIColor *titleColor;
+@property (nonnull,nonatomic,strong)UIColor *cellTitleColor;
 /**
  正常时背景颜色
  */
-@property (nonnull,nonatomic,strong)UIColor *backgroundColor;
+@property (nonnull,nonatomic,strong)UIColor *cellBackgroundColor;
 /**
  选中时标题颜色
  */
-@property (nonnull,nonatomic,strong)UIColor *selectedTitleColor;
+@property (nonnull,nonatomic,strong)UIColor *cellSelectedTitleColor;
 /**
  选中时背景颜色
  */
-@property (nonnull,nonatomic,strong)UIColor *selectedBackgroundColor;
+@property (nonnull,nonatomic,strong)UIColor *cellSelectedBackgroundColor;
 /**
  触摸时的标题颜色
  */
-@property (nonnull,nonatomic,strong)UIColor *touchedTitleColor;
+@property (nonnull,nonatomic,strong)UIColor *cellTouchedTitleColor;
 /**
  触摸时的背景颜色
  */
-@property (nonnull,nonatomic,strong)UIColor *touchedBackgroundColor;
+@property (nonnull,nonatomic,strong)UIColor *cellTouchedBackgroundColor;
 /**
  行分割线颜色
  */
@@ -61,5 +61,7 @@
  选择行的行高
  */
 @property (assign)CGFloat lineHeight;
+
+- (void)refresh;
 
 @end

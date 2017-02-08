@@ -1,0 +1,29 @@
+/* 
+  DemoLinkage.strings
+  LemonKit
+
+  Created by 1em0nsOft on 2017/2/8.
+  Copyright © 2017年 Lemonsoft. All rights reserved.
+*/
+"dl_0"      =   "提示视图";
+"dl_0_0"    =   "LemonKit扩展";
+"dl_0_0_0"  =   "LemonBubble";
+"dl_0_0_1"  =   "LemonHello";
+"dl_0_0_2"  =   "LemonToast";‘
+"dl_0_1"    =   "其他三方扩展";
+"dl_0_1_0"  =   "MBProgressHUD";
+"dl_0_1_1"  =   "SVProgressHUD";
+
+
+"dl_1"      =   "扩展控件";
+
+
+
+"dl_2"      =   "增强工具";
+
+
+
+"dl_3"      =   "图片处理";
+
+
+

@@ -11,12 +11,22 @@
 
 @implementation LKLinkageView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init{
+    if (self = [super init]) {
+        self->_rootItems = [NSMutableArray new];
+    }
+    return self;
 }
-*/
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame: frame]) {
+        self->_rootItems = [NSMutableArray new];
+    }
+    return self;
+}
+
+- (void)refresh{
+    
+}
 
 @end

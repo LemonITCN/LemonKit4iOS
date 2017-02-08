@@ -10,7 +10,10 @@
 
 
 /// @brief 默认的LK导航栏的高度为 64
-#define LK_NAVIGATION_BAR_HEIGHT 64
+#define NAVIGATION_BAR_HEIGHT 64
+#define TAB_BAR_HEIGHT 49
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 /**
  自定义的视图控制器LKUIViewController
@@ -55,5 +58,13 @@
  LK生命周期，该生命周期紧跟initView之后调用，用于初始化界面中所需要的所有的事件，以及处理KVC/KVO相关观察者操作
  */
 - (void)initEvent;
+
+/**
+ 添加View到self.view上
+ 等同于[self.view addSubview: view]
+
+ @param view 要添加到self.view上的视图
+ */
+- (void)addSubview: (nonnull UIView *)view;
 
 @end

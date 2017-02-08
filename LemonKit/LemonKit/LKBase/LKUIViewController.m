@@ -33,7 +33,7 @@ static BOOL _lk_default_status_bar_light;
     self = [super init];
     if (self) {
         self->_beFirst = YES;// 初始化设置为yes，表示当时还没有第一次显示
-        self->_lkNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, LK_NAVIGATION_BAR_HEIGHT)];
+        self->_lkNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, NAVIGATION_BAR_HEIGHT)];
         self->_lkNavigationItem = [[UINavigationItem alloc] init];
         self->_lkNavigationBar.items = @[self->_lkNavigationItem];
         self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
@@ -108,9 +108,8 @@ static BOOL _lk_default_status_bar_light;
     self->_lkNavigationItem.title = title;
 }
 
-- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
-    [super presentViewController: viewControllerToPresent animated: flag completion: completion];
-    NSLog(@"Present ViewController success!");
+- (void)addSubview: (UIView *)view{
+    [self.view addSubview: view];
 }
 
 // 作用：拦截手势触发

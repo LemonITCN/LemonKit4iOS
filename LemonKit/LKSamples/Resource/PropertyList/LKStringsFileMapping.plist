@@ -4,11 +4,7 @@
 <dict>
 	<key>m</key>
 	<string>Main</string>
-	<key>rhs</key>
-	<string>ReleaseHouseSource</string>
-	<key>as</key>
-	<string>ApplySign</string>
-	<key>ci</key>
-	<string>ContractInfomation</string>
+	<key>dl</key>
+	<string>DemoLinkage</string>
 </dict>
 </plist>

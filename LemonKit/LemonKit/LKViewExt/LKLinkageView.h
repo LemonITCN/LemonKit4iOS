@@ -10,6 +10,7 @@
 @class LKLinkageItem;
 @class LKLinkageCell;
 @class LKLinkageView;
+@class LKLinkageColumn;
 
 @protocol LKLinkageViewDelegate <NSObject>
 
@@ -61,6 +62,15 @@
  选择行的行高
  */
 @property (assign)CGFloat lineHeight;
+
+/**
+ 列视图存储数组
+ */
+@property (nonnull,nonatomic,strong,readonly)NSMutableArray<LKLinkageColumn *> *columns;
+/**
+ 选择路径
+ */
+@property (nonnull,nonatomic,strong,readonly)NSMutableArray<NSValue *> *path;
 
 - (void)refresh;
 

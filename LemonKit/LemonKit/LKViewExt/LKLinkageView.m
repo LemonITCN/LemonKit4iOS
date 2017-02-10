@@ -10,9 +10,7 @@
 #import "LKLinkageItem.h"
 #import "LKLinkageColumn.h"
 
-@interface LKLinkageView(){
-    NSMutableArray<LKLinkageColumn *> *_columns;
-}
+@interface LKLinkageView()
 
 @end
 
@@ -55,6 +53,7 @@
         for (NSInteger i = 0 ; i < maxDeepth - self->_columns.count ; i ++)
             [self->_columns addObject: [[LKLinkageColumn alloc] init]];
     // 接下来，根据当前的状态重新摆放column
+    
 }
 
 @end

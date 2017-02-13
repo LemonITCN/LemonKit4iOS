@@ -9,6 +9,56 @@
 #import <UIKit/UIKit.h>
 
 /**
+ 实例对象池，可以通过key,value的形式把对象放入此弱引用池中，并通过key可以从池中取出对象
+ */
+@interface LKInstancePool : NSObject
+
+/**
+ 放置实例对象到实例对象池中
+
+ @param key 键
+ @param value 对应的实例对象
+ */
+- (void)setWithKey: (NSString *)key value: (id)value;
+
+/**
+ 通过字典批量放置实例对象到实例对象池中
+
+ @param dictionary 要放置到实例对象池中的多个字典
+ */
+- (void)setWithDictionary: (NSDictionary<NSString *,id> *)dictionary;
+
+/**
+ 从实例对象池中移除指定的键值对
+
+ @param key 要移除的实例对象的键
+ */
+- (void)removeWithKey: (NSString *)key;
+
+/**
+ 通过数组批量从实例对象池中移除
+
+ @param keysArray 键数组
+ */
+- (void)removeWithKeysArray: (NSArray<NSString *> *)keysArray;
+
+/**
+ 根据键从实例对象池中取出实例·
+
+ @param key 要取出的键
+ @return 对应的实例对象
+ */
+- (id)objectForKey: (NSString *)key;
+
+/**
+ 移除所有的实例对象键值对
+ */
+- (void)clear;
+
+@end
+
+
+/**
  根据指定的类名称字符串获取类
  
  @param className 类名称的字符串
@@ -47,6 +97,11 @@
  快速获取指定对象的实例的扩展类别
  */
 @interface LKInstance : NSObject
+
+/**
+ 实例对象池，这是一个公共若引用对象池，可以通过key，value形式放入池中，通过key可以取出value
+ */
++ (LKInstancePool *)pool;
 
 /**
  根据指定的类名称字符串获取类

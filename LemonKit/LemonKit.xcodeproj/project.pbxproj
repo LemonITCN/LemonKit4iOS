@@ -29,7 +29,6 @@
 		EA4B2A9E1E4AB5D100B3193F /* LKViewControllerMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4B2A9C1E4AB5D100B3193F /* LKViewControllerMapping.plist */; };
 		EA4B2AA41E4AB92600B3193F /* RootTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AA11E4AB92600B3193F /* RootTabViewController.m */; };
 		EA4B2AA51E4AB92600B3193F /* StarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AA31E4AB92600B3193F /* StarterViewController.m */; };
-		EA4B2AAA1E4ABB0C00B3193F /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AA91E4ABB0C00B3193F /* HomepageViewController.m */; };
 		EA4B2AAD1E4ABB2900B3193F /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AAC1E4ABB2900B3193F /* DemoViewController.m */; };
 		EA4B2AB31E4ABB8200B3193F /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AB21E4ABB8200B3193F /* MyViewController.m */; };
 		EA4B2AB61E4ABBB500B3193F /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AB51E4ABBB500B3193F /* ServiceViewController.m */; };
@@ -42,6 +41,7 @@
 		EAC4CA721E03E3B3002CDBAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC4CA701E03E3B3002CDBAE /* Main.storyboard */; };
 		EAC4CA761E03E3BC002CDBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC4CA751E03E3BC002CDBAE /* AppDelegate.m */; };
 		EAC930661E4B018A00F9CF1A /* LKDemoLinkageInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC930651E4B018A00F9CF1A /* LKDemoLinkageInfo.plist */; };
+		EACFA7A51E517F1500C02E48 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B2AA91E4ABB0C00B3193F /* HomepageViewController.m */; };
 		EAEB47201E495B9D0016512B /* LKLinkageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB471F1E495B9D0016512B /* LKLinkageView.m */; };
 		EAEB47241E495BF30016512B /* LKLinkageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB47231E495BF30016512B /* LKLinkageItem.m */; };
 		EAEB47281E496BC70016512B /* LKUUIDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB47271E496BC70016512B /* LKUUIDTool.m */; };
@@ -905,11 +905,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACFA7A51E517F1500C02E48 /* HomepageViewController.m in Sources */,
 				EA264A6E1E03C0F500F0BCE0 /* main.m in Sources */,
 				EA4B2AA41E4AB92600B3193F /* RootTabViewController.m in Sources */,
 				EA4B2AB61E4ABBB500B3193F /* ServiceViewController.m in Sources */,
 				EA4B2AB31E4ABB8200B3193F /* MyViewController.m in Sources */,
-				EA4B2AAA1E4ABB0C00B3193F /* HomepageViewController.m in Sources */,
 				EA4B2AAD1E4ABB2900B3193F /* DemoViewController.m in Sources */,
 				EA4B2AA51E4AB92600B3193F /* StarterViewController.m in Sources */,
 				EAC4CA761E03E3BC002CDBAE /* AppDelegate.m in Sources */,

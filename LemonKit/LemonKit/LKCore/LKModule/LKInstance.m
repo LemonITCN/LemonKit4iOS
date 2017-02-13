@@ -10,9 +10,70 @@
 #import "NSDictionary+LK.h"
 #import "LKNameConst.h"
 
+#pragma LKInstancePool area
+
+@interface LKInstancePool(){
+    NSMapTable<NSString *,id> *_instancePool;
+}
+
+@end
+
+@implementation LKInstancePool
+
+- (instancetype)init{
+    if (self = [super init]) {
+        self->_instancePool = [NSMapTable strongToWeakObjectsMapTable];
+    }
+    return self;
+}
+
+// 增、改
+- (void)setWithKey: (NSString *)key value: (id)value{
+    [self->_instancePool setObject: value forKey: key];
+}
+
+// 增、改，通过字典批量操作
+- (void)setWithDictionary: (NSDictionary<NSString *,id> *)dictionary{
+    for (NSString *key in dictionary.allKeys)
+        [self->_instancePool setObject: dictionary[key] forKey:key];
+}
+
+// 删
+- (void)removeWithKey: (NSString *)key{
+    [self->_instancePool removeObjectForKey: key];
+}
+
+// 删，通过数组批量删除
+- (void)removeWithKeysArray: (NSArray<NSString *> *)keysArray{
+    for (NSString *key in keysArray)
+        [self->_instancePool removeObjectForKey: key];
+}
+
+// 查
+- (id)objectForKey: (NSString *)key{
+    return [self->_instancePool objectForKey: key];
+}
+
+// 清空
+- (void)clear{
+    [self->_instancePool removeAllObjects];
+}
+
+@end
+
+#pragma LKInstance area
+
 @implementation LKInstance
 
 static NSDictionary *_lk_viewControllerMap;
+static LKInstancePool *_lk_insPool;
+
++ (LKInstancePool *)pool{
+    if (!_lk_insPool) {
+        _lk_insPool = [[LKInstancePool alloc] init];
+    }
+    return _lk_insPool;
+}
 
 + (Class)findClass: (NSString *)className{
     return NSClassFromString(className);

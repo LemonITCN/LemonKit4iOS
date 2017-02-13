@@ -32,12 +32,12 @@
 }
 
 // 增、改
-- (void)setWithKey: (NSString *)key value: (id)value{
+- (void)putWithKey: (NSString *)key value: (id)value{
     [self->_instancePool setObject: value forKey: key];
 }
 
 // 增、改，通过字典批量操作
-- (void)setWithDictionary: (NSDictionary<NSString *,id> *)dictionary{
+- (void)putWithDictionary: (NSDictionary<NSString *,id> *)dictionary{
     for (NSString *key in dictionary.allKeys)
         [self->_instancePool setObject: dictionary[key] forKey:key];
 }

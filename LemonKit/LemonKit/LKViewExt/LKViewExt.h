@@ -10,6 +10,7 @@
 #define LKViewExt_h
 
 #import "LKLinkageView.h"
+#import "LKLinkageColumn.h"
 #import "LKLinkageCell.h"
 
 #endif /* LKViewExt_h */

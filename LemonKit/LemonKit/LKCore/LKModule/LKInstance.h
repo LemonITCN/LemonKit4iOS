@@ -14,6 +14,14 @@
 @interface LKInstancePool : NSObject
 
 /**
+ 获取默认的实例对象池
+ 实际指向的是[LKInstance pool];
+
+ @return 默认的实例对象池
+ */
++ (LKInstancePool *)defaultPool;
+
+/**
  放置实例对象到实例对象池中
 
  @param key 键

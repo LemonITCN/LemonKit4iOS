@@ -27,6 +27,10 @@
     return self;
 }
 
++ (LKInstancePool *)defaultPool{
+    return [LKInstance pool];
+}
+
 // 增、改
 - (void)setWithKey: (NSString *)key value: (id)value{
     [self->_instancePool setObject: value forKey: key];

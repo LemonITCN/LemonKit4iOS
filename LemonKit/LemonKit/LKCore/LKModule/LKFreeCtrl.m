@@ -117,6 +117,38 @@
 }
 
 /**
+ LK自由控制 调用顶层ViewController的pop，返回上一层
+
+ @param animated 是否使用动画
+ */
++ (void)popViewControllerAnimated: (BOOL)animated{
+    [[self getTopViewController].navigationController popViewControllerAnimated: animated];
+}
+
+/**
+ LK自由控制 使用动画pop到上一层
+ */
++ (void)popViewController{
+    [self popViewControllerAnimated: YES];
+}
+
+/**
+ LK自由控制 调用顶层ViewController的popToRoot，回root层
+
+ @param animated 是否使用动画
+ */
++ (void)popToRootViewControllerAnimated: (BOOL)animated{
+    [[self getTopViewController].navigationController popToRootViewControllerAnimated: animated];
+}
+
+/**
+ LK自由控制 使用动画pop到root层
+ */
++ (void)popToRootViewController{
+    [self popToRootViewControllerAnimated: YES];
+}
+
+/**
  获取当前应用中最顶层显示的ViewController
  
  @return 顶层的ViewController对象
@@ -129,7 +161,6 @@
     }
     return resultViewController;
 }
-
 
 /**
  递归获取视图控制器

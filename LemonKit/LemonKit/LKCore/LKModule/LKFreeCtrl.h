@@ -80,6 +80,30 @@
 + (void)presentViewController: (UIViewController *)viewController;
 
 /**
+ LK自由控制 调用顶层ViewController的pop，返回上一层
+ 
+ @param animated 是否使用动画
+ */
++ (void)popViewControllerAnimated: (BOOL)animated;
+
+/**
+ LK自由控制 使用动画pop到上一层
+ */
++ (void)popViewController;
+
+/**
+ LK自由控制 调用顶层ViewController的popToRoot，回到层
+ 
+ @param animated 是否使用动画
+ */
++ (void)popToRootViewControllerAnimated: (BOOL)animated;
+
+/**
+ LK自由控制 使用动画pop到root层
+ */
++ (void)popToRootViewController;
+
+/**
  LK自由控制 - 获取当前应用中最顶层显示的ViewController
  
  @return 顶层的ViewController对象

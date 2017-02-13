@@ -27,14 +27,14 @@
  @param key 键
  @param value 对应的实例对象
  */
-- (void)setWithKey: (NSString *)key value: (id)value;
+- (void)putWithKey: (NSString *)key value: (id)value;
 
 /**
  通过字典批量放置实例对象到实例对象池中
 
  @param dictionary 要放置到实例对象池中的多个字典
  */
-- (void)setWithDictionary: (NSDictionary<NSString *,id> *)dictionary;
+- (void)putWithDictionary: (NSDictionary<NSString *,id> *)dictionary;
 
 /**
  从实例对象池中移除指定的键值对

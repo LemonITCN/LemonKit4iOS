@@ -28,7 +28,7 @@
 > 为了方便大家，LemonKit可以使用Cocoapods快速集成哦！
 
 ```shell
-pod 'LemonKit','1.0.2'
+pod 'LemonKit','1.0.11'
 ```
 
 
@@ -79,7 +79,13 @@ pod 'LemonKit','1.0.2'
 
 #### LKUIViewController等基础ViewController
 
-> 针对各种ViewController，LemonKit对其进行了封装和增强，我们让ViewController可以支持全屏返回手势~默认隐藏系统的NavigationBar，而是使用自己扩展的lkNavigationBar，每个页面独立的导航栏，但是你可以根据系统的主题在配置文件中配置全局导航栏颜色！说起来麻烦，不放您去Demo中看看哦~
+> 针对各种ViewController，LemonKit对其进行了封装和增强，我们让ViewController可以支持全屏返回手势~默认隐藏系统的NavigationBar，而是使用自己扩展的lkNavigationBar，每个页面独立的导航栏，但是你可以根据系统的主题在配置文件中配置全局导航栏颜色！说起来麻烦，不妨您去Demo中看看哦~
+
+#### 更多功能我就不一一列出来啦，大家自己摸索哦~
+
+#### 如果你需要什么功能可以告诉我~我给您加进来！
+
+
 
 
 

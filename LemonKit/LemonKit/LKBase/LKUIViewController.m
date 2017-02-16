@@ -20,6 +20,7 @@
 
 @implementation LKUIViewController{
     BOOL _beFirst;
+    UIGestureRecognizer *_panGesture;// 全屏侧滑手势
 }
 
 // 系统的返回按钮图片存放静态变量
@@ -96,10 +97,18 @@ static BOOL _lk_default_status_bar_light;
         self->_beFirst = NO;
         // 让全屏能够侧滑返回
         id target = self.navigationController.interactivePopGestureRecognizer.delegate;
-        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];// 初始化手势，传入系统侧滑API
-        panGesture.delegate = self; // 设置手势代理，拦截手势触发
-        [self.view addGestureRecognizer:panGesture];
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;// 禁止系统自带的滑动手势
+        if (!self->_panGesture){
+            self->_panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];// 初始化手势，传入系统侧滑API
+            self->_panGesture.delegate = self; // 设置手势代理，拦截手势触发
+        }
+        if ([self lkIsUserFullscreenBackGesture]){
+            [self.view addGestureRecognizer: self->_panGesture];
+            self.navigationController.interactivePopGestureRecognizer.enabled = NO;// 禁止系统自带的滑动手势
+        }
+        else{
+            [self.view removeGestureRecognizer: self->_panGesture];
+            self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        }
     }
 }
 
@@ -136,6 +145,10 @@ static BOOL _lk_default_status_bar_light;
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return [LKConfigTool lkApp][LK_STATUS_BAR_DEFAULT_LIGHT] ? UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
+}
+
+- (BOOL)lkIsUserFullscreenBackGesture{
+    return YES;
 }
 
 @end

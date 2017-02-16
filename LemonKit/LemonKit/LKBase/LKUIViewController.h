@@ -67,4 +67,12 @@
  */
 - (void)addSubview: (nonnull UIView *)view;
 
+/**
+ 是否使用全屏侧滑手势
+ 当某些情况下，该手势可能会与界面中的手势产生冲突，那么就可以重写这个方法返回NO，关闭全屏侧滑返回手势
+
+ @return 是否开启全屏侧滑手势的布尔值
+ */
+- (BOOL)lkIsUserFullscreenBackGesture;
+
 @end

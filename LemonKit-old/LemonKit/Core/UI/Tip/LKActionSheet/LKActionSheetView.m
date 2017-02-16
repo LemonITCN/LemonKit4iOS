@@ -166,7 +166,7 @@ static LKActionSheetView *defaultActionSheetView;
     for (NSMutableArray<LKActionItem *> *group in self->actionItems) {
         for (LKActionItem *item in group) {
             pointer -= item.height;
-            LKActionLineView *lineView= [[LKActionLineView alloc] initWithFrame: CGRectMake(0, pointer, LKScreen.width, item.height) actionItem: item];
+            LKActionLineView *lineView= [[LKActionLineView alloc] initWithFrame: CGRectMake(0, pointer, LKScreen.width, item.height) actionItem: item belongActionSheet: self];
             lineView.backgroundColor = [UIColor colorWithRed: 0.93 green:0.93 blue:0.93 alpha:1];
             [lineView addSubview: item.contentView];
             [self->_bodyView addSubview:lineView];

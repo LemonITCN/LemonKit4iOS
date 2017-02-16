@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class LKActionSheetView;
 
 @interface LKActionItem : NSObject
 
-typedef void(^ LK_ACION_SHEET_ON_ITEM_TOUCH)(LKActionItem *);
+typedef void(^ LK_ACION_SHEET_ON_ITEM_TOUCH)(LKActionSheetView *view, LKActionItem *item);
 
 /// @brief 内容控件
 @property (nonatomic , strong) UIView *contentView;

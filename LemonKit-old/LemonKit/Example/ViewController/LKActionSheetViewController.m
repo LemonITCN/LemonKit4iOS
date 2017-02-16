@@ -27,7 +27,7 @@
     [as clear];
     as.headViewHeight = 44;
     as.title = @"这是一个普通的LKActionSheet";
-    LKActionItem *cancel = [[LKActionItem alloc] initWithTitle: @"取消" onTouchBlock:^(LKActionItem *item) {
+    LKActionItem *cancel = [[LKActionItem alloc] initWithTitle: @"取消" onTouchBlock:^(LKActionSheetView *view,LKActionItem *item) {
         [as hide];
     }];
     ((UILabel *)cancel.contentView).textColor = [UIColor redColor];
@@ -44,14 +44,17 @@
     [as clear];
     as.headViewHeight = 44;
     as.title = @"这是一个带有PickerView的LKActionSheet";
-    LKActionItem *cancel = [[LKActionItem alloc] initWithTitle: @"取消" onTouchBlock:^(LKActionItem *item) {
+    LKActionItem *cancel = [[LKActionItem alloc] initWithTitle: @"取消" onTouchBlock:^(LKActionSheetView *view,LKActionItem *item) {
         [as hide];
+    }];
+    LKActionItem *sure = [[LKActionItem alloc] initWithTitle: @"确认" onTouchBlock:^(LKActionSheetView *view,LKActionItem *item) {
+        NSLog(@"您点击了确定");
+        [view hide];
+        //        [as hide];
     }];
     ((UILabel *)cancel.contentView).textColor = [UIColor redColor];
     [as addAction: cancel groupIndex: 0];
-    [as addAction: [[LKActionItem alloc] initWithTitle: @"确认" onTouchBlock:^(LKActionItem *item) {
-        NSLog(@"您点击了确定");
-    }] groupIndex: 0];
+    [as addAction: sure groupIndex: 0];
     
     [as addActionGroup];
     UIPickerView *picker = [[UIPickerView alloc] initWithFrame: CGRectMake(0, 0, LKScreenGetWidth, 160)];

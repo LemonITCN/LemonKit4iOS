@@ -36,7 +36,7 @@
 
 - (instancetype)initWithTitle: (NSString *)title height: (CGFloat)height textColor: (UIColor *)textColor onTouchEvent: (SEL)onTouchEvent withObject: (NSObject *)obj{
     if ([self initWithTitle: title height:height textColor: textColor]) {
-        self.action = ^(LKActionItem *item){
+        self.action = ^(LKActionSheetView *view, LKActionItem *item){
             [obj performSelector: onTouchEvent withObject: obj];
         };
     }

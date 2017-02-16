@@ -18,9 +18,12 @@
 
  @param frame frame对象
  @param item  事件行信息对象
+ @param belongActionSheet 所属actionSheetView
 
  @return 事件行控件
  */
-- (instancetype)initWithFrame:(CGRect)frame actionItem: (LKActionItem *)item;
+- (instancetype)initWithFrame: (CGRect)frame
+                   actionItem: (LKActionItem *)item
+            belongActionSheet: (LKActionSheetView *)actionSheet;
 
 @end

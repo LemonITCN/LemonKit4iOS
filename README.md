@@ -46,7 +46,6 @@ pod 'LemonKit','1.0.11'
 ### LemonKit可以做什么呢？
 
 
-
 #### LKInstance
 
 > 可以帮助你通过类名或者关键字来创建实例，方便你动态的创建对象。你可以在plist中配置你ViewController的别名，然后快速的通过`[LKInstance findViewControllerWithKey: @""]; `获取对象实例哦，这只是个小栗子~您可以看看Demo中

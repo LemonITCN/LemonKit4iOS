@@ -52,6 +52,18 @@ static BOOL _lk_default_status_bar_light;
 - (void)initEvent{};
 
 - (void)viewDidLoad{
+    if (!self->_lkNavigationBar){
+        self->_beFirst = YES;// 初始化设置为yes，表示当时还没有第一次显示
+        self->_lkNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, NAVIGATION_BAR_HEIGHT)];
+        self->_lkNavigationItem = [[UINavigationItem alloc] init];
+        self->_lkNavigationBar.items = @[self->_lkNavigationItem];
+        self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
+
+        [self.view addSubview: self->_lkNavigationBar];
+        [self _initWithConfig];// 根据配置进行初始化（plist配置）
+        self.lkNavigationItem.title = self.title;
+        [self initBaseInfo];
+    }
     [super viewDidLoad];
     [self initView];
     [self initData];
@@ -144,7 +156,8 @@ static BOOL _lk_default_status_bar_light;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return [LKConfigTool lkApp][LK_STATUS_BAR_DEFAULT_LIGHT] ? UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
+    // 修复非布尔值导致的判断错误问题
+    return [([LKConfigTool lkApp][LK_STATUS_BAR_DEFAULT_LIGHT]) boolValue] ? UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
 }
 
 - (BOOL)lkIsUserFullscreenBackGesture{

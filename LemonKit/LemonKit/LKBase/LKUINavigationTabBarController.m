@@ -22,4 +22,14 @@
     return self;
 }
 
+- (void)viewDidLoad{
+    // storyboard的时候不掉用init方法，所以需要后挂载
+    if (!self->_lkTabBarController) {
+        self->_lkTabBarController = [[LKUITabBarController alloc] init];
+        self.navigationBarHidden = YES;
+        [self addChildViewController: self->_lkTabBarController];
+    }
+    [super viewDidLoad];
+}
+
 @end

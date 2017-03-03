@@ -37,7 +37,7 @@ static BOOL _lk_default_status_bar_light;
         self->_lkNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, NAVIGATION_BAR_HEIGHT)];
         self->_lkNavigationItem = [[UINavigationItem alloc] init];
         self->_lkNavigationBar.items = @[self->_lkNavigationItem];
-        self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
+//        self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
         [self.view addSubview: self->_lkNavigationBar];
         [self _initWithConfig];// 根据配置进行初始化（plist配置）
         [self initBaseInfo];
@@ -57,7 +57,7 @@ static BOOL _lk_default_status_bar_light;
         self->_lkNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, NAVIGATION_BAR_HEIGHT)];
         self->_lkNavigationItem = [[UINavigationItem alloc] init];
         self->_lkNavigationBar.items = @[self->_lkNavigationItem];
-        self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
+//        self.view.backgroundColor = [UIColor whiteColor];// 设置LKViewController默认背景颜色是白色
 
         [self.view addSubview: self->_lkNavigationBar];
         [self _initWithConfig];// 根据配置进行初始化（plist配置）

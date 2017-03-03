@@ -147,4 +147,13 @@
  */
 + (UIViewController *)findViewControllerWithKey: (NSString *)keyString;
 
+/**
+ 根据视图控制器的key直接在storyboard中取出视图控制器对象
+ 特别要求：本方法为使用LKStringsFileMapping.plist文件配置缩短名映射关系后viewController的identifier也必须按照规则编写才可以
+
+ @param keyString viewController的identifier
+ @return 视图控制器的实例对象
+ */
++ (UIViewController *)findViewControllerInStoryboardWithKey:(NSString *)keyString;
+
 @end

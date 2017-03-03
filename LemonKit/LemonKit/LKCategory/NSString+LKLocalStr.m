@@ -11,9 +11,9 @@
 #import "LKNameConst.h"
 #import "LKLogConst.h"
 
-@implementation NSString (LKLocalStr)
-
 static NSDictionary *_lk_stringsFileMap;
+
+@implementation NSString (LKLocalStr)
 
 + (NSString *)stringWithLKLocalString: (NSString *)stringKey{
     if (!_lk_stringsFileMap) {

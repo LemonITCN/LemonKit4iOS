@@ -26,7 +26,8 @@
 // 系统的返回按钮图片存放静态变量
 static UIImage *_lk_sys_backIndicatorImage;
 static UIColor *_lk_default_nav_backgroundColor;
-static UIColor *_lk_default_nav_rendColor;
+static UIColor *_lk_default_nav_itemColor;
+static UIColor *_lk_default_nav_titleColor;
 // 是否状态栏亮（白色）
 static BOOL _lk_default_status_bar_light;
 
@@ -94,7 +95,6 @@ static BOOL _lk_default_status_bar_light;
         UIBarButtonItem *nagetiveSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         nagetiveSpacer.width = -10;// 向左的偏移值
         self.lkNavigationItem.leftBarButtonItems = @[nagetiveSpacer, backItem];
-        self.lkNavigationBar.tintColor = [UIColor blackColor];
     }
 }
 
@@ -146,13 +146,16 @@ static BOOL _lk_default_status_bar_light;
     if (!_lk_default_nav_backgroundColor)
         // 存储到静态对象中，方便后续的对象使用，而不是每次都重新初始化颜色对象
         _lk_default_nav_backgroundColor = [UIColor colorWithHexString: [LKConfigTool lkApp][LK_NAV_BAR][LK_NAV_BAR_DFLT_BACK_COLOR]];
-    if (!_lk_default_nav_rendColor) {
-        _lk_default_nav_rendColor = [UIColor colorWithHexString: [LKConfigTool lkApp][LK_NAV_BAR][LK_NAV_BAR_DFLT_REND_COLOR]];
-    }
+    if (!_lk_default_nav_itemColor)
+        _lk_default_nav_itemColor = [UIColor colorWithHexString: [LKConfigTool lkApp][LK_NAV_BAR][LK_NAV_BAR_DFLT_ITEM_COLOR]];
+    if (!_lk_default_nav_titleColor)
+        _lk_default_nav_titleColor = [UIColor colorWithHexString: [LKConfigTool lkApp][LK_NAV_BAR][LK_NAV_BAR_DFLT_TITLE_COLOR]];
     if (_lk_default_nav_backgroundColor)
         self.lkNavigationBar.barTintColor = _lk_default_nav_backgroundColor;
-    if (_lk_default_nav_rendColor)// 非空判断，防止获取失败，对象为nil，导致闪退
-        self.lkNavigationBar.renderingColor = _lk_default_nav_rendColor;
+    if (_lk_default_nav_itemColor)// 非空判断，防止获取失败，对象为nil，导致闪退
+        self.lkNavigationBar.tintColor = _lk_default_nav_itemColor;
+    if (_lk_default_nav_titleColor)
+        self.lkNavigationBar.titleColor = _lk_default_nav_titleColor;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
